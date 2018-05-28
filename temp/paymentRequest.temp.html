@@ -1,0 +1,420 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>JANDI</title>
+	<style>
+		a[href^="x-apple-data-detectors:"] {
+			color: inherit;
+			text-decoration: inherit;
+		}
+	</style>
+</head>
+<body style="padding:0; margin:0">
+
+<!--
+  정기 결제 관련 이메일 템플릿
+  
+  영역 
+  role="email-header" 잔디 로고가 포함되는 헤더
+  role="email-title" 이메일 제목 및 결제 번호, 설명 영역
+  role="team-information"  팀 정보 영역
+  role="payment-information" 결제 정보 영역
+  role="payment-detail"  결제 상세 내역
+  role="email-footer"  기업정보 및 안내 영역
+  role="table-footer"  메일 푸터 영역
+  
+  role="jandi-account-information" 잔디 계좌이체 정보 영역 (2017-07-21 추가)
+  
+  스타일
+  role="premium-label" 프리미엄 플랜 레이블
+  role="enterprise-label" 엔터프라이즈 플랜 레이블 (현재 사용되지 않음)
+  
+-->
+
+<div style="background-color:#f0f0f0; min-width:300px; padding:10px 0;text-align:center;">
+
+	<!--<center>-->
+	<table cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed; width:100%;max-width: 600px; border-radius: 3px; background-color:#FFF;line-height: 1.5; font-size:15px; color: #333;margin:0 auto;">
+		<tbody>
+
+		<tr role="email-header" style="height: 60px;text-align: left;">
+			<td role="logo-container" style="padding: 24px;">
+				<img src="{{logoJandiImgUrl}}" height="31" width="115"/>
+			</td>
+		</tr>
+
+		<tr role="email-title" style="">
+			<td role="title-container" style="padding:0 24px;text-align: center;">
+				<h2 style="margin: 0;font-size: 25px; line-height: 1.5em;">
+					<span>@payment-email-payment-request-title</span>
+				</h2><!-- 이메일 제목 -->
+				<p style="margin: 12px auto; padding: 0 12px;color: #909090;font-size:15px;">
+					<span>@payment-email-payment-request-desc</span>
+				</p><!-- 설명 -->
+			</td>
+		</tr>
+		
+		<tr role="jandi-account-information" style="">
+			<td style="padding:0 24px;">
+				<table cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed; width:100%; padding:24px 0;color: #505050;line-height: 1.5;font-weight:400;border-bottom: 1px solid #E1E1E1;text-align: left;">
+					<tbody style="vertical-align: top;">
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-company-name</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{companyName}}
+						</td>
+					</tr>
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-account-holder-label</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-account-holder-name</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-account-info-label</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-account-holder-info</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-total-amount</span>
+						</td>
+						<td style="text-align: right;font-weight: 700;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{paymentAmount | withCommas}}
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+
+		<tr role="payment-information" style="">
+			<td style="padding:0 24px;">
+				<table cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed; width:100%; padding:24px 0;color: #505050;line-height: 1.5;font-weight:400;border-bottom: 1px solid #E1E1E1;text-align: left;">
+					<tbody style="vertical-align: top;">
+
+					<!-- 플랜 정보 : 항상 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-plan-info</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;color: #fff;">
+							<img src="{{planTypeImgUrl}}" height="18" />
+							<!--
+                                <img src="https://jandi-ftp.s3.amazonaws.com/product/web/temp/label-enterprise.png" height="18" width="95"/>
+                            -->
+						</td>
+					</tr>
+
+					{% if paymentPlan === 'A' %}
+					<!-- 계약 기간 : 연간 계약 신청 시에만 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-contract-period</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{contractStartAt}} ~ {{contractEndAt}}
+						</td>
+					</tr>
+					{% endif %}
+
+					<!-- 과금 기간 : 월/연간 계약 관계 없이 항상 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-billing-period</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{payedStartAt}} ~ {{payedEndAt}}
+						</td>
+					</tr>
+
+					<!-- 결제 수단 : 항상 노출 (계좌이체) -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-payment-method-type</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-payment-method-account-transfer</span>
+						</td>
+					</tr>
+
+					<!-- 결제 상태 : 항상 노출 (결제 대기) -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-payment-status-type</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-payment-status-pending</span>
+						</td>
+					</tr>
+
+					</tbody>
+				</table>
+			</td>
+		</tr>
+
+		<!-- 결제 내역 상세 정보 : '결제 정보 업데이트' 케이스를 제외하고 항상 노출 -->
+		<tr role="payment-detail" style="">
+			<td style="padding: 0 24px;font-size:15px;">
+				<p style="margin: 24px 0 8px;font-weight: 700;color: #505050;text-align: left;">
+					<span>@payment-email-payment-details</span>
+				</p>
+				<table cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed; padding:8px 16px;line-height: 1.5; font-weight:400; width: 100%;background-color: #fafbfb;border: 1px solid #e6e6e6;color: #646464;border-radius: 3px;text-align: left;">
+					<tbody style="vertical-align: top;">
+
+					<!-- 과금 대상 인원 : 결제일 시점의 팀 멤버 수 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-payment-num-of-members-current-period</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{billingUsers | withCommas}}<span>@payment-email-payment-num-of-members-unit</span>
+						</td>
+					</tr>
+
+					<!-- 신청 인원 : 연간 계약 신청 시 입력했던 인원 수 (연간 계약일 경우에만 노출) -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-payment-num-of-members-prepaid</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{contractedUsers | withCommas}}<span>@payment-email-payment-num-of-members-unit</span>
+						</td>
+					</tr>
+
+					{% if exceededUsers > 0 %}
+					<!-- 초과 '정'회원 (인당 7,000원) : 연간 계약 신청 시 입력했던 인원 대비 증가한 인원 수 (연간 계약일 경우에만 노출) -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-exceeded-member-account</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{exceededUsers | withCommas}}<span>@payment-email-payment-num-of-members-unit</span>
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if exceededAssociateUsers > 0 %}
+					<!-- 초과 '준'회원 (인당 1,000원) : 이메일 발송일 기준 무료 제공 준회원보다 현재 준회원 수가 많을 경우 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-exceeded-associate-account</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{exceededAssociateUsers | withCommas}}<span>@payment-email-payment-num-of-members-unit</span>
+						</td>
+					</tr>
+					{% endif %}
+					
+					{% if exceededUsers < 0 %}
+					<!-- 크레딧 대상 인원 (인당 5,000원) : 연간 계약 신청 시 입력했던 인원 대비 감소한 인원 수 (연간 계약일 경우에만 노출) -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-payment-num-of-members-credit-receipients</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{Math.abs(exceededUsers) | withCommas}}<span>@payment-email-payment-num-of-members-unit</span>
+						</td>
+					</tr>
+					{% endif %}
+
+					<tr>
+						<td colspan="2">
+							<hr style="border: 0;border-top: 1px solid #e6e6e6;">
+						</td>
+					</tr>
+
+					{% if paymentPlan === 'A' %}
+					<!-- 연 과금액 : 연간 계약 신청 시 최초 결제 내역에만 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-billing-amount-annual</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{billingAmount | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+					
+					{% if type === 'M' %}
+					<!-- 월 과금액 (인당 7,000원) : 월간 계약시 항상 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-billing-amount-monthly</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{billingAmount | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if additionalBillingAmount %}
+					<!-- 월 과금액 (초과 정회원) : 이메일 발송일 기준 증가한 초과 '정회원'이 있을 경우에만 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-monthly-billing-amount-member</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{additionalBillingAmount | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+					
+					{% if additionalBillingAmount %}
+					<!-- 월 과금액 (초과 준회원) : 이메일 발송일 기준 초과 '준회원'이 있을 경우에만 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-monthly-billing-amount-associate</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{additionalBillingAmount | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if discountAmount > 0 %}
+					<!-- 프로모션 코드 적용 : 프로모션 코드 적용 내역이 있을 경우 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-promotion-applied</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							- {{paymentCurrency | toSymbol}}{{discountAmount | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+
+					{% if creditUsage > 0 %}
+					<!-- 보유 크레딧 적용 : 크레딧 사용 내역이 있을 경우 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-credits-applied</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							- {{paymentCurrency | toSymbol}}{{creditUsage | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+
+					<!-- 합계 : 부가세 부과되기 전의 과금액 합계. 과금액이 있을 경우 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-sub-total-amount</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{(discountedAmount - creditUsage) | withCommas}}
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<hr style="border: 0;border-top: 1px solid #e6e6e6;">
+						</td>
+					</tr>
+
+					<!-- 부가세 : 과금액이 있을 경우 & 결제 통화가 KRW일 경우 노출 -->
+					{% if surtaxAmount > 0 %}
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-vat</span>
+						</td>
+						<td style="text-align: right;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{surtaxAmount | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+
+					<!-- 최종 결제 금액 : 최종 산정된 금액. 항상 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-total-amount</span>
+						</td>
+						<td style="text-align: right;font-weight: 700;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{paymentAmount | withCommas}}
+						</td>
+					</tr>
+
+					{% if creditRefund > 0 %}
+					<!-- 크레딧 지급 : 연간 계약 신청 시 입력했던 인원 대비 감소한 인원이 있을 경우, 지급된 크레딧을 노출 -->
+					<tr>
+						<td style="font-weight: 700;padding: 6px 0;font-size:15px;">
+							<span>@payment-email-credit-amount</span>
+						</td>
+						<td style="text-align: right;font-weight: 700;padding: 6px 0;font-size:15px;">
+							{{paymentCurrency | toSymbol}}{{creditRefund | withCommas}}
+						</td>
+					</tr>
+					{% endif %}
+
+					</tbody>
+				</table>
+			</td>
+		</tr>
+
+
+		<tr role="email-footer" style="">
+			<td style="padding:32px 24px 0 24px;text-align: left;">
+				<img src="{{tosslabLogoImgUrl}}" height="16" width="112" style=""/>
+				<table cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed; width:100%; padding:8px 2px 12px 2px;">
+					<tbody style="vertical-align: top;">
+					<tr>
+						<td style="font-size: 11px;line-height: 18px;color: #57778D;">
+							<span>@payment-email-footer-company-name-label</span>
+							<span>@payment-email-footer-company-name-text</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 11px;line-height: 18px;color: #57778D;">
+							<span>@payment-email-footer-company-regnum-label</span>
+							<span>@payment-email-footer-company-regnum-text</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 11px;line-height: 18px;color: #57778D;">
+							<span>@payment-email-footer-company-location-label</span>
+							<span>@payment-email-footer-company-location-text</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 11px;line-height: 18px;color: #57778D;">
+							<span>@payment-email-footer-company-contact-label</span>
+							<span>@payment-email-footer-company-contact-text</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 11px;line-height: 18px;font-weight: 400;color: #A0A0A0;padding: 14px 0;">
+		              <span>@payment-email-footer-confidential-info</span>
+						</td>
+					</tr>
+
+					</tbody>
+				</table>
+			</td>
+		</tr>
+
+		<tr role="table-footer" style="">
+			<td style="background-color: #f0f0f0; padding: 24px; color: #959595; font-size: 12px; line-height: 18px; text-align: center;">
+			  <span>@payment-email-footer-contact</span>
+				<p style="font-family: Arial, sans-serif;">
+					Copyright © <span>@current-year</span> <a href="https://jandi.com" style="color: #959595;text-decoration: underline;" target="_blank">Toss Lab, Inc.</a> All rights reserved.</p>
+			</td>
+		</tr>
+
+		</tbody>
+	</table>
+
+	<!-- </center> -->
+</div>
+
+</body>
+</html>

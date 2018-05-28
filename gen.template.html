@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Template Generator</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="./js/moment-with-locales.js"></script>
+</head>
+<body style="padding:0 20px; margin:0;position: absolute;top:0;left:0;right:0;bottom:0;">
+<h3></h3>
+<table style="width: 100%;table-layout: auto;height:90%">
+  <tbody>
+	<tr style="height: 24px;">
+		<td colspan="2" style="font-size: 13px;">
+			<strong>1. 변환할 템플릿 선택 : </strong>
+			<select title="select-temp" id="selectedTemp">
+				<option value="0" label="" selected disabled>(템플릿 종류)</option>
+				<option value="1" label="">1. 정기 결제 신청 완료</option>
+				<option value="2" label="">2. 청구서</option>
+				<option value="3" label="">3. 결제 내역</option>
+				<option value="4" label="">4. 결제 정보 업데이트</option>
+				<option value="5" label="">5. 정기 과금 이용 약관</option>
+			</select>
+		</td>
+	</tr>
+	<tr style="height: 24px;">
+		<td colspan="2" style="font-size: 13px;">
+			<strong>2. 언어 선택 : </strong>
+			<select title="select-lang" id="selectedLang">
+				<option value="0" label="" selected disabled>(언어)</option>
+				<option value="1" label="">ko</option>
+				<option value="2" label="">en</option>
+				<option value="3" label="">ja</option>
+				<option value="4" label="">zh-tw</option>
+				<option value="5" label="">zh-cn</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr style="height: 24px;">
+		<td colspan="2">
+			<hr></hr>
+		</td>
+	</tr>
+	<tr style="font-size: 13px;height: 24px;">
+		<td style="width: 40%;">
+			<strong>키값</strong>
+			<button style="margin-right: 12px; float: right;" id="resetL10N" download="">#. 문구 초기화 (리셋)</button>
+			<button style="margin-right: 12px; float: right;" id="updateL10N" download="">3. L10N 적용</button>
+		</td>
+		<td>
+			<strong>미리보기</strong>
+			<button style="margin-left: 6px;" id="downloadTemplate" >4. 템플릿 다운로드</button>
+		</td>
+	</tr>
+	<tr style="">
+		<td style="width: 40%;padding-right: 8px;">
+			<iframe id="importedJson" src="" title="iframe example" width="100%" height="100%" style="min-height: 640px;border: 1px solid #d2d2d2;">
+			  <!-- insert generated json here -->
+			</iframe>
+		</td>
+		<td>
+			<iframe id="previewTempate" src="" title="iframe example" width="100%" height="100%" style="min-height: 640px;border: 1px solid #d2d2d2;">
+			  <!-- insert preview template here -->
+			</iframe>
+		</td>
+	</tr>
+	
+	<tr style="height: 0;overflow: hidden;">
+		<td colspan="2" id="originalString" style="display: none;">
+		</td>
+	</tr>
+  </tbody>
+</table>
+
+
+
+<script src="./js/generator.js"></script>
+<script src="./js/downloader.js"></script>
+
+
+
+</body>
+</html>
