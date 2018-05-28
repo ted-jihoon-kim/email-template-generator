@@ -51,7 +51,7 @@ var tempPath = [ "",
 
 
 function getL10NKeys(keyname) {
-  $.getJSON('http://local.jandi.io:9000/app/template/json/keys.json',
+  $.getJSON('http://localhost:8080/json/keys.json',
   function(parsedData) {
     keyObject = parsedData[keyname]; //testObject에 l10n keyname array를 대입
     
