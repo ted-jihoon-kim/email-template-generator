@@ -54,6 +54,19 @@
 	    <p >{{message}}</p>
 	    <input v-model="message" />
     </div>
+    
+    <hr style="opacity: .3;"></hr>
+    
+    <div id="app-component-button">
+	  <ul>
+		<!-- 커스텀 컴포넌트 아이템-->
+		<label-item v-for="item in labelList"
+					v-bind:label="item"
+					v-bind:title="item.id">
+		</label-item> 
+		<!-- <label-item></label-item> -->
+	  </ul>
+    </div>
 
   </div>
 
@@ -68,7 +81,7 @@
 	})
 	
 	// vue 인스턴스의 타입은 Object
-	console.log(typeof(app));
+	console.log('Vue 인스턴스의 타입은: '+typeof(app));
 	
 	//vue 인스턴스 네임에는 대시(-)를 사용할 수 없음
 	var app_condition = new Vue({
@@ -105,6 +118,24 @@
 			message: '인풋창에 메시지를 입력'
 		}
 	})
+	
+	
+	// 컴포넌트 선언은 vue 인스턴스 이전에 선언되어야 함 (!중요!)
+	Vue.component('label-item', {
+		props: ['label'], 
+		template: '<li><button type="submit" >{{label.text}}</button></li>'
+	})
+	
+	
+	var app_component_button = new Vue({
+		el: '#app-component-button',
+		data: {
+			labelList: [
+				{ id: 0, text: 'Confirm' },{ id: 1, text: 'Cancel' },{ id: 2, text: 'Pending' }
+			]
+		}
+	})
+	
 	
 	
 </script>
