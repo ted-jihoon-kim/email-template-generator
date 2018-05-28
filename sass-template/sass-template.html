@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>SCSS Test Template</title>
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+ 
+  <style>
+	  i:before {
+		font-family: 'typicons';
+		speak: none;
+		display: inline-block;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	  }
+	  
+	  td {
+		  padding: 8px 0;
+	  }
+	  .class-name {
+		padding: 2px 4px;
+		border-radius: 2px;
+		background-color: #F2F2F2;
+		color: #757575;
+	  }
+  </style>
+  
+</head>
+
+<body>
+
+  <table style="border: none;padding: 0;margin: 0;width: 100%;text-align: left; font-size: 13px; font-weight: 400;">
+	  <tbody>
+		  <tr style="box-shadow: 0 1px 0 0 #CBCBCB; line-height: 32px;">
+			  <th>
+				  <span>클래스명 Class Name</span>
+			  </th>
+			  <th>
+				  <span>미리보기 Preview</span>
+			  </th>
+			  <th>
+				  <!-- 외관 종류 (버튼)
+					  
+					   1. Rounded Edge : 각 모서리만 둥근 형태
+					   2. Circular Edge : 좌우측 모서리가 둥근 형태
+					   3. Transparent : 배경이 투명한 형태
+					   4. Text : 텍스트만 있는 형태 -->
+				  <span>외관 Appearance</span>
+			  </th>
+			  <th>
+				  <span>컬러 Color</span>
+			  </th>
+			  <th>
+				  <!-- 폰트의 크기 종류 (공통)
+					  
+					   1. Caption : 11px
+					   2. eXtra Small : 12px
+					   3. Small : 13px
+					   4. Default : 15px
+					   5. Medium : 16px
+					   6. Large : 18px
+					   7. eXtra Large : 20px
+					   8. Title : 22px -->
+				  <span>크기 Size</span>
+			  </th>
+			  <th>
+				  <!-- 내부 형태 종류 (버튼)
+					  
+					   1. label-only : 아이콘 없이 레이블만 있는 형태
+					   2. icon-only : 레이블 없이 아이콘만 있는 형태
+					   3. left-icon : 아이콘이 레이블 좌측에 있는 형태
+					   4. right-icon : 아이콘이 레이블 우측에 있는 형태
+					   5. has-arrow : 화살표가 같이 있는 형태 -->
+				  <span>형태 Type</span>
+			  </th>
+		  </tr>
+		  <tr>
+			  <td><label class="class-name">jui-button-confirm</label></td>
+			  <td>
+				  <button class="jui-button-confirm">
+				    <label>Label</label>
+				  </button>
+			  </td>
+			  <td><span>Rounded Edge</span></td>
+			  <td><span>$color-confirm</span></td>
+			  <td>$base-font-size</td>
+			  <td>$label-only</td>
+		  </tr>
+		  <tr>
+			  <td><label class="class-name">jui-button-alert</label></td>
+			  <td>
+				  <button class="jui-button-alert">
+				    <label>Label</label>
+				  </button>
+			  </td>
+			  <td><span>Rounded Edge</span></td>
+			  <td>$color-alert</td>
+			  <td>$base-font-size</td>
+			  <td>$label-only</td>
+		  </tr>
+		  <tr>
+			  <td><label class="class-name">jui-button (disabled)</label></td>
+			  <td>
+				  <button class="jui-button" disabled>
+				    <label>Label</label>
+				  </button>
+			  </td>
+			  <td><span>Rounded Edge</span></td>
+			  <td>$color-mono</td>
+			  <td>$base-font-size</td>
+			  <td>$label-only</td>
+		  </tr>
+	  </tbody>
+  </table>
+
+  
+  
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  
+  
+</body>
+
+</html>
