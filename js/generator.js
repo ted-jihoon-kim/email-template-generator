@@ -1,6 +1,6 @@
 /* 
-	Template Generator ( /app/template/gen.template.html )
-	last-update : 2017/11/14
+	Template Generator 
+	last-update : 2018/05/28
 	
 	@author : ted.kim@tosslab.com
 */

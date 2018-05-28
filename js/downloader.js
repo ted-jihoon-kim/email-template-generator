@@ -1,5 +1,5 @@
 /* 
-	Template Downloader ( /app/template/gen.template.html )
+	Template Downloader 
 	last-update : 2018/05/25
 	
 	@author : ted.kim@tosslab.com

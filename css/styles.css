@@ -1,0 +1,48 @@
+/* Default Variables */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: Helvetica Neue, sans-serif; }
+
+/* Base & Nesting */
+.jui-button, .jui-button[disabled], .jui-button-confirm, .jui-button-alert {
+  outline: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 0.2em;
+  background-color: #CCC; }
+  .jui-button label, .jui-button[disabled] label, .jui-button-confirm label, .jui-button-alert label {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 15px;
+    pointer-events: none; }
+  .jui-button:not(.disabled):active, .jui-button-confirm:not(.disabled):active, .jui-button-alert:not(.disabled):active {
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.12); }
+
+/* Extend */
+.jui-button[disabled], .jui-button-confirm[disabled], .jui-button-alert[disabled] {
+  cursor: not-allowed; }
+  .jui-button[disabled] label, .jui-button-confirm[disabled] label, .jui-button-alert[disabled] label {
+    color: #FFF; }
+
+.jui-button-confirm {
+  background-color: #00ACE9; }
+  .jui-button-confirm label {
+    color: #FFF; }
+  .jui-button-confirm:hover {
+    background-color: #0092D8; }
+  .jui-button-confirm:active {
+    background-color: #0389C8; }
+  .jui-button-confirm:focus {
+    background-color: #0389C8; }
+
+.jui-button-alert {
+  background-color: #D94516; }
+  .jui-button-alert label {
+    color: #FFF; }
+  .jui-button-alert:hover {
+    background-color: #C9302C; }
+  .jui-button-alert:active {
+    background-color: #BB2A27; }
+  .jui-button-alert:focus {
+    background-color: #BB2A27; }
