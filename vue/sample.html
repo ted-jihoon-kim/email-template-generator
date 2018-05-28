@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper">
+  
+  <!-- top-navigator -->
+  <div class="top-nav-wrapper">
+    
+    <!-- v-bind 디렉티브 : attribute를 동적으로 바인딩 -->
+    <p class="condition indicator" id="app" v-bind:title="message_title" >{{ message }}</p>
+    
+    <hr style="opacity: .3;"></hr>
+    
+    <!-- v-if 디렉티브 : 조건에 따라 요소를 숨기기 / 보여주기 (DOM에서 제거) -->
+    <div id="app-condition">
+	    <h3 v-if="seen">토글되는 영역</h3>
+	    <button v-on:click="toggleView">{{label}}</button>
+	</div>
+    
+    <hr style="opacity: .3;"></hr>
+    
+    <!-- v-for 디렉티브 : 반복되는 요소를 처리 -->
+    <ol id="app-repeatable">
+	  <!-- books는 vue 인스턴스의 data 네임에 대칭하나, book은 따로 매칭되는 네임이 없어도 동작함 -->
+	  <!-- 또는, item in customArrayList 같은 형태로 item 이라는 옵션으로도 활용이 가능 -->
+	  <li v-for="book in books" >
+	    <a v-bind:href="book.url" target="_blank">{{book.name}}</a>
+	  </li>
+    </ol>
+    
+    <hr style="opacity: .3;"></hr>
+    
+    <div id="app-input-binding">
+	    <p >{{message}}</p>
+	    <input v-model="message" />
+    </div>
+
+  </div>
+
+<script>
+	
+	var app = new Vue({
+		el: '#app',
+		data: {
+			message : '안녕하세요 Vue!',
+			message_title : 'ㅇㅣ 페이지는 '+ new Date() +'에 로드 되었어요'
+		}
+	})
+	
+	// vue 인스턴스의 타입은 Object
+	console.log(typeof(app));
+	
+	//vue 인스턴스 네임에는 대시(-)를 사용할 수 없음
+	var app_condition = new Vue({
+		el: '#app-condition',
+		data: {
+			seen:true, //console에서 접근 시 app_condition.seen = true or false
+			label: '숨기기'
+		},
+		methods: {
+			toggleView: function() {
+				this.seen = !this.seen;
+				
+				if(this.seen){ this.label = '숨기기'}
+				else { this.label = '보이기' }
+			}
+		}
+	})
+	
+	var app_repeatable_list = new Vue({
+		el: '#app-repeatable',
+		data: {
+			books: [
+				{ name: '쉽고 빠르게 배우는 Vue.js 2 프로그래밍', url:'http://wikibook.co.kr/vue-js-2/'},
+				{ name: 'Javascript가 보이는 그림책', url: 'http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788931550023'},
+				{ name: '자바스크립트 쿡북 JavaScript Cookbook', url: 'http://www.yes24.com/24/goods/6108013'}
+			]
+			//app_repeatable_list.books.push({name: '새로운책이름'}) 
+		}
+	})
+	
+	var app_model_binding = new Vue({
+		el: '#app-input-binding',
+		data: {
+			message: '인풋창에 메시지를 입력'
+		}
+	})
+	
+	
+</script>
+
+
+</body>
+</html>

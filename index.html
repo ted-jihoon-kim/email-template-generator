@@ -14,14 +14,27 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="http://danml.com/js/download.js"></script>
 	<script src="./js/moment-with-locales.js"></script>
+	<script src="./node_modules/vue/dist/vue.js"></script>
 	
 	<link rel="stylesheet" href="./css/styles.css">
 	<link rel="stylesheet" href="./css/common.css">
 	
 </head>
 
-<body style="">
-<h3></h3>
+<body class="body-wrapper">
+  
+  <!-- top-navigator -->
+  <div class="top-nav-wrapper">
+    <span class="condition indicator" id="app">{{ message }}</span>
+    <table>
+	  <tr>
+		<td>template 1</td>
+		<td>template 1</td>
+		<td>template 1</td>
+	  </tr>
+    </table>
+  </div>
+
 <table style="width: 100%;table-layout: auto;height:90%">
   <tbody>
 	<tr style="height: 24px;">
@@ -91,7 +104,15 @@
 
 <script src="./js/generator.js"></script>
 <script src="./js/downloader.js"></script>
-
+<script>
+	var app = new Vue({
+  el: '#app',
+  data: {
+    //message: '안녕하세요 Vue!'
+    message : 'ㅇㅣ 페이지는 '+ new Date() +'에 로드 되었어요'
+  }
+})
+	</script>
 
 
 </body>
