@@ -1,0 +1,12 @@
+/* Default Variables */
+html,
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 20px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: Helvetica Neue, sans-serif; }
