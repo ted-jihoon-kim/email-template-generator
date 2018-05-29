@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample - Template</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper">
+  
+  <!-- 템플릿 문법 Template Syntax -->
+  <div id="template-syntax">
+    <input v-model="msg">
+    
+    <!-- 클릭 이벤트 발생 시 커스텀 이벤트 setFalse를 호출하는 버튼 -->
+    <button v-on:click="setFalse">버튼 비활성화 상태 토글 버튼</button>
+    
+    <!-- 클릭 이벤트 발생 시 커스텀 이벤트 resetMsg를 호출하는 버튼 -->
+    <!-- v-on 디렉티브는 @로 약어사용 가능 -->
+    <button @click="resetMsg">인풋필드 리셋 버튼</button>
+    
+    <!-- {{ }} mustache 구문 사용 시 일반 텍스트로 데이터를 노출합니다. -->
+    <p>입력중인 메시지 : {{msg}}</p>
+    
+    <!-- v-once 디렉티브는 엘리먼트 및 컴포넌트를 한번만 렌더링 합니다. -->
+    <p v-once>메시지 기본 값 : {{msg}}</p>
+    
+    <!-- v-html 디렉티브는 실제 HTML을 출력합니다. -->
+    <p>HTML로 출력 : <span v-html="msg"></span></p>
+    
+    <!-- Mustache 구문은 HTML속성 (e.g. id, href, ..)에서 사용할 수 없습니다. -->
+    <!-- v-bind 디렉티브는 : 로 약어 사용 가능 -->
+    <a v-bind:id="msg" :title="msg" :href="msg" target="_blank">어트리뷰트로 출력 </a>
+  
+    <!-- v-bind 사용 시 Boolean 속성 사용 시 true가 아닌 경우 엘리먼트에 포함되지 않습니다. -->
+    <p><button v-bind:disabled="isDisabled">Button</button></p>
+    
+    <!-- javascript 표현식 사용 (단 각 바인딩에 하나의 단일 표현식만 포함 가능) -->
+    <p>입력된 메시지를 거꾸로 : {{ msg.split('').reverse().join('') }}</p>
+    
+    <!-- 최초 생성된 변수의 값이 number일 경우 최초 값에 1을 더한 number가 노출되나, input을 통해 변수값 수정 시 String으로 변환됨 -->
+    <p>입력된 메시지 + 1 : {{ msg+1 }}</p>
+    
+    
+    
+  </div>
+  
+  
+  
+<script>
+	
+	var template_syntax = new Vue({
+		el: '#template-syntax',
+		data: {
+			msg: '기본값',
+			//msg: 1,
+			isDisabled: false
+		},
+		methods: {
+			setFalse: function(event){
+				this.isDisabled = !(this.isDisabled) //this는 app_interpolation을 의미
+				console.log(this.isDisabled);
+			},
+			resetMsg: function(event) {
+				this.msg = "기본값"
+			}
+			
+		}
+	})
+
+	
+	
+</script>
+	
+</body>
+</html>
