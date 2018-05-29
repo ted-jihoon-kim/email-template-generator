@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample 4</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper">
+  
+  <!-- 클래스 바인딩 -->
+  <div id="binding-class">
+    <h3>클래스 바인딩</h3>
+    <!-- data 객체 속성에 따른 클래스 바인딩 -->
+    <div class="static" :class="{active: isActive}">객체 속성에 따른 바인딩</div>
+    
+    <!-- 오브젝트 속성에 따른 클래스 바인딩 -->
+    <div class="static" :class="activeClass">오브젝트 바인딩</div>
+    
+    <!-- 계산된 속성에 따른 클래스 바인딩 -->
+    <div class="static" :class="classObject">계산된 속성 바인딩</div>
+    
+    <!-- 배열 구문을 통한 클래스 바인딩 -->
+    <div class="static" :class="[activeClass, errorClass]">배열을 사용한 바인딩</div>
+    
+    <!-- 배열 목록의 조건부 클래스 바인딩 -->
+    <!-- isAcitve 속성이 참일 경우에만 activeClass를 바인딩 (errorClass는 항상 바인딩) -->
+    <div class="static" :class="[ isActive ? activeClass : '', errorClass]">조건부 배열을 사용한 바인딩</div>
+    
+    <!-- 배열 목록의 객체 구문 클래스 바인딩 -->
+    <div class="static" :class="[ {active: isActive}, errorClass]">객체 구문 배열을 사용한 바인딩</div>
+    
+    <!-- 컴포넌트를 통한 바인딩 -->
+    <component-item class="static" :class="[ {active: isActive}, errorClass]" ></component-item>
+    
+  </div>
+  
+  <!-- 인라인 스타일 바인딩 -->
+  <div id="binding-style">
+	<h3>인라인 스타일 바인딩</h3>
+	
+	<!-- 객체 구문 스타일 바인딩 -->
+	<!-- 카멜 케이스(camelCase) 와 케밥 케이스(kebab-case) 혼용이 가능하나 케밥 케이스의 경우 따옴표 안에 작성 필요 -->
+	<div class="inline-style" 
+		 :style="{ color: activeColor, fontSize: fontSize + 'px', 'background-color': monoColor }">객체 구문 인라인 스타일 바인딩</div>
+		 
+	<!-- 스타일 객체를 통한 스타일 바인딩 -->
+	<div class="inline-style"
+		 :style="styleObject">스타일 객체를 통한 스타일 바인딩</div>
+	
+	<!-- 배열 구문을 통한 여러개의 스타일 객체를 바인딩 -->
+	<div class="inline-style"
+		 :style="[baseStyle, uniqueStyle]">배열을 통한 여러 개의 스타일 객체 바인딩</div>
+		 
+	<!-- 나중에 위치한 스타일 객체가 overriding -->
+	<div class="inline-style"
+		 :style="[uniqueStyle, baseStyle]">배열을 통한 여러 개의 스타일 객체 바인딩</div>
+	
+	<div class="inline-style" :style="[baseStyle, { transform: 'skew(30deg)'}]">vendor prefix가 필요한 속성 사용시 자동으로 적용(?)</div>
+		 
+  </div>
+    
+<script>
+	
+	Vue.component( 'component-item', {
+		template: '<div class="static">컴포넌트를 통한 바인딩</div>'
+	})
+	
+	var binding_class = new Vue ({
+		el: '#binding-class',
+		data: {
+			
+			isActive: true,
+			isError: null,
+			
+			// 따옴표('') 유무에 관계없이 v-bind:class 디렉티브 사용할 경우 동작은 동일. 
+			// 다만 대시(-)를 클래스에 표현하려고 할 경우 따옴표('')로 묶어주어야 함.
+			activeClass: {
+				active: true,
+				'text-danger': true 
+			},
+			
+			activeClass: 'active',
+			errorClass: 'text-danger'
+			
+		},
+		
+		computed: {
+			classObject: function() {
+				return {
+					active : this.isActive && !this.isError,
+					'text-danger' : this.isError && this.isError.type === 'fatal'
+				}
+			}
+		}
+		
+	})
+	
+	var binding_style = new Vue({
+		el: '#binding-style',
+		data: {
+			activeColor: '#0092D8',
+			monoColor: '#DEDEDE',
+			fontSize: 30,
+			
+			styleObject: {
+				color: '#5F9719',
+				'font-size': '64px',
+				marginTop: '20px'
+				
+			},
+			
+			baseStyle: {
+				fontSize: '18px',
+				margin: '10px 0',
+				color: '#797979'
+			},
+			
+			uniqueStyle: {
+				fontSize: '9em',
+				color: '#00ACE9'
+			}
+		}
+	})
+
+	
+	
+</script>
+	
+</body>
+</html>
