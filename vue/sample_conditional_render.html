@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample 5</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper">
+  
+  <!-- 조건부 렌더링 -->
+  <div id="conditional-render">
+  	
+  	<!-- v-if -->
+  	<div>
+	  	버튼이 보이나요?
+	  	<!-- isButtonVisible 이 참일 때는 Submit 버튼이 보이고, 거짓일때는 Cancel 버튼이 노출 -->
+	  	<button v-if="isButtonVisible">Submit</button>
+	  	<!-- v-else 엘리먼트의 경우 v-if 또는 v-else-if 디렉티브 바로 다음에 위치해야 인식 가능 -->
+	  	<button v-else>Cancel</button>
+  	</div>
+	
+	<hr>
+	
+	<!-- template 엘리먼트는 보이지 않는 wrapper 역할을 담당 -->
+	<template v-if="isButtonVisible">
+		<h1>Title</h1>
+		<p>Paragraph 1</p>
+		<p>Paragraph 2</p>
+	</template>
+	
+	<hr>
+	
+	<!-- v-if / v-else-if / v-else -->
+	<div v-if="randomNumber == 0">
+		0
+	</div>
+	<div v-else-if="randomNumber > 0 && randomNumber <= 50 ">
+		50이하
+	</div>
+	<div v-else-if="randomNumber < 98 ">
+		50이상
+	</div>
+	<div v-else >
+		99가 나왔네요!
+	</div>
+	
+	<hr>
+	
+	<!-- key -->
+	<button @click="toggleForm()">토글버튼</button>
+	<div></div>
+	<template v-if="loginType=='username' ">
+		<label class="static">사용자이름
+		<input placeholder="이름을 입력" key="username"></label>
+	</template>
+    <template v-else-if="loginType=='email' ">
+		<label class="static">이메일주소
+		<input placeholder="이메일 주소를 입력" key="email"></label>
+	</template>
+
+	<!-- v-show : CSS display 속성만을 토글 -->
+	<!-- note : v-show는 template 구문을 지원하지 않으며, v-else 작동하지 않음 -->
+	<div v-show="loginType=='email'" style="font-size: 13px;color: #B8B8B8;padding: 3px;">
+	<i>이메일 주소는 정확하게 입력해주세요!</i>
+	</div>
+	
+	<!-- v-if VS v-show
+		v-if는 조건부 블럭 안의 이벤트 리스너와 자식 컴포넌트가 토글하는 동안 제거되고 생성되기 때문에 진짜 조건부 렌더링임.
+		v-if는 초기 렌더링시 조건이 거짓인 경우 아무것도 하지 않음. 조건 블록이 처음으로 참이될 때까지 렌더링되지 않음.
+		v-if는 토글 비용이 높고 v-show는 초기 렌더링 비용이 높음.
+		매우 자주 바뀐다면 v-show를 사용하고, 런타임시 조건이 바뀌지 않는다면 v-if를 권장함 -->
+	
+	<!-- v-if 와 v-for를 함께 사용할 경우 v-for가 높은 우선순위를 가져감. -->
+	
+  </div>
+    
+<script>
+	
+	
+	var conditional_render = new Vue ({
+		el: '#conditional-render',
+		data: {
+			isButtonVisible : true,
+			randomNumber: Math.floor(Math.random()*100), //0부터 99 사이의 정수를 반환
+			loginType : 'username'
+		},
+		methods: {
+			toggleForm: function(){
+				if(this.loginType=='username'){
+					this.loginType = 'email'
+				}
+				else {
+					this.loginType= 'username'
+				}
+			}
+		}
+		
+	})
+	
+</script>
+	
+</body>
+</html>
