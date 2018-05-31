@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample 6</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper">
+  
+  <!-- 리스트 렌더링 -->
+  <div id="list-render">
+  	
+	<!-- 기본 구문 사용 -->
+	<ul>
+		<li v-for="item in todoList" >{{item.name}}</li>
+	</ul>
+
+	
+	<hr>
+	
+	<!-- 부모 범위 속성을 사용 -->
+	<!-- 부모 요소인 list_render 객체의 todoLabel 속성을 사용 -->
+	<!-- 반복 요소인 item 위치에 두번째 전달 인자에 index 를 사용 --> 
+	<ul>
+		<li v-for="(item, index) in todoList"><strong>{{todoLabel}} {{index+1}}</strong> : {{item.name}}</li>
+	</ul>
+	
+	<hr>
+	
+	<!-- v-for를 사용해 객체의 속성이나 키를 사용 -->
+	<!-- 객체의 key와 value를 동시에 가져올 경우 value, key 순서로 인자를 입력해야 key-value 의 형태로 가져올 수 있음 --->
+	<ul>
+		<li v-for="(value, key) in todoObject">Key : {{key}} 	 Value : {{value}}</li>
+	</ul>
+	
+	<hr>
+	
+	<!-- v-for를 사용해 객체의 속성이나 키를 사용 -->
+	<ul>
+		<li v-for="(key, value) in todoObject">Key : {{key}} 	 Value : {{value}}</li>
+	</ul>
+	
+	<!-- v-for를 사용해 객체의 속성이나 키를 사용 -->
+	<ul>
+		<li v-for="(value, key, index) in todoObject" >{{index}}. {{key}} : {{value}}</li>
+	</ul>
+	
+	
+	<hr>
+	
+	
+	<table style="table-layout: fixed; text-align: left; width: 100%;">
+		<tbody>
+			<tr>
+				<th style="background-color: #FAFAFA;">
+					<h5>원본 배열</h5>
+				</th>
+				<th>
+					<h5>대체 배열</h5>
+				</th>
+				<th>
+					<h5>필터링된 배열</h5>
+				</th>
+				<th>
+					<h5>필터링된 배열</h5>
+				</th>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td style="background-color: #FAFAFA;">
+					<ul style="padding-left: 20px;">
+						<li v-for="item in mutableTodoList" v-bind:key="item.index" >{{item.name}}</li>
+					</ul>
+				</td>
+				<td>
+					<ul style="padding-left: 20px;">
+						<li v-if="mutatedTodoList.length>0" v-for="item in mutatedTodoList" v-bind:key="item.index" >{{item.name}}</li>
+					</ul>
+				</td>
+				<td>
+					<ul style="padding-left: 20px;">
+						<!-- 계산된 속성 filtedTodo 를 사용 --> 
+						<li v-for="item in filtedTodo" v-bind:key="item.index" >{{item.name}}</li>
+					</ul>
+				</td>
+				<td>
+					<ul style="padding-left: 20px;">
+						<!-- method 사용 -->
+						<!--template 태그 사용 -->
+						<template v-for="item in filter(mutableTodoList)">
+						  <li >{{item.name}}</li>
+						</template> 
+					</ul>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<!-- 배열 변이 메소드 (원본 배열을 변형) -->
+	
+					<!-- push( object ) : 마지막 위치에 객체 삽입
+						pop() : 마지막 항목을 삭제
+						unshift( object ) : 처음 위치에 객체 삽입
+						shift() : 처음 항목을 삭제 
+						splice(index, howmany, item1, item2, ... itemn) : index 위치에 howmany 개의 아이템을 제거하고(optional) item1~n까지의 아이템을 삽입
+						sort() : 배열을 알파벳 순으로 정렬 
+						reverse() : 배열을 역순으로 정렬
+		 			-->
+					<h5>배열 변이 메소드</h5>
+				</td>
+				<td>
+					<!-- 배열 대체 메소드 (새 배열을 반환) -->
+	
+					<!-- filter() : 특정 문자열을 가지고 있는 아이템만 반환 
+						concat() : targetArray.concat(newArrayA, newArrayB, ...) - targetArray에 newArrayA, newArrayB 배열을 합침
+						slice() : 
+		 
+					-->
+					<h5>배열 대체 메소드</h5>
+				</td>
+				<td>
+					<h5>'보기' 텍스트로 필터링 (계산된 속성 사용)</h5>
+				</td>
+				<td>
+					<h5>'보기' 텍스트로 필터링 (method 사용)</h5>
+				</td>
+			</tr>
+			<tr style="vertical-align: top;">
+				<td>
+					<div>
+						<button v-if="mutableTodoListLength > 1" style="display: block;"
+								@click="mutableTodoList.shift()">첫번째 항목을 삭제 → "{{ mutableTodoList[0].name }}"</button>
+		
+						<input placeholder="첫번째 위치에 넣을 할일" v-model="unshiftName" >
+						<button @click="mutableTodoList.unshift({ name : unshiftName })">첫번째 위치에 삽입</button>
+						
+						<button v-if="mutableTodoListLength > 1" style="display: block;"
+								@click="mutableTodoList.pop()">마지막 항목을 삭제 → "{{ mutableTodoList[mutableTodoListLength-1].name }}"</button>
+								
+						<input placeholder="마지막 위치에 넣을 할일" v-model="pushName" >
+						<button @click="mutableTodoList.push({ name : pushName })">마지막 위치에 삽입</button><br>
+						
+						<button @click="mutableTodoList.sort()">알파벳 순으로 정렬</button>
+						
+						<button @click="mutableTodoList.reverse()">현재의 역순으로 정렬</button>
+					</div>
+				</td>
+				<td>
+					<div>
+						<button @click="mutateTodoList('filter')">'하기'에 매치되는 할 일 필터링</button>
+						<button @click="mutateTodoList('concat')">필터링된 대체 배열 리스트에 원본 배열 더하기</button>
+						<button @click="mutateTodoList('slice')"> 2번째부터 마지막에서부터 2번째 순서의 아이템만 남기기</button>
+					</div>
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	
+	
+	<hr>
+	
+	
+	
+  </div>
+  
+  <!-- vue 객체에 반응형 속성을 동적으로 추가하기 -->
+  <!-- vue 객체의 루트레벨에 새로운 '반응형' 속성을 추가하는 것은 불가능 예) extensive_property.b = 1 -->
+  <!-- 그러나 vue 객체의 객체에 반응형 속성을 추가할 수 있음 -->
+  <div id="extensive-property">
+	이름을 입력 하세요.	
+	<input v-model="insertedName">
+	
+	<label for="junior" style="font-size: 12px; padding: 2px 4px; background-color: #F5F5F5;">주니어인가요?
+		<input type="checkbox" id="junior" v-model="chked" >
+	</label>
+	
+	<label for="ms" style="font-size: 12px; padding: 2px 4px; background-color: #F5F5F5;">미혼 여성 인가요?</label>
+	<input type="checkbox" id="ms" v-model="chkedMs" >
+	
+	<div style="padding: 8px;">
+		<span v-if="!chkedMs">{{prefixName[0]}}</span><span v-if="chkedMs">{{prefixName[1]}}</span>{{insertedName}}{{nameObject.subfix}}
+	</div>
+		
+  </div>
+  
+  
+  
+<script>
+	
+	var extensive_property = new Vue ({
+		el: '#extensive-property',
+		data: {
+			prefixName: ['Mr.', 'Ms.'],
+			insertedName: ' ',
+			chked: undefined,
+			chkedMs: undefined,
+			nameObject: {
+				
+			}
+		},
+		watch: {
+			chked: function(updated) {
+				console.log(this.chked)
+				
+				if(this.chked) {
+					//nameObject 객체에 반응형 속성 subfix 추가하기
+					//Vue.set(extensive_property.nameObject, 'subfix', ' Jr')
+					
+					//인스턴스 메소드 $set을 사용하여 반응형 속성 추가하기
+					extensive_property.$set(this.nameObject, 'subfix', ' Jr')
+				}
+				else {
+					this.nameObject.subfix = ''
+				}
+				console.log('동적 속성 추가 -', this.nameObject.subfix)
+			}
+		},
+		methods: {
+			
+		}
+	})
+	
+	
+	var list_render = new Vue ({
+		el: '#list-render',
+		data: {
+			
+			//배열 내 객체가 존재하는 형태
+			todoList: [
+				{ name: '영화보기'},{name:'방청소하기'}
+			],
+			
+			todoLabel: '할 일',
+			
+			todoObject: {
+				todoLabel : '할 일', 
+				todoDue: 'YYYY-MM-DD', 
+				todoName : '너에게 주는 일'
+			},
+			
+			mutableTodoList: [
+				{ name: '영화보기'}, {name:'방청소하기'}, {name:'공부하기'}, {name:'수다떨기'}
+			],
+			
+			mutatedTodoList: [
+				
+			],
+			
+			mutableTodoListLength: 4,
+			unshiftName: '',
+			pushName:''
+		},
+		watch: {
+		  	unshiftName: function(updated) {
+				//this.unshiftName = this.unshiftName
+				//console.log(this.unshiftName)
+			},
+			mutableTodoList: function(updated) {
+				this.mutableTodoListLength = this.mutableTodoList.length
+				console.log(this.mutableTodoListLength)
+			}
+		},
+		computed: {
+			//'보기' 텍스트와 매치하는 아이템만 필터링 하는 계산된 속성
+			filtedTodo: function() {
+				return this.mutableTodoList.filter( function(item) {
+						return item.name.match(/보기/	)
+				})
+			}
+		},
+		methods: {
+			mutateTodoList: function(type) {
+				
+				//console.log(this.mutatedTodoList.length)
+				//return this.mutatedTodoList.length
+				
+				/* in console filter() : 
+				list_render.mutableTodoList = list_render.mutableTodoList.filter(function(item) { return item.name.match(/하기/) }) */
+				
+				if(type == 'filter') {
+					this.mutatedTodoList = this.mutableTodoList.filter( function(item) {
+						return item.name.match(/하기/	)
+					})
+				}
+				else if(type=='concat') {
+					this.mutatedTodoList = this.mutatedTodoList.concat(this.mutableTodoList)
+				}
+				else if (type=='slice') {
+					this.mutatedTodoList = this.mutableTodoList.slice(1, (this.mutableTodoListLength)-1 )
+				}
+				
+			},
+			
+			//'보기' 텍스트와 매치하는 아이템만 필터링 하는 method
+			filter: function(mutableTodoList) {
+				return this.mutableTodoList.filter( function(item) {
+						return item.name.match(/보기/	)
+				})
+			}
+			
+		}
+	})
+	
+</script>
+	
+</body>
+</html>
