@@ -18,7 +18,10 @@
 	
 	<link rel="stylesheet" href="./css/styles.css">
 	<link rel="stylesheet" href="./css/common.css">
-	
+	<style>html{font-family: 'Helvetica Neue', sans-serif;-webkit-font-smoothing: antialiased;}.todo-list li {line-height: 24px;}.todo-list li:hover label {
+		text-decoration: underline;cursor: pointer;
+	}
+		</style>
 </head>
 
 <body class="body-wrapper">
@@ -88,18 +91,140 @@
 	
 	<!-- v-if 와 v-for를 함께 사용할 경우 v-for가 높은 우선순위를 가져감. -->
 	
+	<hr>
+	
+	
+	<!-- 완료된 할 일 과 미완료 할 일 리스트 -->
+	<div>
+	
+		<input v-model="todoTitle" placeholder="새로운 할 일을 추가하세요" autofocus>
+		<button @click="createTodo(todoTitle)" type="submit" :disabled="!hasText(todoTitle)" >할 일 추가</button>
+	
+		<div v-if="todoList.length" class="todo-list">
+			<section style="float: left;width: 42%" >
+				<h5 style="margin: 10px 0 10px 0;">미완료 할 일</h5>
+				<ul v-show="filterUnDone.length">
+				
+				<!-- 요 부분을 템플릿으로 등록하여 사용 할 것임.
+				<template v-for="(item, index) in filterUnDone">
+					
+					<li>
+						<input type="checkbox" 
+					       	   v-bind:key="item.itemIndex" 
+						   	   v-on:click="toggleTodo(item.itemIndex)"><!--{{item.isDone}}
+						<strong v-bind:title="item.itemIndex">{{item.name}}</strong>
+						
+						<button type="submit"
+						        @click="deleteTodo(item.itemIndex)">Del</button>
+					</li>
+				</template>-->
+					
+					<!-- 컴포넌트 내부에 item 객체의 데이터를 반복하여 사용할 것이므로 item에 item 속성을 지정 -->
+					<li 
+						is="list-item"
+						v-for="(item, index) in filterUnDone" 
+						v-bind:item="item"
+						v-on:toggle="toggleTodo(item.itemIndex)"
+						v-on:delete="deleteTodo(item.itemIndex)">
+					</li>
+				
+				</ul>
+				
+				<div v-show="filterUnDone.length == 0">
+					<span style="font-size:14px;color: #999;">모든 할 일을 완료 :)</span>
+				</div>
+				
+			</section>
+			
+			<section style="float: left;width: 42%">
+				<h5 style="margin: 10px 0 10px 0;">완료된 할 일</h5>
+				<ul v-show="filterHasDone.length">
+				<!-- 요 부분을 템플릿으로 등록하여 사용 할 것임.
+				<template v-for="(item, index) in filterHasDone">
+					<li>
+						<input type="checkbox"
+						       v-bind:key="item.itemIndex" 
+							   v-on:click="toggleTodo(item.itemIndex)" checked><!--{{item.isDone}}
+						<strong v-bind:title="item.itemIndex">{{item.name}}</strong>
+						<button type="submit"
+						        @click="deleteTodo(item.itemIndex)">Del</button>
+					</li>
+				</template>
+				-->
+					<li 
+						is="list-item"
+						v-for="(item, index) in filterHasDone" 
+						v-bind:item="item"
+						v-on:toggle="toggleTodo(item.itemIndex)"
+						v-on:delete="deleteTodo(item.itemIndex)">
+					</li>
+					
+				</ul>
+				
+				<div v-show="filterHasDone.length == 0">
+					<span style="font-size:14px;color: #999;">완료된 할 일이 없어요 :(</span>
+				</div>
+				
+			</section>
+		</div>
+
+
+	</div>
+	
   </div>
     
 <script>
 	
+	//할 일 아이템을 컴포넌트로 등록
+	Vue.component('list-item', {
+		props: ['item'],
+		template: '\
+		<li>\
+			<input type="checkbox" v-bind:id="item.itemIndex" v-bind:key="item.itemIndex" \
+			       v-bind:checked="item.checked"\
+				   v-on:click="$emit(\'toggle\')">\
+			<label v-bind:title="item.itemIndex" v-bind:for="item.itemIndex"><strong>{{item.name}}</strong></label>\
+			<button type="submit" v-on:click="$emit(\'delete\')">Del</button>\
+		</li>'
+	})
 	
 	var conditional_render = new Vue ({
 		el: '#conditional-render',
 		data: {
 			isButtonVisible : true,
 			randomNumber: Math.floor(Math.random()*100), //0부터 99 사이의 정수를 반환
-			loginType : 'username'
+			loginType : 'username',
+			
+			todoCategory: ['미완료 할 일', '완료된 할 일'], //카테고리 레이블
+			todoTitle: '', //인풋필드에서 입력받을 문자열
+			todoList: [], //v-for로 뿌려줄 할일 리스트 배열
+			todoListIndex : 1 //할 일 리스트 아이템의 고유 인덱스 (number)
+			/*todoListLength: 0, //할 일 리스트 배열의 길이 (number)		
+			completeTodoCount: 0,
+			completeTodoList: []*/
 		},
+		
+		watch: {
+			todoList: function(updated) {
+				
+			}
+		},
+		computed: {
+			
+			filterHasDone: function(item) {
+				return this.todoList.filter( function(item) {
+					return item.isDone.match(/true/)
+					//match() 메소드의 경우, 정규 표현식을 이용한 '문자열'만 체크할 수 있다
+				})
+			},
+			
+			filterUnDone: function(item) {
+				return this.todoList.filter( function(item) {
+					return item.isDone.match(/false/)
+				})
+			}
+		},
+		
 		methods: {
 			toggleForm: function(){
 				if(this.loginType=='username'){
@@ -108,7 +233,92 @@
 				else {
 					this.loginType= 'username'
 				}
-			}
+			},
+			
+			//인풋 필드에 입력된 글자가 있는지 체크
+			hasText: function(todoTitle) {
+				if(todoTitle != '' && todoTitle.length > 0){
+					return true
+				}
+				else {
+					return false
+				}
+			},
+			
+			createTodo: function(todoTitle) {
+				
+				this.todoList.push(
+					{
+						itemIndex: this.todoListIndex++,
+						name: this.todoTitle,
+						checked: false,
+						isDone : 'false'
+					}
+					
+				)
+				this.todoListLength = this.todoList.length
+				this.todoTitle = '' //인풋필드를 리셋
+				
+				console.log('추가된 아이템 이름 : '+ todoTitle, '이후 추가될 아이템 index : '+ this.todoListIndex, '현재 리스트 길이: ' + this.todoListLength)
+			},
+			
+			deleteTodo: function(index) {
+				
+				console.log('삭제할 아이템의 todoListIndex :'+ index)
+				
+				// deleteTodo 함수의 동작 
+				// 1) deleteTodo 함수가 실행된 버튼의 itemIndex(=index 인수)의 값과 일치하는 값을 가진 객체를 todoList 배열에서 찾고
+				// 2) 해당 객체의 todoList 배열에서 index값을 반환
+				// 3) todoList 배열에서 index 위치의 객체를 제거
+				// 4) 객체를 제거 후 todoList 배열의 길이를 todoListLength 변수에 갱신
+				
+				var currentItemIndex = this.todoList.findIndex(x => x.itemIndex === index)
+				
+				console.log('삭제된 객체의 배열 index, itemIndex : ' + currentItemIndex+', '+this.todoList[currentItemIndex].itemIndex ,'삭제된 객체의 name : '+ this.todoList[currentItemIndex].name )
+				
+				this.todoList.splice(currentItemIndex, 1)
+				this.todoListLength = this.todoList.length	
+				
+				
+				console.log('추가될 아이템의 todoListIndex : '+ this.todoListIndex, '현재 리스트 길이: ' + this.todoListLength)
+				
+			},
+			toggleTodo: function(index) {
+				
+				console.log('토글할 아이템의 todoListIndex :'+ index)
+				
+				//toggleTodo를 호출한 아이템의 고유 index와 일치하는 아이템을 currentItem 에 대입
+				//filter 사용 시 배열이 반환됨.
+				/*var currentItem = this.todoList.filter( function(item) {
+										return item.itemIndex === index
+								  })*/
+				
+				// findIndex로 처리 시
+				var currentItemIndex = this.todoList.findIndex(x => x.itemIndex === index)
+				
+				//아이템의 isDone 속성이 true일 경우 false를, 반대일 경우 true를 대입
+				if (this.todoList[currentItemIndex].isDone == 'true'){
+					this.todoList[currentItemIndex].isDone = 'false'
+					this.todoList[currentItemIndex].checked = false
+				}
+				else {
+					this.todoList[currentItemIndex].isDone = 'true'
+					this.todoList[currentItemIndex].checked = true
+				}
+			},
+			
+			/* 미완료-완료 처리는 계산된 속성으로 필터링.
+			hasDone: function(todoList) {
+				return this.todoList.filter( function(item) {
+					return item.isDone.match('true')
+				})
+			},
+			unDone : function(todoList) {
+				return this.todoList.filter( function(item) {
+					return item.isDone.match('false')
+				})
+			}*/
+			
 		}
 		
 	})
