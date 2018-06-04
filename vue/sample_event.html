@@ -12,27 +12,54 @@
 		.num.is-clicked {
 			
 			animation: zoom-in-out;
-			animation-duration: 0.35s;
-			animation-timing-function: ease-out;
+			animation-duration: 0.385s;
+			animation-timing-function: cubic-bezier(0.57, 0.21, 0.25, 1.05);
 		}
 		.num {
+			position: relative;
 			display: inline-block;
-			transform: scale(1);
-			
-			transition: transform ease-out 0.25s;
+			transform: translate3d(0,0,0);
+			padding-right: 2px;
+			transition: transform cubic-bezier(0.53, 0.33, 0.24, 1.04) 0.25s;
 		}
-		/*
-		.num.is-clicked {
-			transform: scale(2.75);
-			transition: transform ease-out 0.35s;
-		}*/
+		.num .effect {
+			position: absolute;
+			z-index: -1;
+			display: inline-block;
+			top: 0;
+			left: 0;
+			color: #797979;
+			opacity: 0;
+			transform: translate3d(0,0,0);
+			
+		}
+		.num.is-clicked .effect {
+			animation: zoom-in;
+			animation-duration: 0.45s;
+			animation-timing-function: cubic-bezier(0.51, 0.43, 0.25, 1.05);
+		}
+		
+		@keyframes zoom-in {
+			0% {
+				transform: scale(1);
+				opacity: 0.6;
+				filter: blur(0px);
+			}
+			75% {
+				opacity: 0;
+			}
+			100% {
+				transform: scale(3.5);
+				filter: blur(1px);
+			}
+		}
 		
 		@keyframes zoom-in-out {
 			0% {
 				transform: scale(1);
 			}
 			42% {
-				transform: scale(2.75);
+				transform: scale(2.55);
 			}
 			100% {
 				transform: scale(1);
@@ -97,9 +124,9 @@
   <div id="event-handling">
   	
   	<!-- 버튼 클릭 이벤트에 따른 특정 변수 값 업데이트 -->
-  	<section>
+  	<section style="padding: 20px;">
 	  	<button v-on:click="addCount" >+1</button>
-	  	<span>버튼을 클릭한 횟수는<strong class="num" v-bind:class="{'is-clicked': isClicked}">{{count}}</strong> 번 입니다</span>
+	  	<span>버튼을 클릭한 횟수는 <strong class="num" v-bind:class="{'is-clicked': isClicked}">{{count}}<span class="effect">{{count}}</span></strong>번 입니다</span>
   	</section>
   	
   	<hr>
@@ -168,6 +195,14 @@
 			]
 			
 		},
+		watch: {
+			count: function(updated) {
+				this.isClicked = true
+				
+				// 애니메이션 duration이 끝나면 reset하는 메소드 호출 (클릭 시 마다 애니메이션이 실행될 수 있도록)
+				setTimeout(this.resetClass, '400')
+			}	
+		},
 		methods: {
 			//listlink 배열에서 target index를 가진 객체의 link 에 대응하는 값의 주소로 새 페이지를 띄움
 			gotoNewTab: function(target) {
@@ -182,12 +217,9 @@
 			//클릭 이벤트가 1회 발생할 때 마다 카운트 더하기
 			addCount: function() {
 				this.count++
-				this.isClicked = true
-				
-				// 애니메이션 duration이 끝나면 reset하는 메소드 호출 (클릭 시 마다 애니메이션이 실행될 수 있도록)
-				setTimeout(this.resetClass, '350')
 			},
 			
+			// isClicked 변수를 false로 리턴
 			resetClass: function() {
 				this.isClicked = false
 			},
