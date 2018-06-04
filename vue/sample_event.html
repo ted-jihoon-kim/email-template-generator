@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample 7</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+		.num.is-clicked {
+			
+			animation: zoom-in-out;
+			animation-duration: 0.35s;
+			animation-timing-function: ease-out;
+		}
+		.num {
+			display: inline-block;
+			transform: scale(1);
+			
+			transition: transform ease-out 0.25s;
+		}
+		/*
+		.num.is-clicked {
+			transform: scale(2.75);
+			transition: transform ease-out 0.35s;
+		}*/
+		
+		@keyframes zoom-in-out {
+			0% {
+				transform: scale(1);
+			}
+			42% {
+				transform: scale(2.75);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		html{font-family: 'Helvetica Neue', sans-serif;-webkit-font-smoothing: antialiased;}
+		h5 {
+			color: #797979;
+			margin: 8px 2px;
+		}
+		.list-ui {
+			position: relative;cursor: pointer;
+			display: block;
+			border: 1px solid #EEE;
+			border-width: 1px 0 0 0;
+			padding: 12px 12px 12px 72px;
+		}
+		.list-ui:hover {
+			background-color: #F3F3F3;
+		}
+		.list-ui img {
+			position: absolute;
+			width: 42px;
+			height: 42px;
+			left: 16px;
+			top: 12px;
+			border-radius: 2px;
+		}
+		
+		.list-ui .list-name {
+			margin: 0;
+			line-height: 20px;
+			font-size: 16px;
+			font-weight: 700;
+			margin: 2px 0;
+		}
+		.list-ui .list-desc {
+			font-size: 14px;
+			line-height: 20px;
+			display: inline-block;
+			color: #999;
+		}
+		
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper">
+  
+  <!-- 이벤트 핸들링 -->
+  <div id="event-handling">
+  	
+  	<!-- 버튼 클릭 이벤트에 따른 특정 변수 값 업데이트 -->
+  	<section>
+	  	<button v-on:click="addCount" >+1</button>
+	  	<span>버튼을 클릭한 횟수는<strong class="num" v-bind:class="{'is-clicked': isClicked}">{{count}}</strong> 번 입니다</span>
+  	</section>
+  	
+  	<hr>
+  	
+  	<section>
+	  	<!-- 클릭 이벤트 메소드에 event인자를 받아서 처리하는 방식 -->
+	  	<button v-on:click="sayHello">Greeting</button>
+	  	
+	  	<!-- 클릭 이벤트 메소드 실행 시 출력할 문자열을 함께 전달하는 방식 -->
+	  	<button v-on:click="say('Hi!')">Say Hi!</button>
+	  	<button v-on:click.once="say('What?')">Say What?</button>
+  	</section>
+  	
+  	<hr>
+  	
+  	<!-- 이벤트 수식어 처리 샘플 -->
+  	<section>
+		<h5>Official Accounts</h5>
+		
+		<!-- v-on:click.self="event" 선언 시 event.target이 엘리먼트 자체일 경우에만 수행합니다. -->
+		<div class="list-ui" v-on:click.self="gotoNewTab(0)" >
+			<img v-on:click="gotoNewTab(1)"
+				 src="https://qph.fs.quoracdn.net/main-thumb-314258752-100-ddqighveszlccpnfyzajtfmcmzweaofp.jpeg">
+			<p class="list-name" >The Economist</p>
+			
+			<!-- v-on:click.prevent="event" 선언 시 하위의 a 태그에 걸린 링크 이동을 무시합니다. -->
+			<span class="list-desc" v-on:click.prevent="traceText">
+			  <a href="http://jandi.com" target="_blank" style="color: inherit;">News and analysis with a global perspective.</a>
+			</span>
+		</div>
+		
+		<!-- v-on:click.once="clickEvent" 선언 시 이벤트를 1번만 수행합니다. -->
+		<div class="list-ui" v-on:click.once="gotoNewTab(1)">
+			<img v-on:click="gotoNewTab(0)" src="https://qph.fs.quoracdn.net/main-thumb-271427263-200-mlbcoolrpyxesozdlmckxrymvylyddmp.jpeg">
+			<p class="list-name" v-on:click="traceText">Quora for Business</p>
+			<span class="list-desc" v-on:click="traceText">Learn more about advertising on Quora at quora.com/business.</span>
+		</div>
+	  	
+  	</section>
+  	
+  </div>
+  
+<script>
+	
+	var event_handling = new Vue ({
+		el: '#event-handling',
+		data: {
+			count: 0,
+			isClicked: false,
+			name: 'Vue.js',
+			listLink: [
+				{link: 'https://www.quora.com/profile/The-Economist/followers'},
+				{link: 'https://www.quora.com/profile/Quora-for-Business-1/'}
+			]
+			
+		},
+		methods: {
+			//listlink 배열에서 target index를 가진 객체의 link 에 대응하는 값의 주소로 새 페이지를 띄움
+			gotoNewTab: function(target) {
+				window.open(this.listLink[target].link, '_blank')
+			},
+			
+			// 클릭 이벤트가 발생한 target이 가진 텍스트를 로그로 출력
+			traceText: function(event) {
+				console.log(event.target.textContent)
+			},
+			
+			//클릭 이벤트가 1회 발생할 때 마다 카운트 더하기
+			addCount: function() {
+				this.count++
+				this.isClicked = true
+				
+				// 애니메이션 duration이 끝나면 reset하는 메소드 호출 (클릭 시 마다 애니메이션이 실행될 수 있도록)
+				setTimeout(this.resetClass, '350')
+			},
+			
+			resetClass: function() {
+				this.isClicked = false
+			},
+						
+			sayHello: function(event) {
+				console.log('Hello' + this.name + '!')
+				
+				//특정 이벤트를 통해 호출되지 않았을 경우 event 변수는 undefined로 표시됨.
+				console.log(event)
+				
+				//sayHello 메소드 호출이 특정 이벤트를 통해 호출되었을 경우에만 실행.
+				if(event){
+					console.log(event.target.tagName)
+				}
+			},
+			say: function(msg) {
+				console.log(msg)
+			}
+		}
+	})
+	
+	//vue 객체 외부에서도 객체 내부에 정의된 함수를 호출 할 수 있음.
+	event_handling.sayHello();
+	
+	
+</script>
+	
+</body>
+</html>
