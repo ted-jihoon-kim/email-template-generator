@@ -44,7 +44,7 @@
     <p>HTML로 출력 : <span v-html="msg"></span></p>
     
     <!-- Mustache 구문은 HTML속성 (e.g. id, href, ..)에서 사용할 수 없습니다. -->
-    <!-- v-bind 디렉티브는 : 로 약어 사용 가능 -->
+    <!-- v-bind:{{바인딩 속성}} 디렉티브는 :{{바인딩 속성}} 로 약어 사용 가능 -->
     <a v-bind:id="msg" :title="msg" :href="msg" target="_blank">어트리뷰트로 출력 </a>
   
     <!-- v-bind 사용 시 Boolean 속성 사용 시 true가 아닌 경우 엘리먼트에 포함되지 않습니다. -->
