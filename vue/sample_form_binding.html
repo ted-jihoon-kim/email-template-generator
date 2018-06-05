@@ -144,6 +144,7 @@
 
 
 <script>
+	
 	Vue.component('list-item', {
 		props: ['item'],
 		template: '\
@@ -153,7 +154,8 @@
 			<br><span>{{item.formType}}</span>\
 			<br v-if="item.isEditable"><span v-if="item.isEditable">{{item.isEditable}}</span>\
 			<br v-if="item.isImmutable"><span v-if="item.isImmutable">{{item.isImmutable}}</span>\
-			<br><span>{{item.formCurrency}}</span><br>\
+			<br><span>{{item.formCurrency}}</span>\
+			<br><span>{{item.createdAt}}</span>\
 		</li>'
 		//<button type="submit" v-on:click="$emit(\'delete\')">Del</button>\
 	})
@@ -177,7 +179,8 @@
 			currencySelected: 'JPY',
 			createdForms: [], // 생성된 객체 list
 			isTitleEmpty : true,
-			isDescEmpty : true//,
+			isDescEmpty : true,
+			createdAt: ''
 			//isTypeEmpty : true ,
 			//isOptionEmpty : true
 		},
@@ -243,7 +246,9 @@
 			
 			//submit 클릭 이벤트
 			confirm: function(event) {
-				//console.log('confirm form-data')
+
+				var currentTime = moment.locale('ko')
+				currentTime = moment().format('YYYY-MM-DD HH:MM')
 				
 				//form에 입력된 내용을 currentData 객체로 생성하여 createdForms 배열에 순서대로 저장
 				var currentData = new Object
@@ -254,7 +259,8 @@
 					'formType' : this.formType,
 					'isEditable' : this.formOption.isEditable,
 					'isImmutable' : this.formOption.isImmutable,
-					'formCurrency' : this.currencySelected
+					'formCurrency' : this.currencySelected,
+					'createdAt' : currentTime
 				}
 				
 				this.createdForms.push(currentData)
