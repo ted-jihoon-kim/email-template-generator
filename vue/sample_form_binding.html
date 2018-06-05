@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample 8</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+		* {box-sizing: border-box;}
+		html, body {font-family: 'Helvetica Neue', sans-serif;-webkit-font-smoothing: antialiased; margin: 0; padding: 0;}
+		body {overflow-x: hidden; overflow-y: auto;}
+		h5 {
+			color: #797979;
+			margin: 4px 2px;
+		}
+		.body-wrapper { position: absolute; top: 0; left: 0; bottom: 0; right: 0;background-color: #F0F0F0;}
+		.form-input,.form-list {position: relative; display: block; max-width: 450px; margin: 24px auto;padding: 10px 12px;
+    background-color: #FFF;box-shadow: 0 1px 7px 0 rgba(0,0,0,0.03);border-radius: 2px 2px 4px 4px;}
+    	.form-item {margin-bottom: 12px;}
+		.form-preview {
+			padding: 6px;
+			background-color: #F5F5F5;
+			font-size: 13px;
+			line-height: 19px;
+		}
+		.btn {
+			display: block;
+			padding: 6px 8px;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 18px;
+			border-radius: 3px;
+			background-color: #0937AD;
+			color: #FFF;
+			border: none;
+		}
+		.btn[disabled] {
+			background-color: #EEE;
+		}
+		.b-full-width {
+			width: 100%;
+		}
+		.form-list li {
+			padding: 12px 5px;
+		}
+		.form-list li:not(:first-of-type) {
+			border-top: 1px solid #EDEDED;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper" >
+  
+  <!-- 폼 바인딩 -->
+  <div id="form-binding">
+    
+    <form class="form-input" >
+	    
+      <section class="input-section">
+        
+        <div class="form-item">
+	      <label><h5>{{formLables[0]}}</h5></label>
+		  <input v-model.lazy="formTitle"
+		         placeholder="제목을 입력하세요">
+        </div>
+        
+        <div class="form-item">
+	      <label><h5>{{formLables[1]}}</h5></label>
+		  <textarea v-model.lazy="formDescription" placeholder="설명을 입력하세요"></textarea>
+        </div>
+        
+        <div class="form-item">
+	      <label><h5>{{formLables[2]}}</h5></label>
+		  <input type="radio" id="radio-1" value="refund" v-model="formType">환불
+		  <input type="radio" id="radio-2" value="cancel" v-model="formType">구매 취소
+        </div>
+        
+        <div class="form-item">
+	      <label><h5>{{formLables[3]}}</h5></label>
+		  <input type="checkbox" id="checkbox-1" v-model="formOption.isEditable"><!--true-value="ReadOnly" false-value="CanEdit" -->
+		  <label for="checkbox-1">읽기 전용으로 설정</label>
+		  <input type="checkbox" id="checkbox-2" value="Immutable" v-model="formOption.isImmutable">
+		  <label for="checkbox-2">수정 불가로 설정</label>
+        </div>
+        
+        <div class="form-item">
+	      <label><h5>{{formLables[4]}}</h5></label>
+		  <select v-model="currencySelected">
+		    <option v-for="item in formCurrency"
+		            v-bind:value="item.value">{{item.text}}</option>
+		  </select>
+        </div>
+        
+        <div class="form-footer" style="border-top: 1px solid transparent;padding: 12px 0 0;">
+          <button class="btn b-full-width" type="submit" 
+          	      v-on:click.prevent="confirm()" 
+          	      v-bind:disabled="!isAvailable">제출하기</button>
+        </div>
+      
+      </section>
+      
+   
+      <!-- 미리보기 -->
+      <section class="form-preview" style="margin-top: 4px;display: none;">
+	   {{formLables[0]}} : <span>{{formTitle}}</span><br>
+	   {{formLables[1]}} : <span style="white-space: pre-line;">{{formDescription}}</span><br>
+	   {{formLables[2]}} : <span>{{formType}}</span><br>
+	   {{formLables[3]}} : <span>{{formOption}}</span><br>
+	   {{formLables[4]}} : <span>{{currencySelected}}</span>
+      </section>
+      
+      
+	</form>
+	
+	<div class="form-list" v-if="createdForms.length>0">
+		<h5>Inquiry Items ({{createdForms.length}})</h5>
+		<ul style="list-style: none; padding: 0;margin: 0;">
+		  <li 
+			is="list-item"
+			v-for="item in createdForms" 
+			v-bind:item="item">
+		  </li>
+		</ul>
+	</div>
+	
+	
+  
+  </div>
+
+ 
+
+
+
+<script>
+	Vue.component('list-item', {
+		props: ['item'],
+		template: '\
+		<li>\
+			<span><strong>{{item.formTitle}}</strong></span>\
+			<br><span>{{item.formDesc}}</span>\
+			<br><span>{{item.formType}}</span>\
+			<br v-if="item.isEditable"><span v-if="item.isEditable">{{item.isEditable}}</span>\
+			<br v-if="item.isImmutable"><span v-if="item.isImmutable">{{item.isImmutable}}</span>\
+			<br><span>{{item.formCurrency}}</span><br>\
+		</li>'
+		//<button type="submit" v-on:click="$emit(\'delete\')">Del</button>\
+	})
+	
+	
+	
+	var form_binding = new Vue ({
+		el: '#form-binding',
+		data: {
+			isAvailable : false,
+			formLables : ['제목', '설명', '요청 내용', '옵션 설정', '대상 통화 선택'], //label array
+			formTitle : '', //input - text 
+			formDescription : '', //textarea
+			formType: 'refund', //input - radio (default value is refund)
+			formOption: {}, //input - checkbox
+			formCurrency: [
+				{ text: 'JPY', value: 'JPY' },
+				{ text: 'USD', value: 'USD' },
+				{ text: 'KRW', value: 'KRW' }
+			], //select
+			currencySelected: 'JPY',
+			createdForms: [], // 생성된 객체 list
+			isTitleEmpty : true,
+			isDescEmpty : true//,
+			//isTypeEmpty : true ,
+			//isOptionEmpty : true
+		},
+		watch: {
+			
+			formTitle : function(updated) {
+				if(this.formTitle != '') {
+					this.isTitleEmpty = false
+				}
+				else {
+					this.isTitleEmpty = true
+				}
+				console.log( this.isTitleEmpty )
+				this.chkForms()
+			},
+			formDescription : function(updated) {
+				if(this.formDescription != '') {
+					this.isDescEmpty = false
+				}
+				else {
+					this.isDescEmpty = true
+				}
+				console.log( this.isDescEmpty )
+				this.chkForms()
+			}
+			/*,
+			formType : function(updated) {
+				if(this.formType != '') {
+					this.isTypeEmpty = false
+				}
+				else {
+					this.isTypeEmpty = true
+				}
+				console.log( this.isTypeEmpty )
+				this.chkForms()
+			}*/			
+			
+		},
+		computed: {
+			
+		},
+		methods: {
+			
+			//빈 데이타가 없는지 체크
+			chkForms: function() {
+				
+				if(!this.isTitleEmpty && !this.isDescEmpty && !this.isTypeEmpty) {
+					this.isAvailable = true
+				}
+				else {
+					this.isAvailable = false
+				}
+				console.log('isAvailable : '+this.isAvailable)
+				
+			},
+			resetDatas: function() {
+				 this.formTitle = ''
+				 this.formDescription = ''
+				 this.formType = 'refund'
+				 this.formOption= {} 
+				 this.currencySelected = 'JPY'
+			},
+			
+			//submit 클릭 이벤트
+			confirm: function(event) {
+				//console.log('confirm form-data')
+				
+				//form에 입력된 내용을 currentData 객체로 생성하여 createdForms 배열에 순서대로 저장
+				var currentData = new Object
+				
+				currentData = {
+					'formTitle' : this.formTitle, 
+					'formDesc' : this.formDescription,
+					'formType' : this.formType,
+					'isEditable' : this.formOption.isEditable,
+					'isImmutable' : this.formOption.isImmutable,
+					'formCurrency' : this.currencySelected
+				}
+				
+				this.createdForms.push(currentData)
+				
+				this.resetDatas()
+				
+			}
+			
+		}
+	})
+
+
+
+</script>
+	
+</body>
+</html>
