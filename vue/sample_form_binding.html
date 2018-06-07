@@ -97,6 +97,12 @@
         
         <div class="form-item">
 	      <label><h5>{{formLables[4]}}</h5></label>
+		  <input v-model.number="formNumber"
+		         placeholder="상품 번호를 입력하세요">
+        </div>
+        
+        <div class="form-item">
+	      <label><h5>{{formLables[5]}}</h5></label>
 		  <select v-model="currencySelected">
 		    <option v-for="item in formCurrency"
 		            v-bind:value="item.value">{{item.text}}</option>
@@ -154,6 +160,7 @@
 			<br><span>{{item.formType}}</span>\
 			<br v-if="item.isEditable"><span v-if="item.isEditable">{{item.isEditable}}</span>\
 			<br v-if="item.isImmutable"><span v-if="item.isImmutable">{{item.isImmutable}}</span>\
+			<br v-if="item.formNumber"><span v-if="item.formNumber">{{item.formNumber}}</span>\
 			<br><span>{{item.formCurrency}}</span>\
 			<br><span>{{item.createdAt}}</span>\
 		</li>'
@@ -166,11 +173,12 @@
 		el: '#form-binding',
 		data: {
 			isAvailable : false,
-			formLables : ['제목', '설명', '요청 내용', '옵션 설정', '대상 통화 선택'], //label array
+			formLables : ['제목', '설명', '요청 내용', '옵션 설정', '상품 ID', '대상 통화 선택'], //label array
 			formTitle : '', //input - text 
 			formDescription : '', //textarea
 			formType: 'refund', //input - radio (default value is refund)
 			formOption: {}, //input - checkbox
+			formNumber: undefined,
 			formCurrency: [
 				{ text: 'JPY', value: 'JPY' },
 				{ text: 'USD', value: 'USD' },
@@ -180,6 +188,7 @@
 			createdForms: [], // 생성된 객체 list
 			isTitleEmpty : true,
 			isDescEmpty : true,
+			isNumberEmpty : true,
 			createdAt: ''
 			//isTypeEmpty : true ,
 			//isOptionEmpty : true
@@ -205,18 +214,17 @@
 				}
 				console.log( this.isDescEmpty )
 				this.chkForms()
-			}
-			/*,
-			formType : function(updated) {
-				if(this.formType != '') {
-					this.isTypeEmpty = false
+			},
+			formNumber : function(updated) {
+				if(this.formNumber != '') {
+					this.isNumberEmpty = false
 				}
 				else {
-					this.isTypeEmpty = true
+					this.isNumberEmpty = true
 				}
-				console.log( this.isTypeEmpty )
+				console.log( this.isNumberEmpty )
 				this.chkForms()
-			}*/			
+			}		
 			
 		},
 		computed: {
@@ -227,7 +235,7 @@
 			//빈 데이타가 없는지 체크
 			chkForms: function() {
 				
-				if(!this.isTitleEmpty && !this.isDescEmpty && !this.isTypeEmpty) {
+				if(!this.isTitleEmpty && !this.isDescEmpty && !this.isNumberEmpty ) {
 					this.isAvailable = true
 				}
 				else {
@@ -240,7 +248,8 @@
 				 this.formTitle = ''
 				 this.formDescription = ''
 				 this.formType = 'refund'
-				 this.formOption= {} 
+				 this.formOption= {},
+				 this.formNumber = '',
 				 this.currencySelected = 'JPY'
 			},
 			
@@ -259,6 +268,7 @@
 					'formType' : this.formType,
 					'isEditable' : this.formOption.isEditable,
 					'isImmutable' : this.formOption.isImmutable,
+					'formNumber' : this.formNumber,
 					'formCurrency' : this.currencySelected,
 					'createdAt' : currentTime
 				}
