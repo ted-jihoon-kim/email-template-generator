@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample 9</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+		* {box-sizing: border-box;}
+		html, body {font-family: 'Helvetica Neue', sans-serif;-webkit-font-smoothing: antialiased; margin: 0; padding: 0;}
+		body {overflow-x: hidden; overflow-y: auto;}
+		h5 {
+			color: #797979;
+			margin: 4px 2px;
+			text-align: center;
+		}
+		.body-wrapper { position: absolute; top: 0; left: 0; bottom: 0; right: 0;background-color: #F0F0F0;}
+		
+		.btn {
+			display: block;
+			padding: 6px 8px;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 18px;
+			border-radius: 3px;
+			background-color: #0937AD;
+			color: #FFF;
+			border: none;
+		}
+		.btn[disabled] {
+			background-color: #EEE;
+		}
+		.b-full-width {
+			width: 100%;
+		}
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	
+</head>
+
+<body class="body-wrapper" >
+  
+  <!-- 루트 인스턴스 -->
+  <div id="component-basic">
+     <count-component></count-component>
+     <!-- 전역으로 등록한 컴포넌트 --> 
+     <global-component></global-component>
+     
+     <!-- child-instance에 등록한 지역 컴포넌트-->
+	 <my-component></my-component> 
+	    
+	 <table style="width: 100%;">
+		    <!-- 전역으로 등록한 컴포넌트 --> 
+		    <!-- tr, li 같이 특정 DOM이 오도록 제한되는 요소의 경우 tag name이 아닌 is="componentName" 형태로 사용이 가능 -->
+		    <tr>
+		    <th is="global-component"></th>
+		    
+		    <!-- child-instance에 등록한 지역 컴포넌트 -->
+		    <th is="my-component"></th>
+		    </tr>
+	 </table>
+	 
+	 
+	 <div id="child-instance">
+	    
+	    <!-- 전역으로 등록한 컴포넌트 --> 
+	    <global-component></global-component>
+		
+		
+     </div>
+     
+     
+     
+       
+  </div>
+  
+  <div id="count-sample">
+	
+	<count-component></count-component>
+	
+  </div>
+  
+  <!-- props로 데이터 전달 -->
+  <div id="props-sample">
+	  
+	  <!-- HTML에는 kebab-case 를 사용 -->
+	  <props-component prefix-message="안녕!" message="데이터 전달은 이렇게 해요."></props-component>
+	  
+	  <!-- 동적 props 를 사용 -->
+	  <input v-model="prefilledMsg" style="display: block; width: 300px;">
+	  <dynamic-props-comp v-bind:prefilled-msg="prefilledMsg"></dynamic-props-comp>
+	  
+	  <!-- 객체를 사용 -->
+	  <dynamic-object-comp v-bind:todo="todo" ></dynamic-object-comp>
+	  
+  </div>
+
+<script>
+	
+	// 전역 컴포넌트
+	Vue.component('global-component', {
+		template: '\
+		<h5>\
+			<span>이것은 전역 컴포넌트 입니다.</span>\
+		</h5>',
+		//data는 컴포넌트 인스턴스의 함수 function 여야 함. 아래 처럼 등록할 경우 오류 발생.
+		/*
+		data: {
+			prefix: 'Greetings! '
+		}
+		*/
+	})
+	
+	var data = { counter: 0 }
+	
+	// 전역 컴포넌트
+	Vue.component('count-component', {
+		template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+		// 각 컴포넌트 인스턴스에 대해 같은 객체 참조를 반환합니다.
+		data: function () {
+			
+			//return data 선언 시 모든 count-component 객체가 같은 counter 변수를 참조하게 됨.
+			//return data
+			
+			// 각각의 객체가 개별 값을 가지려면 아래처럼 새로운 data 객체를 반환하도록 함.
+			return {
+				counter: 0
+			}
+  		}
+	})
+	
+	// 전역 컴포넌트 - 컴포넌트 호출 시 데이터 전달 받는 형태
+	Vue.component('props-component', {
+		// JavaScript는 camelCase 를 사용
+		props: ['message','prefixMessage'],
+		template: '<span>{{prefixMessage}} {{ message }}</span>'
+	})
+	
+	// 전역 컴포넌트 - 동적으로 데이터 전달 받는 형태
+	Vue.component('dynamic-props-comp', {
+		props: ['prefilledMsg'],
+		template: '<span>{{prefilledMsg}}</span>'
+	})
+	
+	// 전역 컴포넌트 - 객체 전체를 전달 받는 형태
+	Vue.component('dynamic-object-comp', {
+		props: ['todo'],
+		template: '<span> {{todo.id}} / {{todo.title}} / {{todo.isDone}}</span>'
+	})
+	
+	
+	// 지역 컴포넌트 선언
+	var Child = {
+		template: '<th><h5>이것은 지역 컴포넌트 입니다.</h5></th>'
+	}
+	
+	/* 루트 인스턴스 생성*/
+	new Vue ({
+		el: '#component-basic',
+		components: {
+			// 지역 컴포넌트 
+			// <my-component> 는 상위 템플릿에서만 사용할 수 있습니다.
+			'my-component': Child
+		}
+	})
+	
+	
+	//하위 인스턴스 생성
+	var listItem = new Vue ({
+		el: '#child-instance',
+		
+	})
+	
+	
+	
+	//count 샘플 인스턴스 생성
+	var countSample = new Vue ({
+		el: '#count-sample'
+		
+	})
+	
+	//count 샘플 인스턴스 생성
+	var propsSample = new Vue ({
+		el: '#props-sample',
+		data: {
+			prefilledMsg : '동적으로 컴포넌트에 데이타 전달',
+			todo: {
+				id: 'I10KN',
+				title: '공과금 납부하기',
+				isDone : false
+			}
+		}
+	})
+
+
+</script>
+	
+</body>
+</html>
