@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Vue sample 10</title>
+	<style>
+		[id*="L10Nlink"] {
+		  padding-left: 24px;
+		}
+		* {box-sizing: border-box;}
+		html, body {font-family: 'Helvetica Neue', sans-serif;-webkit-font-smoothing: antialiased; margin: 0; padding: 0;}
+		body {overflow-x: hidden; overflow-y: auto;}
+		h5 {
+			color: #797979;
+			margin: 4px 2px;
+			text-align: center;
+		}
+		.body-wrapper { position: absolute; top: 0; left: 0; bottom: 0; right: 0;background-color: #F0F0F0;}
+		
+		.btn {
+			display: block;
+			padding: 6px 8px;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 18px;
+			border-radius: 3px;
+			background-color: #0937AD;
+			color: #FFF;
+			border: none;
+		}
+		.btn[disabled] {
+			background-color: #EEE;
+		}
+		.b-full-width {
+			width: 100%;
+		}
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="http://danml.com/js/download.js"></script>
+	<script src="/js/moment-with-locales.js"></script>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	<!--
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/common.css">
+	-->
+</head>
+
+<body class="body-wrapper" >
+  
+  <!-- 루트 인스턴스 -->
+  <div id="component-advance">
+  	
+  	<!-- 컴포넌트의 prop 검증 : 직접 선언한 객체 전달 
+  	<validate-props-comp v-bind='{ propA: 111, propB: "bbb", propC: "asdf", propD: 2, propE: {data:"null"}, propF: "11" }' >
+  	</validate-props-comp>-->
+  	
+  	<!-- 컴포넌트의 prop 검증 : Vue 객체의 data로 선언된 객체를 전달 -->
+  	<validate-props-comp v-bind='customProps' >
+  	</validate-props-comp>
+
+  </div>
+  
+   
+   
+  <hr>
+  
+  
+  
+  <!-- 이벤트 핸들링 샘플 -->
+  <div id="counter-event-sample" style="padding: 20px;">
+	<p>{{total}}</p>
+	<!-- increment 이벤트 트리거 시 incrementTotal 메소드를 실행 -->
+	<button-counter v-on:increment="incrementTotal"></button-counter>
+	
+	<button-counter v-on:increment="incrementTotal"></button-counter>
+	
+	<!-- 컴포넌트의 루트 엘리먼트에서 네이티브 이벤트를 수신하려할 경우, v-on디렉티브에 native	수식어를 사용 -->
+	<button-counter v-on:click.native="incrementTotal"></button-counter>
+  </div>
+     
+     
+     
+  <hr>
+  
+  
+  <!-- 양방향 바인딩 샘플 (TBD) 
+  <div id="sync-sample">
+	
+	<comp v-bind:foo.sync="bar"></comp>
+  </div>
+  -->
+  
+  <!-- 사용자 정의 이벤트 사용 -->
+  <!-- 아래 3개 인풋필드가 동일한 변수를 표시하고 업데이트 함 -->
+  <div id="custom-event-sample">
+	  
+	  <!-- v-model을 사용한 input -->
+	  <input v-model="something" >
+	  
+	  <!-- v-on 디렉티브를 사용한 input -->
+	  <input v-bind:value="something"
+	  	     v-on:input="something = $event.target.value">
+	  
+	  <!-- 컴포넌트를 사용한 형태 -->
+	  <custom-input :value="something"
+	                v-on:input="something = $event">
+	  </custom-input>
+	  
+  </div>
+  
+
+<script>
+	
+	Vue.component('custom-input', {
+		props: ['value'],
+		//템플릿 내부의 ""(따옴표) 내부에서 '' 를 표현하려할 경우, ' 앞에 \를 붙여야 정상적으로 동작함. ($emit(\'input\', ... 참고)
+		template: '\
+		<input v-bind:value="value" \
+        	   v-on:input="$emit(\'input\', $event.target.value)" \
+        >'
+        
+	})
+	
+/*
+	Vue.component('comp', {
+		template: '<input v-model="" ',
+		data: ['foo'],
+		watch: {
+			this.$emit('update:foo', newValue)
+
+		},
+		
+	})
+*/
+	
+	Vue.component( 'validate-props-comp', {
+		props: {
+			// 기본 타입 확인 (`null` 은 어떤 타입이든 가능하다는 뜻)
+			// Type은 다음 네이티브 생성자 중 하나를 사용가능
+			// String | Number | Boolean | Function | Object | Array | Symbol(?)
+			// propA에 Number 타입이 아닐 경우, 렌더링은 이루어 지나 경고를 출력.
+			// props는 컴포넌트 인스턴스가 생성되기 전에 검증되기 때문에 default 또는 validator 함수 내에서 data, computed 또는 methods와 같은 인스턴스 속성 사용 불가.
+			propA: Boolean,
+			
+			// 여러개의 가능한 타입
+			propB: [String, Number],
+			
+			// 문자열이며 꼭 필요합니다
+			propC: {
+				type: String,
+				required: true
+			},
+			
+			// 숫자이며 기본 값을 가집니다
+			propD: {
+				type: Number,
+				default: 100
+			},
+			
+			// 객체/배열의 기본값은 팩토리 함수에서 반환 되어야 합니다.
+			// default 값은 props로 전달 받은 값이 없을 경우 대체됨.
+			propE: {
+				type: Object,
+				default: function () {
+					return { message: 'hello' }
+				}
+			},
+			
+			// 사용자 정의 유효성 검사 가능
+			propF: {
+				validator: function (value) {
+					return value > 10
+				}
+			}
+			
+		},
+		// 컴포넌트의 템플릿 작성 시, 루트 엘리먼트는 *1개* 여야 함.
+		// 예를 들어 p 엘리먼트 하위에 각각의 span요소를 나열하는 것은 가능하나,
+		// p엘리먼트 없이 span엘리먼트 여러 개를 나열하는 것은 불가능
+		// Component template should contain exactly one root element. 
+		// If you are using v-if on multiple elements, use v-else-if to chain them instead.
+		template: '\
+			<p> <span>propA: {{ propA }}</span> \
+			<br> <span>propB: {{ propB }}</span> \
+			<br> <span>propC: {{ propC }}</span> \
+			<br> <span>propD: {{ propD }}</span> \
+			<br> <span>propE: {{ propE }}</span> \
+			<br> <span>propF: {{ propF }}</span> </p>\ '
+	})
+	
+	// 사용자 지정 이벤트 샘플 
+	// 컴포넌트에 increment 이벤트 호출 시 incrementTotal 함수를 실행하므로,
+	// 1) 컴포넌트 하위에 있는 버튼의 클릭 이벤트에 incrementCounter 함수를 실행하게 하고
+	// 2) 상위의 increment 이벤트를 호출하도록 전달
+	// 결과적으로 각각의 버튼 내부의 counter 변수를 1씩 증가 시키고 각각의 버튼들에서 increment 이벤트를 호출한 만큼 total 변수를 증가 시킴
+	Vue.component('button-counter', {
+		template: '<button v-on:click="incrementCounter">{{counter}}</button>',
+		data: function() {
+			return {counter: 0}
+		},
+		methods: {
+			incrementCounter: function() {
+				this.counter += 1
+				this.$emit('increment')
+			}
+		},
+	})
+
+	/* 루트 인스턴스 생성*/
+	var advanceComp = new Vue ({
+		el: '#component-advance',
+		data: {
+			
+			customProps: {
+				propA : true,
+				propB : ' ',
+				propC : 'propC String',
+				propD : 14,
+				propE : undefined, //{data: 'Unassigned'}
+				propF : 11
+			}
+		}
+	})
+	
+	new Vue ({
+		el: '#counter-event-sample',
+		data: {
+			total: 0
+		},
+		methods: {
+			incrementTotal: function() {
+				this.total += 1
+			}
+		}
+	})
+	
+	var customEvent = new Vue ({
+		el: '#custom-event-sample',
+		data: {
+			something: '썸씽'
+		},
+		methods: {
+			
+		}
+	})
+	
+
+
+</script>
+	
+</body>
+</html>
