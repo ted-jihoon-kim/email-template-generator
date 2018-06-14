@@ -96,7 +96,7 @@
   
   <!-- 사용자 정의 이벤트 사용 -->
   <!-- 아래 3개 인풋필드가 동일한 변수를 표시하고 업데이트 함 -->
-  <div id="custom-event-sample">
+  <div id="custom-event-sample" style="padding: 20px;">
 	  
 	  <!-- v-model을 사용한 input -->
 	  <input v-model="something" >
@@ -112,11 +112,91 @@
 	  
   </div>
   
+  
+  <hr>
+  
+  
+  <!-- 커스텀 컴포넌트 사용한 형태 샘플 앱 -->
+  <div id="custom-input-sample" style="padding: 20px;">
+	  
+	  <!-- 샘플 컴포넌트 -->
+	  <!-- int 변수인 price를 컴포넌트에서 사용하고자 할 경우 1) v-model="price" OR v-bind:value="price" 둘다 동일한 동작을 수행함 -->
+	  <currency-input v-model="price"></currency-input>
+	  
+	  <!-- v-model 샘플 컴포넌트 -->
+	  <checkbox-sample v-model="foo" value="some value"></checkbox-sample>
+	  
+  </div>
+  
 
 <script>
+	Vue.component('checkbox-sample', {
+		model: {
+			prop: 'checked',
+			event: 'change'
+		},
+		props: {
+			// 다른 목적을 위해 `value` prop를 사용할 수 있습니다.
+			checked: Boolean,
+			value: String
+		},
+		template: '<input type="checkbox">'
+	})
+	
+	Vue.component('currency-input', {
+		props: ['value'],
+		template: '<span style="font-weight:700;font-size:16px;">$ \
+		<input type="text" \
+			   ref="input" \
+			   v-bind:value="value" \
+        	   v-on:input="updateValue($event.target.value)" \
+        ></span>',
+        methods: {
+	        
+	        //input 필드 값이 변화할때마다 실행되는 함수
+	        updateValue: function(value) {
+		        
+		        //formattedValue 라는 지역 변수를 선언한 뒤 인풋필드에 입력된 텍스트를 가공해서 저장
+		        // trim() : 텍스트의 공백을 제거
+		        // slice(start, end) : 특정 구간의 텍스트를 잘라서 반환 (start - end 사이, end 값은 포함하지 않는다.)
+		        // e.g. "string".slice(0,3) 을 했을 경우 "str"을 반환하게 된다.
+		        // 아래 예시에서는 삼항 연산자를 사용하여 end 위치를 지정
+		        // 삼항 연산자의 형태는 : (boolean 표현식) ? (true일 때 실행하는 문장) : (거짓일 때 실행하는 문장)
+		        // 따라서 아래 slice()메소드의 end 값은 - 인풋필드로 입력된 값에서 '.' 문자의 위치가 -1 즉 없을 경우에는 입력된 값의 길이만큼 반환하고,
+		        // '.' 문자가 있을 경우에는 '.'문자의 *첫 번째 index값*에서 3을 더한 위치값을 반환한다.
+		        // *첫 번째 index값이란, 문자열 내에서 index 0부터 시작해서 찾았을 때, 가장 먼저 발견되는 index 만이 유효하다.
+		        // 즉 소수점이 있는 문자인 경우 소수점 2째 자리까지만 유지하고 그 아래자리부터는 제거하는 동작을 수행.
+		        var formattedValue = value
+		        .trim()
+		        .slice(
+			        0, value.indexOf('.') === -1 ? value.length : value.indexOf('.') +3
+			    )
+			    
+				console.log(formattedValue, value)
+				
+				// 가공된 formattedValue 변수와 인풋필드에 입력된 값이 같지 않을 때 
+				// 즉 소수점 3째 자리까지 입력된 value와 가공된 formattedValue는 항상 2째자리까지만 갖게 되므로 두 데이타가 상이할 때가 존재함
+				// e.g. value = "12.345" / formattedValue = "12.34"
+				// 이 때 변형된 formattedValue 값을 $refs 선언한 곳의 value에 재 대입함으로써 2개의 값을 일치시킴
+				if(formattedValue !== value) {
+		        	
+		        	this.$refs.input.value = formattedValue
+		        	console.log('forced updated.')
+	        	}
+	        	
+	        	//가공된 formattedValue 값을 숫자로 형변환을 하여 반환
+	        	this.$emit('input', Number(formattedValue))
+	        	
+	        }
+	        
+        }
+        
+	})
+	
 	
 	Vue.component('custom-input', {
 		props: ['value'],
+		
 		//템플릿 내부의 ""(따옴표) 내부에서 '' 를 표현하려할 경우, ' 앞에 \를 붙여야 정상적으로 동작함. ($emit(\'input\', ... 참고)
 		template: '\
 		<input v-bind:value="value" \
@@ -124,8 +204,6 @@
         >'
         
 	})
-
-
 	
 	Vue.component( 'validate-props-comp', {
 		props: {
@@ -238,6 +316,16 @@
 		}
 	})
 	
+	var customInput = new Vue ({
+		el: '#custom-input-sample',
+		data: {
+			price: 0,
+			foo: true
+		},
+		methods: {
+			
+		}
+	})
 
 
 </script>
