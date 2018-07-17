@@ -51,7 +51,11 @@ var tempPath = [ "",
 
 
 function getL10NKeys(keyname) {
-  $.getJSON('http://localhost:8080/json/keys.json',
+  
+  //JSON 데이터는 CACHE 저장하지 않음.
+  $.ajaxSetup({ cache: false});
+  
+  $.getJSON('/json/keys.json',
   function(parsedData) {
     keyObject = parsedData[keyname]; //testObject에 l10n keyname array를 대입
     
@@ -82,6 +86,17 @@ function getL10NKeys(keyname) {
     //SC l10n 오브젝트를 문자열화
     scL10N = JSON.stringify(SCL10nObj, null, "\t");
     scDataUri = "data:application/json;charset=utf-8,"+ encodeURIComponent(scL10N);
+    
+    console.log(
+	    "koDataUri :"+koDataUri
+	    /*,
+	    "enDataUri :"+enDataUri,
+	    "jaDataUri :"+jaDataUri,
+	    "tcDataUri :"+tcDataUri,
+	    "scDataUri :"+scDataUri*/
+    )
+    
+    
     
   });
   
