@@ -37,4 +37,8 @@ $('#downloadTemplate').click(function() {
 	else if(currentTempType==5){ // 5. 정기 과금 이용 약관
 		download(convertedString, 'payment_agreement_'+currentTempLang+'.html', "text/html");
 	}
+	else if(currentTempType==6){ // 6. 차단안내
+		download(convertedString, 'removal.notification.'+currentTempLang+'.html', "text/html");
+	}
+
 });

@@ -1,0 +1,1042 @@
+{
+  "payment_agreement": [
+    {
+      "KEY": "@payment-agreement-page-title",
+      "KO": "정기 과금 이용 약관",
+      "EN": "Subscription Terms and Conditions",
+      "TC(zh-tw)": "升級條款和條件",
+      "SC(zh-cn)": "升级条款和条件",
+      "JA": "定期課金利用規約"
+    },
+    {
+      "KEY": "@payment-agreement-section-policy-title",
+      "KO": "과금 정책",
+      "EN": "Billing",
+      "TC(zh-tw)": "付款",
+      "SC(zh-cn)": "付款",
+      "JA": "課金規約"
+    },
+    {
+      "KEY": "@payment-agreement-section-policy-1st-desc",
+      "KO": "선택하신 요금제 및 과금 주기에 따라 정기적으로 선불 결제가 진행됩니다.",
+      "EN": "If you choose to subscribe to a paid plan (“Plan”), you agree to pay the fees (“Fees”) on a recurring basis (monthly or annually).",
+      "TC(zh-tw)": "若您選擇升級付費方案 (以下簡稱：方案)，您將同意以月繳或年繳的方式支付費用。",
+      "SC(zh-cn)": "若您选择升级付费方案 (以下简称：方案)，您将同意以月缴或年缴的方式支付费用。",
+      "JA": "選択した料金プランや課金周期によって、定期的に前払いが行われます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-policy-2nd-desc",
+      "KO": "정기 과금 신청 시 정확한 결제 정보를 입력하셔야 하며, 결제 정보를 제공할 경우 잔디(또는 잔디가 지정한 결제 대행업체)가 해당 거래에 필요한 결제 금액 전체를 청구할 수 있도록 허가한 것으로 간주합니다.",
+      "EN": "You must provide accurate, current, and authorized payment information (e.g. credit card number, expiration date). By submitting your payment information, you authorize us to charge your payment method for the Plan you have chosen.",
+      "TC(zh-tw)": "您需要提供正確、正在使用且被核定的付費資訊 (例如：信用卡卡號、信用卡有效期限)。藉由填寫並傳送付費資訊，您將允許以此方式，針對所選方案進行付款。",
+      "SC(zh-cn)": "您需要提供正确、正在使用且被核定的付费信息 (例如：信用卡卡号、信用卡有效期限)。藉由填写并传送付费信息，您将允许以此方式，针对所选方案进行付款。",
+      "JA": "定期課金申し込みの時、正確なお支払い情報を入力する必要があり、お支払い情報を提供する場合JANDI（またはJANDIが指定した決済代行業者）が該当取引に必要な決済金額全体を請求できるように許可したものとみなされます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-policy-3rd-desc-en",
+      "KO": "",
+      "EN": "We may bill: 1) in advance; 2) shortly after subscription; 3) on a recurring basis.",
+      "TC(zh-tw)": "我們提供以下付款方式：1) 預先付款；2) 升級後稍晚付款；3) 經常性定期付款。",
+      "SC(zh-cn)": "我们提供以下付款方式：1) 预先付款；2) 升级后稍晚付款；3) 经常性定期付款。",
+      "JA": ""
+    },
+    {
+      "KEY": "@payment-agreement-section-policy-4th-desc",
+      "KO": "선택하신 통화에 따라 부가세가 부과될 수 있습니다.",
+      "EN": "We may calculate taxes payable by you based on the billing information that you provide us.",
+      "TC(zh-tw)": "依據您所提供的付費資訊，我們將為您計算出應付稅額。",
+      "SC(zh-cn)": "依据您所提供的付费信息，我们将为您计算出应付税额。",
+      "JA": "選択した通貨により付加価値税が課されることもあります。"
+    },
+    {
+      "KEY": "@payment-agreement-section-policy-5th-desc",
+      "KO": "별도의 취소 의사가 없는한, 선택하신 과금 주기에 따라 매월 또는 매년 정기적으로 과금이 진행됩니다. 취소 시, 선택하신 과금 주기에 따라 다음 결제일부터 결제 중단 처리가 되며 사용 중인 팀은 무료 버전으로 전환됩니다. (취소 관련 문의는 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> 또는 1:1 문의하기를 통해 가능합니다)",
+      "EN": "JANDI will automatically renew at the end of the subscription period unless you cancel your subscription via <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> or Live Support. The cancellation will be effective the day after the last day of your current subscription period, and your team will be downgraded to the Free plan.",
+      "TC(zh-tw)": "JANDI 將會於方案續約日當天自動續約，直到您取消為止 (可透過線上客服或來信至 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a>)。若取消續約，將於目前方案期限最後一天之後生效，同時您的團隊將降級為免費方案。",
+      "SC(zh-cn)": "JANDI 将会于方案续约日当天自动续约，直到您取消为止 (可透过线上客服或来信至 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a>)。若取消续约，将于目前方案期限最后一天之后生效，同时您的团队将降级为免费方案。",
+      "JA": "別のキャンセル意思のない限り、選択した課金周期によって毎月または毎年定期的に課金が行われます。キャンセルの時、選択した課金周期により次のお支払い日から支払中断処理になりご使用中のチームは無料バージョンに転換されます。（キャンセルについて詳細は　<a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a>　またはお問い合わせよりご連絡お願い致します。\n"
+    },
+    {
+      "KEY": "@payment-agreement-section-policy-6th-desc",
+      "KO": "이미 지불이 완료된 금액에 대해서는 현금 환불이 가능하지 않습니다. 단, 잔디의 귀책 사유로 인해 잘못된 금액이 결제되었거나 초과 과금이 발생한 경우 환불이 가능합니다.",
+      "EN": "We do not refund any Fees already paid to us.",
+      "TC(zh-tw)": "我們將不退還任何已支付給我們的升級費用。",
+      "SC(zh-cn)": "我们将不退还任何已支付给我们的升级费用。",
+      "JA": "すでに支払いが完了された金額につきましては、現金の払い戻しができません。ただし、JANDIの帰責事由により間違った金額が決済されたか超え課金が発生した場合、払い戻しができます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-m-subscription-title",
+      "KO": "월간 과금",
+      "EN": "Monthly Subscription",
+      "TC(zh-tw)": "月繳方式 (按月繳費)",
+      "SC(zh-cn)": "月缴方式 (按月缴费)",
+      "JA": "月間課金"
+    },
+    {
+      "KEY": "@payment-agreement-section-m-subscription-1st-desc",
+      "KO": "월간 과금을 선택하신 경우, 매월 첫 5 영업일 이내로 월간 이용료가 청구됩니다.",
+      "EN": "You will be billed within the first five business days of every month.",
+      "TC(zh-tw)": "您需要於每月前五個工作天內完成付款。",
+      "SC(zh-cn)": "您需要于每月前五个工作天内完成付款。",
+      "JA": "月間課金を選択した場合、毎月初５営業日以内に月間利用料が請求されます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-m-subscription-2nd-desc",
+      "KO": "월 이용료는 매월 1일 팀에 등록된 인원 기준으로 산정됩니다.",
+      "EN": "The monthly Fees will be based on the number of members registered in the team on the 1st day of each month.",
+      "TC(zh-tw)": "按月繳費的計算，將會以每月一號的團隊成員數量為基礎。",
+      "SC(zh-cn)": "按月缴费的计算，将会以每月一号的团队成员数量为基础。",
+      "JA": "月利用料は毎月1日チームに登録された人数を基準で算定されます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-m-subscription-3rd-desc",
+      "KO": "월간 과금에서 연간 과금으로 언제든지 과금 주기를 변경하실 수 있으며 변경 내용은 다음 정산 주기에 반영됩니다.",
+      "EN": "If you choose the Monthly Subscription, you can switch to the Annual Subscription at any time.",
+      "TC(zh-tw)": "若您選擇月繳方式，可以隨時變更為年繳方式。",
+      "SC(zh-cn)": "若您选择月缴方式，可以随时变更为年缴方式。",
+      "JA": "月間課金で年間課金にいつでも課金周期を変更することができ、変更内容は次の精算周期に反映されます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-y-subscription-title",
+      "KO": "연간 과금",
+      "EN": "Annual Subscription",
+      "TC(zh-tw)": "年繳方式 (按年繳費)",
+      "SC(zh-cn)": "年缴方式 (按年缴费)",
+      "JA": "年間課金"
+    },
+    {
+      "KEY": "@payment-agreement-section-y-subscription-1st-desc",
+      "KO": "연간 과금을 선택하신 경우, 신청하신 달의 다음 달 첫 5영업일 이내로 연간 이용료가 청구됩니다.",
+      "EN": "You will be billed for your annual Fees within the first five business days of next month you subscribed.",
+      "TC(zh-tw)": "您需要於升級或續約的次月前五個工作天內完成付款。",
+      "SC(zh-cn)": "您需要于升级或续约的次月前五个工作天内完成付款。",
+      "JA": "年間課金を選択した場合、お申込みいただいた月の翌月初５営業日以内に年間利用料が請求されます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-y-subscription-2nd-desc",
+      "KO": "연간 과금 주기 도중에는 신청 인원을 변경, 월간 과금으로 변경, 또는 요금제 다운그레이드가 가능하지 않습니다.",
+      "EN": "Note that under the Annual Subscription you will not be permitted to cancel, change the number of prepaid members, switch to the Monthly Subscription, or downgrade your plan until your current subscription period ends.",
+      "TC(zh-tw)": "在方案期限前，取消付款或付費使用與/或終止任何協議，我們將不退還任何已支付給我們的升級費用。同時也無法變更預付成員數量、無法變更為月繳方式與降級使用方案。",
+      "SC(zh-cn)": "在方案期限前，取消付款或付费使用与/或终止任何协议，我们将不退还任何已支付给我们的升级费用。同时也无法变更预付成员数量、无法变更为月缴方式与降级使用方案。",
+      "JA": "年間課金周期の途中にはお申し込み人数を変更、月間課金への変更、または料金プランダウングレードができません。"
+    },
+    {
+      "KEY": "@payment-agreement-section-credit-title",
+      "KO": "추가 이용료 및 크레딧 환불",
+      "EN": "Extra Charge / JANDI Credit Refund",
+      "TC(zh-tw)": "額外付款與 JANDI 點數",
+      "SC(zh-cn)": "额外付款与 JANDI 点数",
+      "JA": "追加利用料及びクレジットの払い戻し"
+    },
+    {
+      "KEY": "@payment-agreement-section-credit-1st-desc",
+      "KO": "연간 이용료 지불이 완료된 후, 매월 1일 팀에 등록된 인원에 따라 추가 과금 또는 크레딧 환불이 발생할 수 있습니다.",
+      "EN": "Under the Annual Subscription, there may be extra charges or credit refunds (“JANDI Credits”) based on the number of members registered in the team on the 1st day of each month.",
+      "TC(zh-tw)": "在年繳方式中，您可能因為預先支付較多成員數量，而可另外獲得 JANDI 點數。點數將於每月一號，以團隊成員數量為基礎計算。",
+      "SC(zh-cn)": "在年缴方式中，您可能因为预先支付较多成员数量，而可另外获得 JANDI 点数。点数将于每月一号，以团队成员数量为基础计算。",
+      "JA": "年間利用料のお支払いが完了された後、毎月1日チームに登録された人数により追加課金またはクレジット払い戻しが発生することがあります。"
+    },
+    {
+      "KEY": "@payment-agreement-section-credit-2nd-desc",
+      "KO": "신청 인원 대비, 매월 1일 등록된 인원이 많은 경우, 추가 인원에 따른 월 이용료가 추가 청구됩니다.",
+      "EN": "If the total number of members registered in the team has exceeded the number of members that are pre-paid, there will be extra monthly charges for the exceeded number of members.",
+      "TC(zh-tw)": "如果實際使用的團隊成員數量超過預付數量，則需要額外為超過數量付款。",
+      "SC(zh-cn)": "如果实际使用的团队成员数量超过预付数量，则需要额外为超过数量付款。",
+      "JA": "お申し込み人数に比べて毎月1日登録された人数が多い場合、追加人数による月利用料が追加請求されます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-credit-3rd-desc",
+      "KO": "신청 인원 대비, 매월 1일 등록된 인원이 적은 경우, 감소한 인원에 따른 월 이용료가 크레딧으로 환불 처리됩니다.",
+      "EN": "If the total number of members registered in the team are less than the number of members pre-paid, JANDI Credits will be issued on a monthly basis.",
+      "TC(zh-tw)": "如果實際使用的團隊成員數量少於預付數量，則您將於每月獲得 JANDI 點數。",
+      "SC(zh-cn)": "如果实际使用的团队成员数量少于预付数量，则您将于每月获得 JANDI 点数。",
+      "JA": "お申し込み人数に比べて毎月1日登録された人数が少ない場合、減少した人数による月利用料がクレジットでし払い戻し処理されます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-credit-4th-desc",
+      "KO": "크레딧은 이미 지불이 완료된 금액을 기준으로 산정되며, 추가 이용료 발생 시 또는 다음 정산 주기에 사용됩니다. 크레딧은 발급일로부터 5 년간 유효하며, 다른 팀으로 이양 또는 현금 환불이 가능하지 않습니다. 팀 삭제 시, 누적된 크레딧 또한 삭제됩니다.",
+      "EN": "Note that JANDI Credits can be used when extra charges occur or when your Plan renews. JANDI Credits are valid for 5 years unless you delete your team. JANDI Credits are non- transferrable to other teams, and non-refundable in cash.",
+      "TC(zh-tw)": "JANDI 點數可以在額外付款或方案續約時使用，藉此取代部分付費金額。假如您沒有刪除團隊的話，JANDI 點數可使用五年，但無法轉移給其他團隊，也無法轉換成現金。",
+      "SC(zh-cn)": "JANDI 点数可以在额外付款或方案续约时使用，以取代部分付费金额。假如您没有删除团队的话，JANDI 点数可使用五年，但无法转移给其他团队，也无法转换成现金。",
+      "JA": "クレジットはすでにお支払いが完了された金額を基準に算定され、追加利用料の発生時または次の精算周期に使用されます。クレジットは発給日から５年間有効であり、他のチームへの移譲または現金の払い戻しができません。チーム削除時、累積されたクレジットも削除されます。"
+    },
+    {
+      "KEY": "@payment-agreement-section-etc-title",
+      "KO": "기타",
+      "EN": "Others",
+      "TC(zh-tw)": "其他",
+      "SC(zh-cn)": "其他",
+      "JA": "その他"
+    },
+    {
+      "KEY": "@payment-agreement-section-etc-1st-desc",
+      "KO": "잔디가 지정한 결제 대행업체는 결제 처리를 위해 제공해주신 결제 정보를 수집 및 저장할 수 있으며, 결제 정보는 결제 외 다른 용도로 사용되지 않습니다.",
+      "EN": "Authorized payment agencies may collect your information you have provided for billing purpose. Your information will not be used for any other purpose.",
+      "TC(zh-tw)": "受核定的支付單位可能會取得您的付款資訊，但不被允許做其他用途。",
+      "SC(zh-cn)": "受核定的支付单位可能会取得您的付款信息，但不被允许做其他用途。",
+      "JA": "JANDIが指定した決済代行業者は決済の処理のため提供していただいたお支払い情報を収集及び保存することができ、お支払い情報は決済以外に他の用度に使われることはありません。"
+    },
+    {
+      "KEY": "@payment-agreement-section-etc-2nd-desc",
+      "KO": "본 약관에 명시되지 않은 내용은 잔디 서비스 이용약관 및 개인정보 취급방침을 따릅니다.",
+      "EN": "Content not specified in these Terms and Conditions is subject to JANDI Terms of Service and Privacy Policy.",
+      "TC(zh-tw)": "在此條款與條件內沒有提到的細節，將會在 JANDI 的使用條款和隱私權條款另外揭露。",
+      "SC(zh-cn)": "在此条款与条件内没有提到的细节，将会在 JANDI 的使用条款和隐私权条款另外揭露。",
+      "JA": "本規約に明記されない内容はJANDIサービス利用規約及びプライバシーポリシーに従います。"
+    },
+    {
+      "KEY": "@payment-agreement-footer-date-02",
+      "KO": "시행일 : 2017년 11월 27일",
+      "EN": "Effective Date : November 27, 2017",
+      "TC(zh-tw)": "生效日期 : 2017年 11月 27日",
+      "SC(zh-cn)": "生效日期 : 2017年 11月 27日",
+      "JA": "施行日 : 2017年 11月 27日"
+    }
+  ],
+  "email_template": [
+    {
+      "KEY": "@payment-email-subscription-title",
+      "KO": "정기 결제 신청 완료",
+      "EN": "Subscription Process Complete",
+      "TC(zh-tw)": "付款流程完成",
+      "SC(zh-cn)": "付款流程完成",
+      "JA": "定期支払のお申し込み完了"
+    },
+    {
+      "KEY": "@payment-email-subscription-desc",
+      "KO": "아래의 정보와 같이 정기 결제 신청이 완료되었습니다. 익월 첫 5영업일 이내로 관리자 확인 후 최초 결제가 진행될 예정입니다.",
+      "EN": "Your subscription has been complete. Please refer to the following information. Your first payment will be processed within the first 5 business days of next month.",
+      "TC(zh-tw)": "付款流程已經完成，請參考以下資訊<br>首次支付將於次月的第一週完成扣款",
+      "SC(zh-cn)": "付款流程已经完成，请参考以下信息<br>首次支付将于次月的第一周完成扣款",
+      "JA": "以下の通り定期支払のお申し込み受付が完了致しました。来月の初週、管理者の確認後最初の支払が進行になる予定です。"
+    },
+    {
+      "KEY": "@payment-email-payment-request-title",
+      "KO": "청구서",
+      "EN": "Payment Request",
+      "TC(zh-tw)": "付款生效",
+      "SC(zh-cn)": "付款生效",
+      "JA": "支払い申込書"
+    },
+    {
+      "KEY": "@payment-email-payment-request-desc",
+      "KO": "잔디 유료 사용을 위해 요청주신 청구서입니다. 본 메일 수신 후 아래 계좌로 10영업일 이내에 입금해주셔야 결제가 완료됩니다.",
+      "EN": "Payment for {{teamName}} Team has been requested. Payment must be made within 10 business days after receiving this email.",
+      "TC(zh-tw)": "此為您所欲升級方案的付款生效表單。請於收到此郵件後十日內，完成後續付款事宜",
+      "SC(zh-cn)": "此为您所欲升级方案的付款生效表单。请于收到此邮件后十日内，完成后续付款事宜",
+      "JA": "JANDI有料使用のためリクエストしてくださった支払い申込書です。本メールを受信した後、下の口座に10営業日以内に振り込まなければ支払いは完了できません。"
+    },
+    {
+      "KEY": "@payment-email-billing-complete-title",
+      "KO": "결제 내역",
+      "EN": "Invoice",
+      "TC(zh-tw)": "付款明細",
+      "SC(zh-cn)": "付款明细",
+      "JA": "支払内訳"
+    },
+    {
+      "KEY": "@payment-email-billing-complete-desc",
+      "KO": "{{teamName}} 팀의 결제 내역입니다.",
+      "EN": "Your payment for {{teamName}} Team has been processed. Please see below for payment details.",
+      "TC(zh-tw)": "{{teamName}} 團隊的付款流程正在處理中，請閱讀以下詳細付款內容",
+      "SC(zh-cn)": "{{teamName}} 团队的付款流程正在处理中，请阅读以下详细付款内容",
+      "JA": "{{teamName}}チームの支払内訳です。"
+    },
+    {
+      "KEY": "@payment-email-payment-info-update-title",
+      "KO": "결제 정보 업데이트",
+      "EN": "Payment Information Update",
+      "TC(zh-tw)": "更新付款資訊",
+      "SC(zh-cn)": "更新付款信息",
+      "JA": "支払情報の更新"
+    },
+    {
+      "KEY": "@payment-email-payment-info-update-desc",
+      "KO": "{{teamName}} 팀의 결제 정보가 업데이트 되었습니다.",
+      "EN": "{{teamName}} Team's payment information has been updated.",
+      "TC(zh-tw)": "{{teamName}} 團隊付款資訊已經更新",
+      "SC(zh-cn)": "{{teamName}} 团队付款信息已经更新",
+      "JA": "{{teamName}}チームの支払情報が更新されました。"
+    },
+    {
+      "KEY": "@payment-email-company-name",
+      "KO": "상호명",
+      "EN": "Company Name",
+      "TC(zh-tw)": "公司名稱",
+      "SC(zh-cn)": "公司名称",
+      "JA": "会社名"
+    },
+    {
+      "KEY": "@payment-email-admin-name",
+      "KO": "담당자 이름",
+      "EN": "Admin Name",
+      "TC(zh-tw)": "管理員姓名",
+      "SC(zh-cn)": "管理员姓名",
+      "JA": "ご担当者名"
+    },
+    {
+      "KEY": "@payment-email-admin-email",
+      "KO": "담당자 이메일",
+      "EN": "Admin Email Address",
+      "TC(zh-tw)": "管理員電子郵箱",
+      "SC(zh-cn)": "管理员电子邮箱",
+      "JA": "ご担当者Eメールアドレス"
+    },
+    {
+      "KEY": "@payment-email-admin-phone-number",
+      "KO": "업체 또는 담당자 연락처",
+      "EN": "Admin Phone Number",
+      "TC(zh-tw)": "管理員聯絡電話",
+      "SC(zh-cn)": "管理员联络电话",
+      "JA": "ご担当者電話番号(直通)"
+    },
+    {
+      "KEY": "@payment-email-account-holder-label",
+      "KO": "예금주",
+      "EN": "Account Holder",
+      "TC(zh-tw)": "帳戶持有人",
+      "SC(zh-cn)": "账户持有人",
+      "JA": "預金者名"
+    },
+    {
+      "KEY": "@payment-email-account-holder-name",
+      "KO": "(주)토스랩",
+      "EN": "Toss Lab, Inc.",
+      "TC(zh-tw)": "Toss Lab, Inc.",
+      "SC(zh-cn)": "Toss Lab, Inc.",
+      "JA": "（株）トスラボ"
+    },
+    {
+      "KEY": "@payment-email-account-info-label",
+      "KO": "계좌 정보",
+      "EN": "Account Information",
+      "TC(zh-tw)": "匯款資訊",
+      "SC(zh-cn)": "匯款資訊",
+      "JA": "口座情報"
+    },
+    {
+      "KEY": "@payment-email-account-holder-info",
+      "KO": "우리은행 1005-102-854750",
+      "EN": "Woori Bank 1005-102-854750",
+      "TC(zh-tw)": "國泰世華銀行松山分行 037031008302",
+      "SC(zh-cn)": "国泰世华银行松山分行037031008302",
+      "JA": "ウリ銀行 1005-102-854750"
+    },
+    {
+      "KEY": "@payment-email-plan-info",
+      "KO": "플랜 정보",
+      "EN": "Plan Information",
+      "TC(zh-tw)": "方案資訊",
+      "SC(zh-cn)": "方案信息",
+      "JA": "プランの情報"
+    },
+    {
+      "KEY": "@payment-email-contract-period",
+      "KO": "계약 기간",
+      "EN": "Contract Period",
+      "TC(zh-tw)": "合約期間",
+      "SC(zh-cn)": "合约期间",
+      "JA": "契約期間"
+    },
+    {
+      "KEY": "@payment-email-billing-period",
+      "KO": "과금 기간",
+      "EN": "Billing Period",
+      "TC(zh-tw)": "付款期間",
+      "SC(zh-cn)": "付款期间",
+      "JA": "課金期間"
+    },
+    {
+      "KEY": "@payment-email-payment-method-type",
+      "KO": "결제 수단",
+      "EN": "Payment Method",
+      "TC(zh-tw)": "付款方式",
+      "SC(zh-cn)": "付款方式",
+      "JA": "支払手段"
+    },
+    {
+      "KEY": "@payment-email-payment-method-credit-card",
+      "KO": "신용카드 정기결제 ({{cardCompany}})",
+      "EN": "Automatic Credit Card Payment ({{brand}})",
+      "TC(zh-tw)": "信用卡自動轉帳 ({{brand}})",
+      "SC(zh-cn)": "信用卡自动转账 ({{brand}})",
+      "JA": "クレジットカード定期支払 ({{brand}})"
+    },
+    {
+      "KEY": "@payment-email-payment-method-account-transfer",
+      "KO": "계좌이체",
+      "EN": "Account Transfer",
+      "TC(zh-tw)": "匯款轉帳",
+      "SC(zh-cn)": "汇款转账",
+      "JA": "口座振込"
+    },
+    {
+      "KEY": "@payment-email-payment-status-type",
+      "KO": "결제 상태",
+      "EN": "Payment Status",
+      "TC(zh-tw)": "付款狀態",
+      "SC(zh-cn)": "付款状态",
+      "JA": "支払状況"
+    },
+    {
+      "KEY": "@payment-email-payment-status-pending",
+      "KO": "결제 대기",
+      "EN": "Pending",
+      "TC(zh-tw)": "付款尚未完成",
+      "SC(zh-cn)": "付款尚未完成",
+      "JA": "支払待ち"
+    },
+    {
+      "KEY": "@payment-email-payment-status-paid",
+      "KO": "결제 완료",
+      "EN": "Paid",
+      "TC(zh-tw)": "付款完成",
+      "SC(zh-cn)": "付款完成",
+      "JA": "支払完了"
+    },
+    {
+      "KEY": "@payment-email-payment-details",
+      "KO": "결제 내역 상세 정보",
+      "EN": "Payment Details",
+      "TC(zh-tw)": "詳細付款內容",
+      "SC(zh-cn)": "详细付款内容",
+      "JA": "支払内訳"
+    },
+    {
+      "KEY": "@payment-email-payment-date-label",
+      "KO": "결제일",
+      "EN": "Payment Date",
+      "TC(zh-tw)": "付款日期",
+      "SC(zh-cn)": "付款日期",
+      "JA": "支払日"
+    },
+    {
+      "KEY": "@payment-email-payment-date-within-5-days",
+      "KO": "익월 5영업일 이내",
+      "EN": "Within 5 working days of next month",
+      "TC(zh-tw)": "下個月前五個工作天內",
+      "SC(zh-cn)": "下个月前五个工作天内",
+      "JA": "翌日５営業日以内"
+    },
+    {
+      "KEY": "@payment-email-payment-num-of-members-current-period",
+      "KO": "과금 대상 인원",
+      "EN": "# of Members (current period)",
+      "TC(zh-tw)": "現有成員數量",
+      "SC(zh-cn)": "现有成员数量",
+      "JA": "課金対象人数"
+    },
+    {
+      "KEY": "@payment-email-payment-num-of-members-prepaid",
+      "KO": "신청 인원",
+      "EN": "# of Members (prepaid)",
+      "TC(zh-tw)": "預付成員數量",
+      "SC(zh-cn)": "预付成员数量",
+      "JA": "お申し込み人数"
+    },
+    {
+      "KEY": "@payment-email-exceeded-member-account",
+      "KO": "초과 정회원",
+      "EN": "# of Members Added",
+      "TC(zh-tw)": "加購正成員數量",
+      "SC(zh-cn)": "加购正成员数量",
+      "JA": "追加され正メンバー数"
+    },
+    {
+      "KEY": "@payment-email-exceeded-associate-account",
+      "KO": "초과 준회원",
+      "EN": "# of Associates Added",
+      "TC(zh-tw)": "加購準成員數量",
+      "SC(zh-cn)": "加购准成员数量",
+      "JA": "追加され準メンバー数"
+    },
+    {
+      "KEY": "@payment-email-payment-num-of-members-credit-receipients",
+      "KO": "크레딧 대상 인원",
+      "EN": "# of Credit Recipients",
+      "TC(zh-tw)": "獲取點數成員數量",
+      "SC(zh-cn)": "获取点数成员数量",
+      "JA": "クレジット対象人数"
+    },
+    {
+      "KEY": "@payment-email-payment-num-of-members-unit",
+      "KO": "명",
+      "EN": " People",
+      "TC(zh-tw)": "人",
+      "SC(zh-cn)": "人",
+      "JA": "人"
+    },
+    {
+      "KEY": "@payment-email-billing-amount-annual",
+      "KO": "연 과금액",
+      "EN": "Annual Billing",
+      "TC(zh-tw)": "按年付款 (年繳)",
+      "SC(zh-cn)": "按年付款 (年缴)",
+      "JA": "年課金額"
+    },
+    {
+      "KEY": "@payment-email-billing-amount-monthly",
+      "KO": "월 과금액",
+      "EN": "Monthly Billing",
+      "TC(zh-tw)": "按月付款 (月繳)",
+      "SC(zh-cn)": "按月付款 (月缴)",
+      "JA": "月課金額"
+    },
+    {
+      "KEY": "@payment-email-monthly-billing-amount-member",
+      "KO": "월 과금액 (정회원)",
+      "EN": "Additional Charge (Member)",
+      "TC(zh-tw)": "按月付款 (月繳，正成員)",
+      "SC(zh-cn)": "按月付款 (月缴，正成员)",
+      "JA": "月課金額 (正メンバー)"
+    },
+    {
+      "KEY": "@payment-email-monthly-billing-amount-associate",
+      "KO": "월 과금액 (준회원)",
+      "EN": "Additional Charge (Associate)",
+      "TC(zh-tw)": "按月付款 (月繳，準成員)",
+      "SC(zh-cn)": "按月付款 (月缴，准成员)",
+      "JA": "月課金額 (準メンバー)"
+    },
+    {
+      "KEY": "@payment-email-promotion-applied",
+      "KO": "프로모션 코드 적용",
+      "EN": "Promotion Applied",
+      "TC(zh-tw)": "使用折扣碼",
+      "SC(zh-cn)": "使用优惠码",
+      "JA": "プロモーションコード適用"
+    },
+    {
+      "KEY": "@payment-email-credits-applied",
+      "KO": "보유 크레딧 적용",
+      "EN": "Credits Applied",
+      "TC(zh-tw)": "點數使用",
+      "SC(zh-cn)": "点数使用",
+      "JA": "保有クレジット適用"
+    },
+    {
+      "KEY": "@payment-email-sub-total-amount",
+      "KO": "합계",
+      "EN": "Sub Total",
+      "TC(zh-tw)": "小計",
+      "SC(zh-cn)": "小计",
+      "JA": "お会計"
+    },
+    {
+      "KEY": "@payment-email-vat",
+      "KO": "부가세",
+      "EN": "VAT",
+      "TC(zh-tw)": "營業稅",
+      "SC(zh-cn)": "增值税",
+      "JA": "消費税"
+    },
+    {
+      "KEY": "@payment-email-total-amount",
+      "KO": "최종 결제 금액",
+      "EN": "Total Amount",
+      "TC(zh-tw)": "合計(含稅)",
+      "SC(zh-cn)": "合计(含税)",
+      "JA": "支払料金"
+    },
+    {
+      "KEY": "@payment-email-credit-amount",
+      "KO": "크레딧 지급",
+      "EN": "Credit Amount",
+      "TC(zh-tw)": "點數數量",
+      "SC(zh-cn)": "点数数量",
+      "JA": "クレジット支給"
+    },
+    {
+      "KEY": "@payment-email-footer-company-name-label",
+      "KO": "<strong>법인명</strong>",
+      "EN": "<strong>Company Name</strong>",
+      "TC(zh-tw)": "<strong>公司名稱</strong>",
+      "SC(zh-cn)": "<strong>公司名称</strong>",
+      "JA": "<strong>法人名</strong>"
+    },
+    {
+      "KEY": "@payment-email-footer-company-name-text",
+      "KO": "(주) 토스랩 (Toss Lab, Inc.)",
+      "EN": "Toss Lab, Inc.",
+      "TC(zh-tw)": "Toss Lab, Inc.",
+      "SC(zh-cn)": "Toss Lab, Inc.",
+      "JA": "（株）トスラボ（Toss Lab, Inc.）"
+    },
+    {
+      "KEY": "@payment-email-footer-company-regnum-label",
+      "KO": "<strong>사업자 등록번호</strong>",
+      "EN": "<strong>Company Registration Number</strong>",
+      "TC(zh-tw)": "<strong>公司統編</strong>",
+      "SC(zh-cn)": "<strong>企业营业执照注册号</strong>",
+      "JA": "<strong>事業者登録番号</strong>"
+    },
+    {
+      "KEY": "@payment-email-footer-company-regnum-text",
+      "KO": "220-88-81740",
+      "EN": "220-88-81740",
+      "TC(zh-tw)": "54397324",
+      "SC(zh-cn)": "54397324",
+      "JA": "220-88-81740"
+    },
+    {
+      "KEY": "@payment-email-footer-company-location-label",
+      "KO": "<strong>사업장 소재지</strong>",
+      "EN": "<strong>Company Location</strong>",
+      "TC(zh-tw)": "<strong>公司地址</strong>",
+      "SC(zh-cn)": "<strong>公司地址</strong>",
+      "JA": "<strong>事業場所在地</strong>"
+    },
+    {
+      "KEY": "@payment-email-footer-company-location-text",
+      "KO": "서울특별시 강남구 테헤란로 419, 16층",
+      "EN": "16F Teheran-ro 419, Gangnam-gu, Seoul, South Korea",
+      "TC(zh-tw)": "台灣台北市中山區松江路9號6樓",
+      "SC(zh-cn)": "台湾台北市中山区松江路9号6楼",
+      "JA": "ソウル特別市江南区テヘラン路419、16階"
+    },
+    {
+      "KEY": "@payment-email-footer-company-contact-label",
+      "KO": "<strong>전화번호</strong>",
+      "EN": "<strong>Phone Number</strong>",
+      "TC(zh-tw)": "<strong>公司聯繫電話</strong>",
+      "SC(zh-cn)": "<strong>公司联系电话</strong>",
+      "JA": "<strong>電話番号</strong>"
+    },
+    {
+      "KEY": "@payment-email-footer-company-contact-text",
+      "KO": "02-6959-9599",
+      "EN": " +82-2-6959-9599",
+      "TC(zh-tw)": "02-8914-5954",
+      "SC(zh-cn)": " +886-2-8914-5954",
+      "JA": "　+82-2-6959-9599"
+    },
+    {
+      "KEY": "@payment-email-footer-confidential-info",
+      "KO": "상기 메일은 지정된 수신인만을 위한 것이며 법령에 따라 보호되는 영업비밀, 산업기술 등을 포함하고 있을 수 있습니다. 본 문서에 포함된 정보를 무단으로 제 3자에게 공개, 배포, 복사 또는 사용하는 것은 엄격하게 금지됩니다. 만일 귀하가 지정된 수신자가 아닌 경우, 발신인 또는 (주)토스랩으로 알려주시고 원본 메일과 포함된 모든 정보를 파기하여 주시기 바랍니다.",
+      "EN": "Information in this email is confidential and may contain legally privileged company strategies or technologies. It is intended solely for the use of the addressee. You may not disseminate, distribute, use or copy this message or attachments or disclose to anyone the contents thereof. If you are not the intended addressee, please notify the sender or Toss Lab, Inc. and delete this email immediately. ",
+      "TC(zh-tw)": "本電子郵件可能包含機密資訊請勿傳予第三者知曉。台端如非本電子郵件之收件者，請於誤收此文件後，立即與本公司聯絡，並請退回本郵件後，刪除此電子檔。本電子文件可能含有依法受機密或特殊管制之資訊，切勿轉寄、散佈、複製或公開其內容。特此致謝。",
+      "SC(zh-cn)": "本电子邮件可能包含机密信息请勿传予第三者知晓。如非本电子邮件之收件者，请于误收此文件后，立即与本公司联络，并请退回本邮件后，删除此电子档。本电子文件可能含有依法受机密或特殊管制之信息，切勿转寄、散布、复制或公开其内容。特此致谢。",
+      "JA": "上記のメールは指定された受信者のためのメールで、法令により保護される営業秘密、産業技術などを含めていることもあります。本文書に含まれた情報を無断に第三者に公開、配布、コピーまたは使用することは厳しく禁じられています。万一貴下が指定された受信者ではない場合、お手数ですが発信者または（株）トスラボまでお知らせくださって原本メールと含まれている全ての情報を破棄して下さいますようお願い致します。"
+    },
+    {
+      "KEY": "@payment-email-footer-contact",
+      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
+      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> or <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">JANDI FAQ</a>.",
+      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">教學中心</a> 取得更多資訊",
+      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">教学中心</a> 取得更多信息",
+      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a>または<a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
+    },
+    {
+      "KEY": "@payment-email-footer-copyright",
+      "KO": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
+      "EN": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
+      "TC(zh-tw)": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
+      "SC(zh-cn)": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
+      "JA": "Copyright © 2018 Toss Lab, Inc. All rights reserved."
+    },
+    {
+      "KEY": "@payment-email-billing-amount-additional-charge (Removed)",
+      "KO": "월 과금액 (초과인원)",
+      "EN": "Additional Charge",
+      "TC(zh-tw)": "成員加購",
+      "SC(zh-cn)": "成员加购",
+      "JA": "月課金額（超過人数）"
+    },
+    {
+      "KEY": "@payment-email-payment-num-of-members-added (Removed)",
+      "KO": "초과 인원",
+      "EN": "# of Members Added",
+      "TC(zh-tw)": "加購成員數量",
+      "SC(zh-cn)": "加购成员数量",
+      "JA": "超過人数"
+    }
+  ],
+  "account_and_team_mail": [
+    {
+      "KEY": "@common-heading-greetings",
+      "KO": "JANDI에 오신 걸 환영합니다!",
+      "EN": "Thank you for signing up for JANDI",
+      "TC(zh-tw)": "感謝您註冊使用JANDI。",
+      "SC(zh-cn)": "感谢您注册使用JANDI。",
+      "JA": "Welcome to JANDI"
+    },
+    {
+      "KEY": "@common-heading-user",
+      "KO": "{{username}}님,",
+      "EN": "Hi {{username}},",
+      "TC(zh-tw)": "您好 {{username}}",
+      "SC(zh-cn)": "您好 {{username}}",
+      "JA": "{{username}}さん、こんにちは"
+    },
+    {
+      "KEY": "@common-full-signature",
+      "KO": "감사합니다.<br>— JANDI 팀",
+      "EN": "Cheers!<br>—Team JANDI",
+      "TC(zh-tw)": "感謝！<br>— JANDI團隊",
+      "SC(zh-cn)": "感谢！<br>— JANDI团队",
+      "JA": "ありがとうございます。<br>— チームJANDI一同"
+    },
+    {
+      "KEY": "@common-short-signature",
+      "KO": "— JANDI 팀",
+      "EN": "— Team JANDI",
+      "TC(zh-tw)": "— JANDI團隊",
+      "SC(zh-cn)": "— JANDI团队",
+      "JA": "— チームJANDI一同"
+    },
+    {
+      "KEY": "@common-goto-jandi-main-button",
+      "KO": "JANDI 메인 페이지",
+      "EN": "JANDI Main Page",
+      "TC(zh-tw)": "JANDI",
+      "SC(zh-cn)": "账户首页(JANDI)",
+      "JA": "JANDIホーム"
+    },
+    {
+      "KEY": "@common-happy-communicating",
+      "KO": "잔디와 함께 달라진 업무 환경을 경험해보세요!",
+      "EN": "Happy communicating!",
+      "TC(zh-tw)": "願你有個愉快的溝通體驗！",
+      "SC(zh-cn)": "愿您有愉快的沟通体验！",
+      "JA": "JANDIと変わった業務環境を体験してください！"
+    },
+    {
+      "KEY": "@common-footer-contact",
+      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
+      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> or <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">JANDI FAQ</a>.",
+      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教學中心</a> 取得更多資訊",
+      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教学中心</a> 取得更多信息",
+      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a>または<a href=\"\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
+    },
+    {
+      "KEY": "@common-footer-copyright",
+      "KO": "© Toss Lab, Inc. All rights reserved.",
+      "EN": "© Toss Lab, Inc. All rights reserved.",
+      "TC(zh-tw)": "© Toss Lab, Inc. All rights reserved.",
+      "SC(zh-cn)": "© Toss Lab, Inc. All rights reserved.",
+      "JA": "© Toss Lab, Inc. All rights reserved."
+    },
+    {
+      "KEY": "@activation-description",
+      "KO": "업무에 꼭 필요한 기능만 모은 팀 커뮤니케이션 툴,<br>잔디를 이용해보세요.",
+      "EN": "We're excited to show you the possibilities!<br>Click the button below to get started:",
+      "TC(zh-tw)": "我們非常開心能向您展示我們產品的無限可能！<br>請點擊以下的按鍵完成剩餘的設定：",
+      "SC(zh-cn)": "我们非常开心能向您展示我们产品的无限可能！<br>请点击以下的按键完成剩余的设定：",
+      "JA": "メールアドレス認証のお願い"
+    },
+    {
+      "KEY": "@activation-verify-button",
+      "KO": "이메일 인증하기",
+      "EN": "Activate your account",
+      "TC(zh-tw)": "啟動您的帳號",
+      "SC(zh-cn)": "启动您的帐号",
+      "JA": "このメールアドレスを認証する"
+    },
+    {
+      "KEY": "@activation-verify-description",
+      "KO": "계정을 활성화하려면 하단의 버튼을 클릭하셔서 JANDI에 등록한 이메일 주소를 인증해주세요.",
+      "EN": "To activate your account, please click on the button below to verify the email address registered in JANDI.",
+      "TC(zh-tw)": "JANDI是永久免費使用，無論您有多少團隊成員",
+      "SC(zh-cn)": "JANDI是永久免费使用，无论您有多少团队成员",
+      "JA": "アカウントをアクティベートするため、下記のボタンをクリックしJANDIに登録したメールアドレスを認証してください。"
+    },
+    {
+      "KEY": "@activation-benefit-title",
+      "KO": "잔디와 함께 달라진 업무 환경을 경험해보세요.",
+      "EN": "JANDI is the future of group communications and information sharing.",
+      "TC(zh-tw)": "JANDI是團隊通訊及檔案分享的未來",
+      "SC(zh-cn)": "JANDI是团队通讯及档案分享的未来",
+      "JA": "JANDIを使うことでチームコミュニケーションが劇的に効率化できます。"
+    },
+    {
+      "KEY": "@activation-benefit-description01",
+      "KO": "실시간으로 팀원들과 의사소통이 가능하며,",
+      "EN": "Instantly connect with anyone on your team",
+      "TC(zh-tw)": "即時與您團隊上的任何人聯繫",
+      "SC(zh-cn)": "即时与您团队上的任何人联系",
+      "JA": "用途別に分けられるグループチャット"
+    },
+    {
+      "KEY": "@activation-benefit-description02",
+      "KO": "주제 별 그룹 생성으로 팀 커뮤니케이션이 편리해질 뿐만 아니라,",
+      "EN": "Upload, share, and discuss files for easy collaboration",
+      "TC(zh-tw)": "通過上傳、分享和討論檔案達到輕易的協作",
+      "SC(zh-cn)": "通过上传、分享和讨论档案达到轻易的协作",
+      "JA": "ファイルの共有、検索、コメント追加機能"
+    },
+    {
+      "KEY": "@activation-benefit-description03",
+      "KO": "메신저를 통해 팀원들과 쉽게 파일을 공유할 수 있으며,",
+      "EN": "Browse and search through all your messages and files in one place",
+      "TC(zh-tw)": "在同一處即可瀏覽和搜尋所有的訊息及檔案",
+      "SC(zh-cn)": "在同一处即可浏览和搜寻所有的讯息及档案",
+      "JA": "PCとスマートフォン完全同期"
+    },
+    {
+      "KEY": "@activation-benefit-description04",
+      "KO": "언제 어디서든 모바일과 데스크톱에 최적화된 업무 환경을 제공합니다.",
+      "EN": "Use it at your desk or take it on the go with our Web, iOS, and Android apps.",
+      "TC(zh-tw)": "無論是在辦公桌前或路上，我們提供網頁版或iOS和Android應用程式供您使用",
+      "SC(zh-cn)": "无论是在办公桌前或路上，我们提供网页版或iOS和Android应用程式供您使用",
+      "JA": "非常にシンプルでわかりやすいユーザーインターフェー"
+    },
+    {
+      "KEY": "@verification-heading",
+      "KO": "잔디를 이용해주셔서 감사합니다!",
+      "EN": "You're almost there.",
+      "TC(zh-tw)": "驗証步驟快完成了！",
+      "SC(zh-cn)": "验證步骤快完成了！",
+      "JA": "あと一歩です。"
+    },
+    {
+      "KEY": "@verification-description01",
+      "KO": "가입 화면에서 아래 인증번호를 입력해주세요.",
+      "EN": "Enter this verification code to access JANDI.",
+      "TC(zh-tw)": "輸入驗証碼登錄JANDI",
+      "SC(zh-cn)": "输入验證码登录JANDI",
+      "JA": "JANDIを利用するために認証コードを入力してください。"
+    },
+    {
+      "KEY": "@verification-description02",
+      "KO": "모바일 앱을 통해 더 쉽고 빠르게 잔디를 사용하실 수 있습니다.",
+      "EN": "For the best mobile experience, download the app for iOS or Android.",
+      "TC(zh-tw)": "為提升行動用戶的使用體驗，建議下載iOS和Android版本",
+      "SC(zh-cn)": "为提升行动用户的使用体验，建议下载iOS和Android版本",
+      "JA": "モバイルに最適化されたiOS, Androidアプリをダウンロード"
+    },
+    {
+      "KEY": "@password-change-description-done",
+      "KO": "방금 {{username}}님의 비밀번호가 변경되었습니다.<br>직접 변경하신 게 아니라면 지금 바로 다시 변경해주시기 바랍니다.",
+      "EN": "The password for your account {{username}} was recently changed.<br>If you made this change, you’re all set! If not, please reset your password to secure your account. ",
+      "TC(zh-tw)": "您的密碼最近更改了。<br>如果是您進行了這個更改，一切就沒有問題。如果不是，請即刻重新設定您的密碼以確保您帳號的安全性！<br>感謝！",
+      "SC(zh-cn)": "您的密码最近更改了。<br>如果是您进行了这个更改，一切就没有问题。如果不是，请即刻重新设定您的密码以确保您帐号的安全性！<br>感谢！",
+      "JA": "{{username}}さんのアカウントのパスワードが最新更新されました。<br>もし身に覚えがない場合は、すぐにパスワードを再設定するか、下記カスタマーサポートまでご連絡ください。"
+    },
+    {
+      "KEY": "@password-change-description-reset01",
+      "KO": "방금 비밀번호를 다시 설정할 수 있도록 이 이메일을 보내달라고 요청하셨습니다.<br>아래 버튼을 누르시면 비밀번호를 새로 설정하실 수 있습니다.",
+      "EN": "Forgot your password?<br>Choose a new one by clicking the button below.",
+      "TC(zh-tw)": "忘記您的密碼了嗎？馬上點擊以下的按鍵選擇一個新的。",
+      "SC(zh-cn)": "忘记您的密码了吗？马上点击以下的按键选择一个新的。",
+      "JA": "パスワードをお忘れですか？<br>以下のボタンからパスワードをリセットできます。"
+    },
+    {
+      "KEY": "@password-change-description-reset02",
+      "KO": "만약 비밀번호 재설정 요청을 하지 않으셨다면 이 이메일을 신경쓰지 않으셔도 됩니다.<br>아래 버튼을 클릭하지 않으시면 비밀번호는 변경되지 않습니다.",
+      "EN": "If it wasn't you or you didn't really mean it, just ignore this email and your password will stay the same.",
+      "TC(zh-tw)": "如果這不是您或您根本沒有這個意思，請勿理會這封來信並且您的密碼將保持不變。<br>祝您好運！",
+      "SC(zh-cn)": "如果这不是您或您根本没有这个意思，请勿理会这封来信并且您的密码将保持不变。<br>祝您好运！",
+      "JA": "このメールに身に覚えがない場合は、特に気にする必要はありません。あなたのパスワードはそのままご利用できます。"
+    },
+    {
+      "KEY": "@password-change-reset-button",
+      "KO": "비밀번호 재설정하기",
+      "EN": "Choose a new password",
+      "TC(zh-tw)": "選擇新的密碼",
+      "SC(zh-cn)": "选择新的密码",
+      "JA": "パスワード再発行"
+    },
+    {
+      "KEY": "@enabled-member-description",
+      "KO": "잔디 팀 <a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a>으로부터 차단이 해제되셨습니다. <a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">잔디</a>에 방문하시면 다시 팀에 접근하실 수 있습니다.",
+      "EN": "Your membership to <a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a> has been enabled. Sign in to <a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a> now to catch up on anything you may have missed!",
+      "TC(zh-tw)": "您<a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a> 的成員資格已被啟用。現在就登入到<a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>看看有什麽事情是您可能已經錯過的！",
+      "SC(zh-cn)": "您<a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a> 的成员资格已被启用。现在就登入到<a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>看看有什么事情是您可能已经错过的！",
+      "JA": "あなたのアカウントが<a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a>で有効化されました。<a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>でアクセスしてみてください。どうぞよろしくお願いいたします。"
+    },
+    {
+      "KEY": "@confirmation-description",
+      "KO": "JANDI 계정에 새로운 이메일 주소를 추가하셨습니다.<br>이메일 주소 인증을 위해 아래 버튼을 눌러주세요.",
+      "EN": "You added a new email address to your JANDI account.<br>In order to complete the process, please verify this email by clicking on the button below.",
+      "TC(zh-tw)": "您爲了您的JANDI帳號新增加了電子郵件地址。<br>爲了完成這個流程，請點擊以下按鍵以確認這電子郵件是正確的。",
+      "SC(zh-cn)": "您爲了您的JANDI帐号新增加了电子邮件地址。<br>爲了完成这个流程，请点击以下按键以确认这电子邮件是正确的。",
+      "JA": "あなたがJANDIに新しいメールアドレスを登録しましたので、確認のメールをお送りしています。<br>このメールアドレスを認証する場合は、以下の「認証する」ボタンクを押してください。"
+    },
+    {
+      "KEY": "@confirmation-button",
+      "KO": "이메일 인증하기",
+      "EN": "Confirm Email Address",
+      "TC(zh-tw)": "確認",
+      "SC(zh-cn)": "确认",
+      "JA": "認証する"
+    },
+    {
+      "KEY": "@removal-notification-title",
+      "KO": "잔디 팀 {{teamname}} 탈퇴 안내",
+      "EN": "You have been removed from JANDI Team '{{teamname}}'",
+      "TC(zh-tw)": "您已經被退出團隊 '{{teamname}}'",
+      "SC(zh-cn)": "您已经被退出团队 '{{teamname}}'",
+      "JA": "JANDIチーム'{{teamname}}’から脱退されました。"
+    },
+    {
+      "KEY": "@removal-notification-heading",
+      "KO": "잔디 팀 '{{teamname}}'의 관리자가 {{username}}님을 탈퇴 처리 하였습니다. 자세한 탈퇴 처리 사유는 '{{teamname}}' 팀 관리자에게 문의해주세요.",
+      "EN": "Team Admin of JANDI Team '{{teamname}}' has removed {{username}} from the Team. For details regarding your removal, please contact Team Admin of '{{teamname}}’.",
+      "TC(zh-tw)": "{{teamname}}' 團隊的管理員，已將{{user name}} 退出團隊。想瞭解更多關於退出團隊的資訊，請聯繫'{{teamname}}' 的團隊管理員。謝謝您。",
+      "SC(zh-cn)": "{{teamname}}' 团队的管理员，已将{{username}} 退出团队。想了解更多关于退出团队的信息，请联系'{{teamname}}' 的团队管理员。谢谢您。",
+      "JA": "JANDIチーム'{{teamname}}’の管理者が{{username}}を脱退処理しました。脱退事由についての詳細は'{{teamname}}’チーム管理者へお問い合わせください。ご利用ありがとうございます。"
+    },
+    {
+      "KEY": "@removal-notification-description",
+      "KO": "안녕하세요, {{name}}님.<br>회원님께서는 {{teamname}} 관리자의 결정에 따라 팀에서 탈퇴되었음을 알려드립니다.<br>이에 따라 이 팀에 대한 접근 권한이 더 이상 없습니다.",
+      "EN": "Dear {{name}},<br>We would like to inform you that you have been removed from the team according to the {{teamname}} admin’s decision.<br>As a result, you no longer have access to this team.",
+      "TC(zh-tw)": "親愛的 {{name}},<br>由於 {{teamname}} 團隊管理員的決定，我們要提醒您已被退出團隊，您將不再有進入團隊的權限。<br>建議您可以和團隊管理員做進一步確認。",
+      "SC(zh-cn)": "尊敬的 {{name}},<br>由于 {{teamname}} 团队管理员的决定，我们要提醒您已被退出团队，您将不再有进入团队的权限。<br>建议您可以和团队管理员做进一步确认。",
+      "JA": "こんにちは {{name}}様。<br>お客様は {{teamname}} 管理者の決定により チームから退出されたことをお知らせいたします。<br>これ応じチームへのアクセスがこれから制限されます。"
+    },
+    {
+      "KEY": "@removal-notification-date",
+      "KO": "탈퇴 일시: {{removalDate}}",
+      "EN": "Removal date : {{removalDate}}",
+      "TC(zh-tw)": "退出日期 : {{removalDate}}",
+      "SC(zh-cn)": "退出日期 : {{removalDate}}",
+      "JA": "退出日時 : {{removalDate}}"
+    },
+    {
+      "KEY": "@domain-changed-description01",
+      "KO": "방금 {{username}} 님의 JANDI 팀 {{teamname}}의 웹 주소가  <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>로 변경되었습니다.",
+      "EN": "The web address (URL) for your JANDI team ‘{{teamname}}’ was changed to <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>.",
+      "TC(zh-tw)": "我們要讓您知道您在JANDI上的團隊‘{{teamname}}'的網域地址（URL）已經改成<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>。",
+      "SC(zh-cn)": "我们要让您知道您在JANDI上的团队‘{{teamname}}'的网域地址（URL）已经改成<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>。",
+      "JA": "お使いの'{{teamname}}'のログインURLが、<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>に変更されましたのでお知らせします。"
+    },
+    {
+      "KEY": "@domain-changed-description02",
+      "KO": "다음에 JANDI를 이용하실 때에 착오 없으시길 바랍니다.",
+      "EN": "Please use this going forward when you sign in online.",
+      "TC(zh-tw)": "請您之後在網上登入時使用這個。",
+      "SC(zh-cn)": "请您之后在网上登入时使用这个。",
+      "JA": "これからは、上記のURLからログインしてください。<br>引き続き、JANDIをよろしくお願いいたします。"
+    },
+    {
+      "KEY": "@domain-changed-description03",
+      "KO": "필요하신 경우 언제라도 <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">잔디 홈페이지</a>에 접속하셔서 가입하신 팀을 찾으실 수 있습니다.",
+      "EN": "P.S. You can always find your team's web address by signing in through <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>",
+      "TC(zh-tw)": "注：您仍然可以透過<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>登入找到您團隊的網域地址。",
+      "SC(zh-cn)": "注：您仍然可以透过<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>登入找到您团队的网域地址。",
+      "JA": "なお、<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>からログインすることで、アクセス可能なチームの一覧を確認することができます。"
+    },
+    {
+      "KEY": "@invitation-description",
+      "KO": "{{inviter}}님께서 {{teamname}}에 초대하셨습니다.<br>잔디를 통해 이전과는 완전히 달라진 업무 환경을 경험해보세요!",
+      "EN": "You have been invited to join {{teamname}} by {{inviter}}.",
+      "TC(zh-tw)": "請您點擊以下的按鍵加入 {{teamname}}。",
+      "SC(zh-cn)": "请您点击以下的按键加入 {{teamname}}。",
+      "JA": "JANDIは、新しいコミュニケーションツールで、チームメンバーと簡単にチャットやファイル共有ができます。{{teamname}}に参加しましょう。そしてチームワークを劇的に改善しましょう。"
+    },
+    {
+      "KEY": "@invitation-accept-button",
+      "KO": "초대된 팀 가입하기",
+      "EN": "Join now",
+      "TC(zh-tw)": "啟動和加入",
+      "SC(zh-cn)": "启动和加入",
+      "JA": "登録する（無料）"
+    },
+    {
+      "KEY": "@invitation-cancel-link",
+      "KO": "초대를 거절하거나 회원님에게 도착한 메일이 아닌 경우 <a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">여기를 클릭</a>하여 초대를 취소할 수 있습니다.",
+      "EN": "Not you? Please <a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">click here</a> If you want to decline the invitation.",
+      "TC(zh-tw)": "欲拒絕邀請或此為錯誤電郵，請點擊<a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">此處</a>退回邀請。",
+      "SC(zh-cn)": "欲拒绝邀请或此为错误电邮，请点击<a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">此处</a>退回邀请。",
+      "JA": "招待を拒否するか、またはあなたに送信されたメールではない場合は<a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">こちら</a>をクリックし、招待をキャンセルすることができます。"
+    },
+    {
+      "KEY": "@admin-ownership-description",
+      "KO": "잔디 팀 {{teamname}}의 관리자로 지정되셨습니다. 관리자의 권한은 다음과 같습니다.",
+      "EN": "{{teamname}}'s ownership has been transferred to you. Here are what a team owner can do :",
+      "TC(zh-tw)": "{{teamname}} 的管理員權限已轉移給你，你現在可以執行以下動作：",
+      "SC(zh-cn)": "{{teamname}} 的管理员权限已转移给您，您现在可以执行以下操作：",
+      "JA": "JANDIチームの{{teamname}}の管理者に指定されました。管理者の権限は以下の通りです。"
+    },
+    {
+      "KEY": "@admin-ownership-authority01",
+      "KO": "메시지, 파일, 댓글 삭제",
+      "EN": "Delete messages, files, and comments",
+      "TC(zh-tw)": "管理團員權限",
+      "SC(zh-cn)": "管理成员权限",
+      "JA": "メッセージ、ファイル、コメント削除"
+    },
+    {
+      "KEY": "@admin-ownership-authority02",
+      "KO": "토픽 정보 변경",
+      "EN": "Editing topic info",
+      "TC(zh-tw)": "刪除所有訊息/檔案/留言",
+      "SC(zh-cn)": "删除所有信息/文件/评论",
+      "JA": "トピック情報変更"
+    },
+    {
+      "KEY": "@admin-ownership-authority03",
+      "KO": "멤버 관리",
+      "EN": "Managing members",
+      "TC(zh-tw)": "編輯議題資訊",
+      "SC(zh-cn)": "编辑议题信息",
+      "JA": "メンバー管理"
+    },
+    {
+      "KEY": "@admin-ownership-access-link",
+      "KO": "<a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">잔디 홈페이지</a>의 팀 목록에서 관리자 페이지로 접근하실 수 있습니다.",
+      "EN": "You can access the team settings menu from the team list of <a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI main page</a>.",
+      "TC(zh-tw)": "欲前往管理員控制台，進入帳戶首頁即可。或者選擇重新登入 <a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>，頁面將會自動轉載至你的帳戶首頁。",
+      "SC(zh-cn)": "进入 <a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">账户首页(JANDI)</a>，即可前往管理员控制面板。",
+      "JA": "<a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDIホーム</a>  からチームリストで管理者ページにアクセスできます。"
+    },
+    {
+      "KEY": "@deleted-team-description01",
+      "KO": "잔디 팀 {{teamname}}이 관리자에 의해 삭제되었습니다.",
+      "EN": "We regret to inform you that your JANDI team {{teamname}} has been deleted. ",
+      "TC(zh-tw)": "我們要讓您知道您的JANDI團隊{{teamname}}已被刪除。",
+      "SC(zh-cn)": "我们要让您知道您的JANDI团队{{teamname}}已被删除。",
+      "JA": "{username}}さん、こんにちは JANDIのチームの{{teamname}}が削除されました。"
+    },
+    {
+      "KEY": "@deleted-team-description02",
+      "KO": "그동안 사용해주셔서 감사드리며 <a style=\"font-weight:bold;color:#00c473;\" href=\"http://www.jandi.com\" target=\"_blank\">잔디 홈페이지</a>에서 언제라도 새로 팀을 생성하실 수 있습니다.",
+      "EN": "But don’t worry! You can continue to use your JANDI account with other teams or create one of your own for free.",
+      "TC(zh-tw)": "感謝您使用JANDI，不過您還是可以在<a style=\"font-weight:bold;color:#00c473\" href=\"http://www.jandi.com\" target=\"_blank\">jandi.com</a>上建立新的。",
+      "SC(zh-cn)": "感谢您使用JANDI，不过您还是可以在<a style=\"font-weight:bold;color:#00c473;\" href=\"http://www.jandi.com\" target=\"_blank\">jandi.com</a>上建立新的。",
+      "JA": "JANDIのご利用ありがとうございました。新しいチームは、<a style=\"font-weight:bold;color:#00c473;\" href=\"http://www.jandi.com\" target=\"_blank\">www.jandi.com</a>からいつでも作成できます。<br>またのご利用を心よりお待ちしております。<br>今後ともよろしくお願いいたします。"
+    }
+  ],
+  "disabledMember_template": [
+    {
+      "KEY": "@email-common-dear-username",
+      "KO": "{{username}}님,",
+      "EN": "Dear {{username}},",
+      "TC(zh-tw)": "親愛的 {{username}},",
+      "SC(zh-cn)": "尊敬的 {{username}},",
+      "JA": "{{username}}様,"
+    },
+    {
+      "KEY": "@email-blocked-from-team",
+      "KO": "잔디 팀 {{teamname}}으로부터 차단되셨습니다. 자세한 차단 사유는 {{teamname}}팀 관리자에게 문의해주세요.",
+      "EN": "You have been blocked from JANDI Team {{teamname}}. For more information please contact Team Admin of {{teamname}}.",
+      "TC(zh-tw)": "你已經被 JANDI 的 {{teamname}} 團隊關閉權限。想瞭解更多資訊，請聯繫 {{teamname}} 的團隊管理員。",
+      "SC(zh-cn)": "你已经被 JANDI 的 {{teamname}} 团队关闭权限。想了解更多信息，请联系 {{teamname}} 的团队管理员。",
+      "JA": "あなたはJANDIチーム{{teamname}}からブロックされています。 詳細については、{{teamname}}のチーム管理者にお問い合わせください。"
+    },
+    {
+      "KEY": "@email-common-full-signature",
+      "KO": "감사합니다.<br>— JANDI 팀",
+      "EN": "Thank you.<br>—Team JANDI",
+      "TC(zh-tw)": "謝謝你。<br>— JANDI團隊",
+      "SC(zh-cn)": "谢谢你。<br>— JANDI团队",
+      "JA": "ありがとうございます。<br>— チームJANDI一同"
+    },
+    {
+      "KEY": "@payment-email-footer-contact",
+      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
+      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> or <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">JANDI FAQ</a>.",
+      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">教學中心</a> 取得更多資訊",
+      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">教学中心</a> 取得更多信息",
+      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00ace9;text-decoration: underline;\">support@tosslab.com</a>または<a href=\"\" style=\"color: #00ace9;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00ace9;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
+    },
+    {
+      "KEY": "@payment-email-footer-copyright",
+      "KO": "© Toss Lab, Inc. All rights reserved.",
+      "EN": "© Toss Lab, Inc. All rights reserved.",
+      "TC(zh-tw)": "© Toss Lab, Inc. All rights reserved.",
+      "SC(zh-cn)": "© Toss Lab, Inc. All rights reserved.",
+      "JA": "© Toss Lab, Inc. All rights reserved."
+    }
+  ]
+}

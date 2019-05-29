@@ -46,7 +46,8 @@ var tempPath = [ "",
 				 "./temp/paymentRequest.temp.html",
 				 "./temp/billingComplete.temp.html",
 				 "./temp/contractUpdate.temp.html",
-				 "./temp/payment.agreement.temp.html"
+				 "./temp/payment.agreement.temp.html",
+				 "./temp/temp.removal.notification.html"
 				];
 
 
@@ -149,6 +150,10 @@ $('select').change(function() {
 		if(currentTempType == 5){
 		  getL10NKeys("payment_agreement");
 		}
+		else if(currentTempType == 6) {
+		  getL10NKeys("account_and_team_mail");
+		}
+	
 		else {
 		  getL10NKeys("email_template");
 		}
