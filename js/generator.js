@@ -47,16 +47,26 @@ var tempPath = [ "",
 				 "./temp/billingComplete.temp.html",
 				 "./temp/contractUpdate.temp.html",
 				 "./temp/payment.agreement.temp.html",
-				 "./temp/temp.removal.notification.html"
+				 "./temp/temp-member-mailer/removalNotification.html", // 6. 차단안내
+				 "./temp/temp-account-mailer/confirmation.html", // 7. 이메일 인증
+				 "./temp/temp-account-mailer/enabledMember.html", // 8. 차단 해제
+				 "./temp/temp-account-mailer/forgotPassword.html", // 9. 비밀번호 재설정 안내
+				 "./temp/temp-account-mailer/passwordChanged.html", // 10. 비밀번호 변경 안내
+				 "./temp/temp-account-mailer/verification.html", // 11. 인증코드 안내
+				 "./temp/temp-account-mailer/activation.html", // 12. 가입 후 이메일 인증 안내
+				 "./temp/temp-team-mailer/domainChanged.html",
+				 "./temp/temp-team-mailer/invite.html",
+				 "./temp/temp-team-mailer/ownershipTransferred.html",
+				 "./temp/temp-team-mailer/teamDeleted.html"
 				];
 
-
+$.ajaxSetup({ cache: false});
 function getL10NKeys(keyname) {
   
   //JSON 데이터는 CACHE 저장하지 않음.
   $.ajaxSetup({ cache: false});
   
-  $.getJSON('/json/keys.json',
+  $.getJSON('./json/keys.json',
   function(parsedData) {
     keyObject = parsedData[keyname]; //testObject에 l10n keyname array를 대입
     
@@ -150,13 +160,13 @@ $('select').change(function() {
 		if(currentTempType == 5){
 		  getL10NKeys("payment_agreement");
 		}
-		else if(currentTempType == 6) {
-		  getL10NKeys("account_and_team_mail");
-		}
-	
-		else {
+		else if ( currentTempType == 1 || currentTempType == 2 || currentTempType == 3 || currentTempType == 4) {
 		  getL10NKeys("email_template");
 		}
+		else {
+		  getL10NKeys("account_and_team_mail");
+		}
+		
 	}
 	
 	loadTemp();
@@ -235,7 +245,7 @@ function replaceKeys(obj) {
 		   $('#originalString').text( originText.replace('<span>'+keynameR+'</span>', valueR ) );
 	   }
     }
-    else if( (keynameR == "@payment-email-total-amount") || (keynameR == "@payment-agreement-page-title") ) { // '최종 결제 금액' 단어 변환 시 2회 반복
+    else if( (keynameR == "@payment-email-total-amount") || (keynameR == "@payment-agreement-page-title") || (keynameR == "@confirmation-button") || (keynameR == "@password-change-reset-button")) { // '최종 결제 금액' 단어 변환 시 2회 반복
 	   for(var i=1;i<3;i++) {
 		   originText = $('#originalString').text();
 		   $('#originalString').text( originText.replace('<span>'+keynameR+'</span>', valueR ) );
