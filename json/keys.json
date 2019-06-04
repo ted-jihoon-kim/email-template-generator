@@ -620,11 +620,11 @@
     },
     {
       "KEY": "@payment-email-footer-contact",
-      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\"tel:+82-2-6959-9599\" style=\"color: #00C473;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
-      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> or <a href=\"tel:+82-2-6959-9599\" style=\"color: #00C473;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">JANDI FAQ</a>.",
-      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\"tel:+886-2-8914-5954\" style=\"color: #00C473;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">教學中心</a> 取得更多資訊",
-      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\"tel:+886-2-8914-5954\" style=\"color: #00C473;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">教学中心</a> 取得更多信息",
-      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a>または<a href=\"tel:+82-2-6959-9599\" style=\"color: #00C473;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
+      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\" tel:+82-2-6959-9599\" style=\"color: #00C473;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
+      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> or <a href=\" tel:+82-2-6959-9599\" style=\"color: #00C473;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">JANDI FAQ</a>.",
+      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\" tel:+886-2-8914-5954\" style=\"color: #00C473;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">教學中心</a> 取得更多資訊",
+      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\" tel:+886-2-8914-5954\" style=\"color: #00C473;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">教学中心</a> 取得更多信息",
+      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a>または<a href=\" tel:+82-2-6959-9599\" style=\"color: #00C473;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
     },
     {
       "KEY": "@payment-email-footer-copyright",
@@ -649,394 +649,6 @@
       "TC(zh-tw)": "加購成員數量",
       "SC(zh-cn)": "加购成员数量",
       "JA": "超過人数"
-    }
-  ],
-  "account_and_team_mail": [
-    {
-      "KEY": "@common-heading-greetings",
-      "KO": "JANDI에 오신 걸 환영합니다!",
-      "EN": "Thank you for signing up for JANDI",
-      "TC(zh-tw)": "感謝您註冊使用JANDI。",
-      "SC(zh-cn)": "感谢您注册使用JANDI。",
-      "JA": "Welcome to JANDI"
-    },
-    {
-      "KEY": "@common-heading-user",
-      "KO": "{{username}}님,",
-      "EN": "Hi {{username}},",
-      "TC(zh-tw)": "您好 {{username}}",
-      "SC(zh-cn)": "您好 {{username}}",
-      "JA": "{{username}}さん、こんにちは"
-    },
-    {
-      "KEY": "@common-full-signature",
-      "KO": "감사합니다.<br>— JANDI 팀",
-      "EN": "Cheers!<br>—Team JANDI",
-      "TC(zh-tw)": "感謝！<br>— JANDI團隊",
-      "SC(zh-cn)": "感谢！<br>— JANDI团队",
-      "JA": "ありがとうございます。<br>— チームJANDI一同"
-    },
-    {
-      "KEY": "@common-short-signature",
-      "KO": "— JANDI 팀",
-      "EN": "— Team JANDI",
-      "TC(zh-tw)": "— JANDI團隊",
-      "SC(zh-cn)": "— JANDI团队",
-      "JA": "— チームJANDI一同"
-    },
-    {
-      "KEY": "@common-goto-jandi-main-button",
-      "KO": "JANDI 메인 페이지",
-      "EN": "JANDI Main Page",
-      "TC(zh-tw)": "JANDI",
-      "SC(zh-cn)": "账户首页(JANDI)",
-      "JA": "JANDIホーム"
-    },
-    {
-      "KEY": "@common-happy-communicating",
-      "KO": "잔디와 함께 달라진 업무 환경을 경험해보세요!",
-      "EN": "Happy communicating!",
-      "TC(zh-tw)": "願你有個愉快的溝通體驗！",
-      "SC(zh-cn)": "愿您有愉快的沟通体验！",
-      "JA": "JANDIと変わった業務環境を体験してください！"
-    },
-    {
-      "KEY": "@common-footer-contact",
-      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\"tel:+82-2-6959-9599\" style=\"color: #00c473;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
-      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> or <a href=\"tel:+82-2-6959-9599\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">JANDI FAQ</a>.",
-      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\"tel:+886-2-8914-5954\" style=\"color: #00c473;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教學中心</a> 取得更多資訊",
-      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\"tel:+886-2-8914-5954\" style=\"color: #00c473;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教学中心</a> 取得更多信息",
-      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a>または<a href=\"tel:+82-2-6959-9599\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
-    },
-    {
-      "KEY": "@common-footer-copyright",
-      "KO": "© Toss Lab, Inc. All rights reserved.",
-      "EN": "© Toss Lab, Inc. All rights reserved.",
-      "TC(zh-tw)": "© Toss Lab, Inc. All rights reserved.",
-      "SC(zh-cn)": "© Toss Lab, Inc. All rights reserved.",
-      "JA": "© Toss Lab, Inc. All rights reserved."
-    },
-    {
-      "KEY": "@activation-description",
-      "KO": "업무에 꼭 필요한 기능만 모은 팀 커뮤니케이션 툴,<br>잔디를 이용해보세요.",
-      "EN": "We're excited to show you the possibilities!<br>Click the button below to get started:",
-      "TC(zh-tw)": "我們非常開心能向您展示我們產品的無限可能！<br>請點擊以下的按鍵完成剩餘的設定：",
-      "SC(zh-cn)": "我们非常开心能向您展示我们产品的无限可能！<br>请点击以下的按键完成剩余的设定：",
-      "JA": "メールアドレス認証のお願い"
-    },
-    {
-      "KEY": "@activation-verify-button",
-      "KO": "이메일 인증하기",
-      "EN": "Activate your account",
-      "TC(zh-tw)": "啟動您的帳號",
-      "SC(zh-cn)": "启动您的帐号",
-      "JA": "このメールアドレスを認証する"
-    },
-    {
-      "KEY": "@activation-verify-description",
-      "KO": "계정을 활성화하려면 하단의 버튼을 클릭하셔서 JANDI에 등록한 이메일 주소를 인증해주세요.",
-      "EN": "To activate your account, please click on the button below to verify the email address registered in JANDI.",
-      "TC(zh-tw)": "JANDI是永久免費使用，無論您有多少團隊成員",
-      "SC(zh-cn)": "JANDI是永久免费使用，无论您有多少团队成员",
-      "JA": "アカウントをアクティベートするため、下記のボタンをクリックしJANDIに登録したメールアドレスを認証してください。"
-    },
-    {
-      "KEY": "@activation-benefit-title",
-      "KO": "잔디와 함께 달라진 업무 환경을 경험해보세요.",
-      "EN": "JANDI is the future of group communications and information sharing.",
-      "TC(zh-tw)": "JANDI是團隊通訊及檔案分享的未來",
-      "SC(zh-cn)": "JANDI是团队通讯及档案分享的未来",
-      "JA": "JANDIを使うことでチームコミュニケーションが劇的に効率化できます。"
-    },
-    {
-      "KEY": "@activation-benefit-description01",
-      "KO": "실시간으로 팀원들과 의사소통이 가능하며,",
-      "EN": "Instantly connect with anyone on your team",
-      "TC(zh-tw)": "即時與您團隊上的任何人聯繫",
-      "SC(zh-cn)": "即时与您团队上的任何人联系",
-      "JA": "用途別に分けられるグループチャット"
-    },
-    {
-      "KEY": "@activation-benefit-description02",
-      "KO": "주제 별 그룹 생성으로 팀 커뮤니케이션이 편리해질 뿐만 아니라,",
-      "EN": "Upload, share, and discuss files for easy collaboration",
-      "TC(zh-tw)": "通過上傳、分享和討論檔案達到輕易的協作",
-      "SC(zh-cn)": "通过上传、分享和讨论档案达到轻易的协作",
-      "JA": "ファイルの共有、検索、コメント追加機能"
-    },
-    {
-      "KEY": "@activation-benefit-description03",
-      "KO": "메신저를 통해 팀원들과 쉽게 파일을 공유할 수 있으며,",
-      "EN": "Browse and search through all your messages and files in one place",
-      "TC(zh-tw)": "在同一處即可瀏覽和搜尋所有的訊息及檔案",
-      "SC(zh-cn)": "在同一处即可浏览和搜寻所有的讯息及档案",
-      "JA": "PCとスマートフォン完全同期"
-    },
-    {
-      "KEY": "@activation-benefit-description04",
-      "KO": "언제 어디서든 모바일과 데스크톱에 최적화된 업무 환경을 제공합니다.",
-      "EN": "Use it at your desk or take it on the go with our Web, iOS, and Android apps.",
-      "TC(zh-tw)": "無論是在辦公桌前或路上，我們提供網頁版或iOS和Android應用程式供您使用",
-      "SC(zh-cn)": "无论是在办公桌前或路上，我们提供网页版或iOS和Android应用程式供您使用",
-      "JA": "非常にシンプルでわかりやすいユーザーインターフェー"
-    },
-    {
-      "KEY": "@verification-heading",
-      "KO": "잔디를 이용해주셔서 감사합니다!",
-      "EN": "You're almost there.",
-      "TC(zh-tw)": "驗証步驟快完成了！",
-      "SC(zh-cn)": "验證步骤快完成了！",
-      "JA": "あと一歩です。"
-    },
-    {
-      "KEY": "@verification-description01",
-      "KO": "가입 화면에서 아래 인증번호를 입력해주세요.",
-      "EN": "Enter this verification code to access JANDI.",
-      "TC(zh-tw)": "輸入驗証碼登錄JANDI",
-      "SC(zh-cn)": "输入验證码登录JANDI",
-      "JA": "JANDIを利用するために認証コードを入力してください。"
-    },
-    {
-      "KEY": "@verification-description02",
-      "KO": "모바일 앱을 통해 더 쉽고 빠르게 잔디를 사용하실 수 있습니다.",
-      "EN": "For the best mobile experience, download the app for iOS or Android.",
-      "TC(zh-tw)": "為提升行動用戶的使用體驗，建議下載iOS和Android版本",
-      "SC(zh-cn)": "为提升行动用户的使用体验，建议下载iOS和Android版本",
-      "JA": "モバイルに最適化されたiOS, Androidアプリをダウンロード"
-    },
-    {
-      "KEY": "@password-change-description-done",
-      "KO": "방금 {{username}}님의 비밀번호가 변경되었습니다.<br>직접 변경하신 게 아니라면 지금 바로 다시 변경해주시기 바랍니다.",
-      "EN": "The password for your account {{username}} was recently changed.<br>If you made this change, you’re all set! If not, please reset your password to secure your account. ",
-      "TC(zh-tw)": "您的密碼最近更改了。<br>如果是您進行了這個更改，一切就沒有問題。如果不是，請即刻重新設定您的密碼以確保您帳號的安全性！<br>感謝！",
-      "SC(zh-cn)": "您的密码最近更改了。<br>如果是您进行了这个更改，一切就没有问题。如果不是，请即刻重新设定您的密码以确保您帐号的安全性！<br>感谢！",
-      "JA": "{{username}}さんのアカウントのパスワードが最新更新されました。<br>もし身に覚えがない場合は、すぐにパスワードを再設定するか、下記カスタマーサポートまでご連絡ください。"
-    },
-    {
-      "KEY": "@password-change-description-reset01",
-      "KO": "방금 비밀번호를 다시 설정할 수 있도록 이 이메일을 보내달라고 요청하셨습니다.<br>아래 버튼을 누르시면 비밀번호를 새로 설정하실 수 있습니다.",
-      "EN": "Forgot your password?<br>Choose a new one by clicking the button below.",
-      "TC(zh-tw)": "忘記您的密碼了嗎？馬上點擊以下的按鍵選擇一個新的。",
-      "SC(zh-cn)": "忘记您的密码了吗？马上点击以下的按键选择一个新的。",
-      "JA": "パスワードをお忘れですか？<br>以下のボタンからパスワードをリセットできます。"
-    },
-    {
-      "KEY": "@password-change-description-reset02",
-      "KO": "만약 비밀번호 재설정 요청을 하지 않으셨다면 이 이메일을 신경쓰지 않으셔도 됩니다.<br>아래 버튼을 클릭하지 않으시면 비밀번호는 변경되지 않습니다.",
-      "EN": "If it wasn't you or you didn't really mean it, just ignore this email and your password will stay the same.",
-      "TC(zh-tw)": "如果這不是您或您根本沒有這個意思，請勿理會這封來信並且您的密碼將保持不變。<br>祝您好運！",
-      "SC(zh-cn)": "如果这不是您或您根本没有这个意思，请勿理会这封来信并且您的密码将保持不变。<br>祝您好运！",
-      "JA": "このメールに身に覚えがない場合は、特に気にする必要はありません。あなたのパスワードはそのままご利用できます。"
-    },
-    {
-      "KEY": "@password-change-reset-button",
-      "KO": "비밀번호 재설정하기",
-      "EN": "Choose a new password",
-      "TC(zh-tw)": "選擇新的密碼",
-      "SC(zh-cn)": "选择新的密码",
-      "JA": "パスワード再発行"
-    },
-    {
-      "KEY": "@enabled-member-description",
-      "KO": "잔디 팀 <a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a>으로부터 차단이 해제되셨습니다. <a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">잔디</a>에 방문하시면 다시 팀에 접근하실 수 있습니다.",
-      "EN": "Your membership to <a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a> has been enabled. Sign in to <a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a> now to catch up on anything you may have missed!",
-      "TC(zh-tw)": "您<a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a> 的成員資格已被啟用。現在就登入到<a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>看看有什麽事情是您可能已經錯過的！",
-      "SC(zh-cn)": "您<a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a> 的成员资格已被启用。现在就登入到<a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>看看有什么事情是您可能已经错过的！",
-      "JA": "あなたのアカウントが<a href=\"{{teamurl}}\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">{{teamname}}</a>で有効化されました。<a href=\"https://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>でアクセスしてみてください。どうぞよろしくお願いいたします。"
-    },
-    {
-      "KEY": "@confirmation-description",
-      "KO": "JANDI 계정에 새로운 이메일 주소를 추가하셨습니다.<br>이메일 주소 인증을 위해 아래 버튼을 눌러주세요.",
-      "EN": "You added a new email address to your JANDI account.<br>In order to complete the process, please verify this email by clicking on the button below.",
-      "TC(zh-tw)": "您爲了您的JANDI帳號新增加了電子郵件地址。<br>爲了完成這個流程，請點擊以下按鍵以確認這電子郵件是正確的。",
-      "SC(zh-cn)": "您爲了您的JANDI帐号新增加了电子邮件地址。<br>爲了完成这个流程，请点击以下按键以确认这电子邮件是正确的。",
-      "JA": "あなたがJANDIに新しいメールアドレスを登録しましたので、確認のメールをお送りしています。<br>このメールアドレスを認証する場合は、以下の「認証する」ボタンクを押してください。"
-    },
-    {
-      "KEY": "@confirmation-button",
-      "KO": "이메일 인증하기",
-      "EN": "Confirm Email Address",
-      "TC(zh-tw)": "確認",
-      "SC(zh-cn)": "确认",
-      "JA": "認証する"
-    },
-    {
-      "KEY": "@removal-notification-title",
-      "KO": "잔디 팀 {{teamname}} 탈퇴 안내",
-      "EN": "You have been removed from JANDI Team '{{teamname}}'",
-      "TC(zh-tw)": "您已經被退出團隊 '{{teamname}}'",
-      "SC(zh-cn)": "您已经被退出团队 '{{teamname}}'",
-      "JA": "JANDIチーム'{{teamname}}’から脱退されました。"
-    },
-    {
-      "KEY": "@removal-notification-heading",
-      "KO": "잔디 팀 '{{teamname}}'의 관리자가 {{username}}님을 탈퇴 처리 하였습니다. 자세한 탈퇴 처리 사유는 '{{teamname}}' 팀 관리자에게 문의해주세요.",
-      "EN": "Team Admin of JANDI Team '{{teamname}}' has removed {{username}} from the Team. For details regarding your removal, please contact Team Admin of '{{teamname}}’.",
-      "TC(zh-tw)": "{{teamname}}' 團隊的管理員，已將{{user name}} 退出團隊。想瞭解更多關於退出團隊的資訊，請聯繫'{{teamname}}' 的團隊管理員。謝謝您。",
-      "SC(zh-cn)": "{{teamname}}' 团队的管理员，已将{{username}} 退出团队。想了解更多关于退出团队的信息，请联系'{{teamname}}' 的团队管理员。谢谢您。",
-      "JA": "JANDIチーム'{{teamname}}’の管理者が{{username}}を脱退処理しました。脱退事由についての詳細は'{{teamname}}’チーム管理者へお問い合わせください。ご利用ありがとうございます。"
-    },
-    {
-      "KEY": "@removal-notification-description",
-      "KO": "안녕하세요, {{name}}님.<br>회원님께서는 {{teamname}} 관리자의 결정에 따라 팀에서 탈퇴되었음을 알려드립니다.<br>이에 따라 이 팀에 대한 접근 권한이 더 이상 없습니다.",
-      "EN": "Dear {{name}},<br>We would like to inform you that you have been removed from the team according to the {{teamname}} admin’s decision.<br>As a result, you no longer have access to this team.",
-      "TC(zh-tw)": "親愛的 {{name}},<br>由於 {{teamname}} 團隊管理員的決定，我們要提醒您已被退出團隊，您將不再有進入團隊的權限。<br>建議您可以和團隊管理員做進一步確認。",
-      "SC(zh-cn)": "尊敬的 {{name}},<br>由于 {{teamname}} 团队管理员的决定，我们要提醒您已被退出团队，您将不再有进入团队的权限。<br>建议您可以和团队管理员做进一步确认。",
-      "JA": "こんにちは {{name}}様。<br>お客様は {{teamname}} 管理者の決定により チームから退出されたことをお知らせいたします。<br>これ応じチームへのアクセスがこれから制限されます。"
-    },
-    {
-      "KEY": "@removal-notification-date",
-      "KO": "탈퇴 일시: {{removalDate}}",
-      "EN": "Removal date : {{removalDate}}",
-      "TC(zh-tw)": "退出日期 : {{removalDate}}",
-      "SC(zh-cn)": "退出日期 : {{removalDate}}",
-      "JA": "退出日時 : {{removalDate}}"
-    },
-    {
-      "KEY": "@domain-changed-description01",
-      "KO": "방금 {{username}} 님의 JANDI 팀 {{teamname}}의 웹 주소가  <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>로 변경되었습니다.",
-      "EN": "The web address (URL) for your JANDI team ‘{{teamname}}’ was changed to <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>.",
-      "TC(zh-tw)": "我們要讓您知道您在JANDI上的團隊‘{{teamname}}'的網域地址（URL）已經改成<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>。",
-      "SC(zh-cn)": "我们要让您知道您在JANDI上的团队‘{{teamname}}'的网域地址（URL）已经改成<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>。",
-      "JA": "お使いの'{{teamname}}'のログインURLが、<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>に変更されましたのでお知らせします。"
-    },
-    {
-      "KEY": "@domain-changed-description02",
-      "KO": "다음에 JANDI를 이용하실 때에 착오 없으시길 바랍니다.",
-      "EN": "Please use this going forward when you sign in online.",
-      "TC(zh-tw)": "請您之後在網上登入時使用這個。",
-      "SC(zh-cn)": "请您之后在网上登入时使用这个。",
-      "JA": "これからは、上記のURLからログインしてください。<br>引き続き、JANDIをよろしくお願いいたします。"
-    },
-    {
-      "KEY": "@domain-changed-description03",
-      "KO": "필요하신 경우 언제라도 <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">잔디 홈페이지</a>에 접속하셔서 가입하신 팀을 찾으실 수 있습니다.",
-      "EN": "P.S. You can always find your team's web address by signing in through <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>",
-      "TC(zh-tw)": "注：您仍然可以透過<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>登入找到您團隊的網域地址。",
-      "SC(zh-cn)": "注：您仍然可以透过<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>登入找到您团队的网域地址。",
-      "JA": "なお、<a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"http://www.jandi.com\">www.jandi.com</a>からログインすることで、アクセス可能なチームの一覧を確認することができます。"
-    },
-    {
-      "KEY": "@invitation-description",
-      "KO": "{{inviter}}님께서 {{teamname}}에 초대하셨습니다.<br>잔디를 통해 이전과는 완전히 달라진 업무 환경을 경험해보세요!",
-      "EN": "You have been invited to join {{teamname}} by {{inviter}}.",
-      "TC(zh-tw)": "請您點擊以下的按鍵加入 {{teamname}}。",
-      "SC(zh-cn)": "请您点击以下的按键加入 {{teamname}}。",
-      "JA": "JANDIは、新しいコミュニケーションツールで、チームメンバーと簡単にチャットやファイル共有ができます。{{teamname}}に参加しましょう。そしてチームワークを劇的に改善しましょう。"
-    },
-    {
-      "KEY": "@invitation-accept-button",
-      "KO": "초대된 팀 가입하기",
-      "EN": "Join now",
-      "TC(zh-tw)": "啟動和加入",
-      "SC(zh-cn)": "启动和加入",
-      "JA": "登録する（無料）"
-    },
-    {
-      "KEY": "@invitation-cancel-link",
-      "KO": "초대를 거절하거나 회원님에게 도착한 메일이 아닌 경우 <a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">여기를 클릭</a>하여 초대를 취소할 수 있습니다.",
-      "EN": "Not you? Please <a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">click here</a> If you want to decline the invitation.",
-      "TC(zh-tw)": "欲拒絕邀請或此為錯誤電郵，請點擊<a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">此處</a>退回邀請。",
-      "SC(zh-cn)": "欲拒绝邀请或此为错误电邮，请点击<a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">此处</a>退回邀请。",
-      "JA": "招待を拒否するか、またはあなたに送信されたメールではない場合は<a href=\"{{denyUrl}}\" style=\"font-weight:bold;color:#00c473;\">こちら</a>をクリックし、招待をキャンセルすることができます。"
-    },
-    {
-      "KEY": "@admin-ownership-description",
-      "KO": "잔디 팀 {{teamname}}의 관리자로 지정되셨습니다. 관리자의 권한은 다음과 같습니다.",
-      "EN": "{{teamname}}'s ownership has been transferred to you. Here are what a team owner can do :",
-      "TC(zh-tw)": "{{teamname}} 的管理員權限已轉移給你，你現在可以執行以下動作：",
-      "SC(zh-cn)": "{{teamname}} 的管理员权限已转移给您，您现在可以执行以下操作：",
-      "JA": "JANDIチームの{{teamname}}の管理者に指定されました。管理者の権限は以下の通りです。"
-    },
-    {
-      "KEY": "@admin-ownership-authority01",
-      "KO": "메시지, 파일, 댓글 삭제",
-      "EN": "Delete messages, files, and comments",
-      "TC(zh-tw)": "管理團員權限",
-      "SC(zh-cn)": "管理成员权限",
-      "JA": "メッセージ、ファイル、コメント削除"
-    },
-    {
-      "KEY": "@admin-ownership-authority02",
-      "KO": "토픽 정보 변경",
-      "EN": "Editing topic info",
-      "TC(zh-tw)": "刪除所有訊息/檔案/留言",
-      "SC(zh-cn)": "删除所有信息/文件/评论",
-      "JA": "トピック情報変更"
-    },
-    {
-      "KEY": "@admin-ownership-authority03",
-      "KO": "멤버 관리",
-      "EN": "Managing members",
-      "TC(zh-tw)": "編輯議題資訊",
-      "SC(zh-cn)": "编辑议题信息",
-      "JA": "メンバー管理"
-    },
-    {
-      "KEY": "@admin-ownership-access-link",
-      "KO": "<a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">잔디 홈페이지</a>의 팀 목록에서 관리자 페이지로 접근하실 수 있습니다.",
-      "EN": "You can access the team settings menu from the team list of <a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI main page</a>.",
-      "TC(zh-tw)": "欲前往管理員控制台，進入帳戶首頁即可。或者選擇重新登入 <a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDI</a>，頁面將會自動轉載至你的帳戶首頁。",
-      "SC(zh-cn)": "进入 <a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">账户首页(JANDI)</a>，即可前往管理员控制面板。",
-      "JA": "<a href=\"http://www.jandi.com\" style=\"font-weight:bold;color:#00c473;\" target=\"_blank\">JANDIホーム</a>  からチームリストで管理者ページにアクセスできます。"
-    },
-    {
-      "KEY": "@deleted-team-description01",
-      "KO": "잔디 팀 {{teamname}}이 관리자에 의해 삭제되었습니다.",
-      "EN": "We regret to inform you that your JANDI team {{teamname}} has been deleted. ",
-      "TC(zh-tw)": "我們要讓您知道您的JANDI團隊{{teamname}}已被刪除。",
-      "SC(zh-cn)": "我们要让您知道您的JANDI团队{{teamname}}已被删除。",
-      "JA": "{username}}さん、こんにちは JANDIのチームの{{teamname}}が削除されました。"
-    },
-    {
-      "KEY": "@deleted-team-description02",
-      "KO": "그동안 사용해주셔서 감사드리며 <a style=\"font-weight:bold;color:#00c473;\" href=\"http://www.jandi.com\" target=\"_blank\">잔디 홈페이지</a>에서 언제라도 새로 팀을 생성하실 수 있습니다.",
-      "EN": "But don’t worry! You can continue to use your JANDI account with other teams or create one of your own for free.",
-      "TC(zh-tw)": "感謝您使用JANDI，不過您還是可以在<a style=\"font-weight:bold;color:#00c473\" href=\"http://www.jandi.com\" target=\"_blank\">jandi.com</a>上建立新的。",
-      "SC(zh-cn)": "感谢您使用JANDI，不过您还是可以在<a style=\"font-weight:bold;color:#00c473;\" href=\"http://www.jandi.com\" target=\"_blank\">jandi.com</a>上建立新的。",
-      "JA": "JANDIのご利用ありがとうございました。新しいチームは、<a style=\"font-weight:bold;color:#00c473;\" href=\"http://www.jandi.com\" target=\"_blank\">www.jandi.com</a>からいつでも作成できます。<br>またのご利用を心よりお待ちしております。<br>今後ともよろしくお願いいたします。"
-    }
-  ],
-  "disabledMember_template": [
-    {
-      "KEY": "@email-common-dear-username",
-      "KO": "{{username}}님,",
-      "EN": "Dear {{username}},",
-      "TC(zh-tw)": "親愛的 {{username}},",
-      "SC(zh-cn)": "尊敬的 {{username}},",
-      "JA": "{{username}}様,"
-    },
-    {
-      "KEY": "@email-blocked-from-team",
-      "KO": "잔디 팀 {{teamname}}으로부터 차단되셨습니다. 자세한 차단 사유는 {{teamname}}팀 관리자에게 문의해주세요.",
-      "EN": "You have been blocked from JANDI Team {{teamname}}. For more information please contact Team Admin of {{teamname}}.",
-      "TC(zh-tw)": "你已經被 JANDI 的 {{teamname}} 團隊關閉權限。想瞭解更多資訊，請聯繫 {{teamname}} 的團隊管理員。",
-      "SC(zh-cn)": "你已经被 JANDI 的 {{teamname}} 团队关闭权限。想了解更多信息，请联系 {{teamname}} 的团队管理员。",
-      "JA": "あなたはJANDIチーム{{teamname}}からブロックされています。 詳細については、{{teamname}}のチーム管理者にお問い合わせください。"
-    },
-    {
-      "KEY": "@email-common-full-signature",
-      "KO": "감사합니다.<br>— JANDI 팀",
-      "EN": "Thank you.<br>—Team JANDI",
-      "TC(zh-tw)": "謝謝你。<br>— JANDI團隊",
-      "SC(zh-cn)": "谢谢你。<br>— JANDI团队",
-      "JA": "ありがとうございます。<br>— チームJANDI一同"
-    },
-    {
-      "KEY": "@payment-email-footer-contact",
-      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\"\" style=\"color: #00C473;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
-      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> or <a href=\"\" style=\"color: #00C473;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">JANDI FAQ</a>.",
-      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\"\" style=\"color: #00C473;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">教學中心</a> 取得更多資訊",
-      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\"\" style=\"color: #00C473;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">教学中心</a> 取得更多信息",
-      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00C473;text-decoration: underline;\">support@tosslab.com</a>または<a href=\"\" style=\"color: #00C473;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00C473;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
-    },
-    {
-      "KEY": "@payment-email-footer-copyright",
-      "KO": "© Toss Lab, Inc. All rights reserved.",
-      "EN": "© Toss Lab, Inc. All rights reserved.",
-      "TC(zh-tw)": "© Toss Lab, Inc. All rights reserved.",
-      "SC(zh-cn)": "© Toss Lab, Inc. All rights reserved.",
-      "JA": "© Toss Lab, Inc. All rights reserved."
     }
   ],
   "account_and_team_mail": [
@@ -1114,11 +726,11 @@
     },
     {
       "KEY": "@common-footer-contact",
-      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
-      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> or <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">JANDI FAQ</a>.",
-      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教學中心</a> 取得更多資訊",
-      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\"\" style=\"color: #00c473;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教学中心</a> 取得更多信息",
-      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a>または<a href=\"\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
+      "KO": "궁금하시거나 더 알고싶은 내용이 있으시다면, 언제라도 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 또는 <a href=\" tel:+82-2-6959-9599\" style=\"color: #00c473;text-decoration: underline;\">02-6959-9599</a>로 연락주세요. 더 자세한 내용이 궁금하다면 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">고객지원 사이트</a>에서 잔디의 사용법을 간단히 알아보실 수 있습니다.",
+      "EN": "For more information, please contact <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> or <a href=\" tel:+82-2-6959-9599\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>. You can view basic JANDI instruction on <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">JANDI FAQ</a>.",
+      "TC(zh-tw)": "想要瞭解更多資訊，請聯繫 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或來電至 <a href=\" tel:+886-2-8914-5954\" style=\"color: #00c473;text-decoration: underline;\">02-8914-5954</a>。或者前往<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教學中心</a> 取得更多資訊",
+      "SC(zh-cn)": "想要了解更多信息，请联系 <a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a> 或来电至 <a href=\" tel:+886-2-8914-5954\" style=\"color: #00c473;text-decoration: underline;\">+886-2-8914-5954</a>。或者前往 <a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">教学中心</a> 取得更多信息",
+      "JA": "ご不明な点やご意見がありましたら、いつでも<a href=\"mailto:support@tosslab.com\" style=\"color: #00c473;text-decoration: underline;\">support@tosslab.com</a>または<a href=\" tel:+82-2-6959-9599\" style=\"color: #00c473;text-decoration: underline;\">+82-2-6959-9599</a>にご連絡ください。もっと詳しいことは<a href=\"https://jandi.zendesk.com\" style=\"color: #00c473;text-decoration: underline;\">お客様サポートサイト</a>でJANDIの使い方を簡単に確認できます。"
     },
     {
       "KEY": "@common-footer-copyright",
@@ -1377,6 +989,14 @@
       "JA": ""
     },
     {
+      "KEY": "@domain-changed-title",
+      "KO": "잔디 팀 {{teamname}} 도메인 변경 안내",
+      "EN": "The web address (URL) for your JANDI team ‘{{teamname}}’ was changed",
+      "TC(zh-tw)": "JANDI上的團隊‘{{teamname}}'的網域地址（URL）已經改",
+      "SC(zh-cn)": "JANDI上的团队‘{{teamname}}'的网域地址（URL）已经改",
+      "JA": "お使いの'{{teamname}}'のログインURLが変更されました"
+    },
+    {
       "KEY": "@domain-changed-description01",
       "KO": "방금 {{username}} 님의 JANDI 팀 {{teamname}}의 웹 주소가  <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>로 변경되었습니다.",
       "EN": "The web address (URL) for your JANDI team ‘{{teamname}}’ was changed to <a style=\"font-weight:bold;color:#00c473;\" target=\"_blank\" href=\"{{url}}\">{{url}}</a>.",
@@ -1441,6 +1061,14 @@
       "JA": ""
     },
     {
+      "KEY": "@admin-ownership-title",
+      "KO": "잔디 팀 {{teamname}} 관리자 지정 안내",
+      "EN": "{{teamname}}'s ownership has been transferred to you",
+      "TC(zh-tw)": "{{teamname}} 的管理員權限已轉移給你",
+      "SC(zh-cn)": "{{teamname}} 的管理员权限已转移给您",
+      "JA": "JANDIチームの{{teamname}}の管理者に指定されました"
+    },
+    {
       "KEY": "@admin-ownership-description",
       "KO": "잔디 팀 {{teamname}}의 관리자로 지정되셨습니다. 관리자의 권한은 다음과 같습니다.",
       "EN": "{{teamname}}'s ownership has been transferred to you. Here are what a team owner can do :",
@@ -1487,6 +1115,14 @@
       "TC(zh-tw)": "",
       "SC(zh-cn)": "",
       "JA": ""
+    },
+    {
+      "KEY": "@deleted-team-title",
+      "KO": "잔디 팀 {{teamname}} 삭제 안내",
+      "EN": "JANDI team {{teamname}} has been deleted",
+      "TC(zh-tw)": "JANDI團隊{{teamname}}已被刪除",
+      "SC(zh-cn)": "JANDI团队{{teamname}}已被删除",
+      "JA": "JANDIのチームの{{teamname}}が削除されました"
     },
     {
       "KEY": "@deleted-team-description01",
