@@ -208,7 +208,7 @@
       "EN": "Your subscription has been complete. Please refer to the following information. Your first payment will be processed within the first 5 business days of next month.",
       "TC(zh-tw)": "付款流程已經完成，請參考以下資訊<br>首次支付將於次月的第一週完成扣款",
       "SC(zh-cn)": "付款流程已经完成，请参考以下信息<br>首次支付将于次月的第一周完成扣款",
-      "JA": "以下の通り定期支払のお申し込み受付が完了致しました。来月の初週、管理者の確認後最初の支払が進行になる予定です。"
+      "JA": "以下の通り定期支払のお申し込み受付が完了致しました。<br>来月の初週、管理者の確認後最初の支払が進行になる予定です。"
     },
     {
       "KEY": "@payment-email-payment-request-title",
@@ -222,9 +222,9 @@
       "KEY": "@payment-email-payment-request-desc",
       "KO": "잔디 유료 사용을 위해 요청주신 청구서입니다. 본 메일 수신 후 아래 계좌로 10영업일 이내에 입금해주셔야 결제가 완료됩니다.",
       "EN": "Payment for {{teamName}} Team has been requested. Payment must be made within 10 business days after receiving this email.",
-      "TC(zh-tw)": "此為您所欲升級方案的付款生效表單。請於收到此郵件後十日內，完成後續付款事宜",
-      "SC(zh-cn)": "此为您所欲升级方案的付款生效表单。请于收到此邮件后十日内，完成后续付款事宜",
-      "JA": "JANDI有料使用のためリクエストしてくださった支払い申込書です。本メールを受信した後、下の口座に10営業日以内に振り込まなければ支払いは完了できません。"
+      "TC(zh-tw)": "此為您所欲升級方案的付款生效表單。<br>請於收到此郵件後十日內，完成後續付款事宜",
+      "SC(zh-cn)": "此为您所欲升级方案的付款生效表单。<br>请于收到此邮件后十日内，完成后续付款事宜",
+      "JA": "JANDI有料使用のためリクエストしてくださった支払い申込書です。<br>本メールを受信した後、下の口座に10営業日以内に振り込まなければ支払いは完了できません。"
     },
     {
       "KEY": "@payment-email-billing-complete-title",
@@ -614,9 +614,9 @@
       "KEY": "@payment-email-footer-confidential-info",
       "KO": "상기 메일은 지정된 수신인만을 위한 것이며 법령에 따라 보호되는 영업비밀, 산업기술 등을 포함하고 있을 수 있습니다. 본 문서에 포함된 정보를 무단으로 제 3자에게 공개, 배포, 복사 또는 사용하는 것은 엄격하게 금지됩니다. 만일 귀하가 지정된 수신자가 아닌 경우, 발신인 또는 (주)토스랩으로 알려주시고 원본 메일과 포함된 모든 정보를 파기하여 주시기 바랍니다.",
       "EN": "Information in this email is confidential and may contain legally privileged company strategies or technologies. It is intended solely for the use of the addressee. You may not disseminate, distribute, use or copy this message or attachments or disclose to anyone the contents thereof. If you are not the intended addressee, please notify the sender or Toss Lab, Inc. and delete this email immediately. ",
-      "TC(zh-tw)": "本電子郵件可能包含機密資訊請勿傳予第三者知曉。台端如非本電子郵件之收件者，請於誤收此文件後，立即與本公司聯絡，並請退回本郵件後，刪除此電子檔。本電子文件可能含有依法受機密或特殊管制之資訊，切勿轉寄、散佈、複製或公開其內容。特此致謝。",
-      "SC(zh-cn)": "本电子邮件可能包含机密信息请勿传予第三者知晓。如非本电子邮件之收件者，请于误收此文件后，立即与本公司联络，并请退回本邮件后，删除此电子档。本电子文件可能含有依法受机密或特殊管制之信息，切勿转寄、散布、复制或公开其内容。特此致谢。",
-      "JA": "上記のメールは指定された受信者のためのメールで、法令により保護される営業秘密、産業技術などを含めていることもあります。本文書に含まれた情報を無断に第三者に公開、配布、コピーまたは使用することは厳しく禁じられています。万一貴下が指定された受信者ではない場合、お手数ですが発信者または（株）トスラボまでお知らせくださって原本メールと含まれている全ての情報を破棄して下さいますようお願い致します。"
+      "TC(zh-tw)": "本電子郵件可能包含機密資訊請勿傳予第三者知曉。<br>台端如非本電子郵件之收件者，請於誤收此文件後，立即與本公司聯絡，並請退回本郵件後，刪除此電子檔。<br>本電子文件可能含有依法受機密或特殊管制之資訊，切勿轉寄、散佈、複製或公開其內容。特此致謝。",
+      "SC(zh-cn)": "本电子邮件可能包含机密信息请勿传予第三者知晓。<br>如非本电子邮件之收件者，请于误收此文件后，立即与本公司联络，并请退回本邮件后，删除此电子档。<br>本电子文件可能含有依法受机密或特殊管制之信息，切勿转寄、散布、复制或公开其内容。特此致谢。",
+      "JA": "上記のメールは指定された受信者のためのメールで、法令により保護される営業秘密、産業技術などを含めていることもあります。<br>本文書に含まれた情報を無断に第三者に公開、配布、コピーまたは使用することは厳しく禁じられています。<br>万一貴下が指定された受信者ではない場合、お手数ですが発信者または（株）トスラボまでお知らせくださって<br>原本メールと含まれている全ての情報を破棄して下さいますようお願い致します。"
     },
     {
       "KEY": "@payment-email-footer-contact",
@@ -628,27 +628,11 @@
     },
     {
       "KEY": "@payment-email-footer-copyright",
-      "KO": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
-      "EN": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
-      "TC(zh-tw)": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
-      "SC(zh-cn)": "Copyright © 2018 Toss Lab, Inc. All rights reserved.",
-      "JA": "Copyright © 2018 Toss Lab, Inc. All rights reserved."
-    },
-    {
-      "KEY": "@payment-email-billing-amount-additional-charge (Removed)",
-      "KO": "월 과금액 (초과인원)",
-      "EN": "Additional Charge",
-      "TC(zh-tw)": "成員加購",
-      "SC(zh-cn)": "成员加购",
-      "JA": "月課金額（超過人数）"
-    },
-    {
-      "KEY": "@payment-email-payment-num-of-members-added (Removed)",
-      "KO": "초과 인원",
-      "EN": "# of Members Added",
-      "TC(zh-tw)": "加購成員數量",
-      "SC(zh-cn)": "加购成员数量",
-      "JA": "超過人数"
+      "KO": "© Toss Lab, Inc. All rights reserved.",
+      "EN": "© Toss Lab, Inc. All rights reserved.",
+      "TC(zh-tw)": "© Toss Lab, Inc. All rights reserved.",
+      "SC(zh-cn)": "© Toss Lab, Inc. All rights reserved.",
+      "JA": "© Toss Lab, Inc. All rights reserved."
     }
   ],
   "account_and_team_mail": [
