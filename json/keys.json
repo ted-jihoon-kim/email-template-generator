@@ -942,11 +942,11 @@
     },
     {
       "KEY": "@removal-notification-heading",
-      "KO": "잔디 팀 '{{teamname}}'의 관리자가 {{user}}님을 탈퇴 처리 하였습니다. 자세한 탈퇴 처리 사유는 '{{teamname}}' 팀 관리자에게 문의해주세요.",
-      "EN": "Team Admin of JANDI Team '{{teamname}}' has removed {{user}} from the Team. For details regarding your removal, please contact Team Admin of '{{teamname}}’.",
-      "TC(zh-tw)": "{{teamname}}' 團隊的管理員，已將{{user}} 退出團隊。想瞭解更多關於退出團隊的資訊，請聯繫'{{teamname}}' 的團隊管理員。謝謝您。",
-      "SC(zh-cn)": "{{teamname}}' 团队的管理员，已将{{user}} 退出团队。想了解更多关于退出团队的信息，请联系'{{teamname}}' 的团队管理员。谢谢您。",
-      "JA": "JANDIチーム'{{teamname}}’の管理者が{{user}}を脱退処理しました。脱退事由についての詳細は'{{teamname}}’チーム管理者へお問い合わせください。ご利用ありがとうございます。"
+      "KO": "잔디 팀 '{{teamname}}'의 관리자가 {{name}}님을 탈퇴 처리 하였습니다. 자세한 탈퇴 처리 사유는 '{{teamname}}' 팀 관리자에게 문의해주세요.",
+      "EN": "Team Admin of JANDI Team '{{teamname}}' has removed {{name}} from the Team. For details regarding your removal, please contact Team Admin of '{{teamname}}’.",
+      "TC(zh-tw)": "{{teamname}}' 團隊的管理員，已將{{name}} 退出團隊。想瞭解更多關於退出團隊的資訊，請聯繫'{{teamname}}' 的團隊管理員。謝謝您。",
+      "SC(zh-cn)": "{{teamname}}' 团队的管理员，已将{{name}} 退出团队。想了解更多关于退出团队的信息，请联系'{{teamname}}' 的团队管理员。谢谢您。",
+      "JA": "JANDIチーム'{{teamname}}’の管理者が{{name}}を脱退処理しました。脱退事由についての詳細は'{{teamname}}’チーム管理者へお問い合わせください。ご利用ありがとうございます。"
     },
     {
       "KEY": "@removal-notification-description",
