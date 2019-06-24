@@ -57,7 +57,8 @@ var tempPath = [ "",
 				 "./temp/temp-team-mailer/domainChanged.html",
 				 "./temp/temp-team-mailer/invite.html",
 				 "./temp/temp-team-mailer/ownershipTransferred.html",
-				 "./temp/temp-team-mailer/teamDeleted.html"
+				 "./temp/temp-team-mailer/teamDeleted.html",
+				 "./temp/temp-member-mailer/disabledMember.html"
 				];
 
 $.ajaxSetup({ cache: false});

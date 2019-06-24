@@ -37,7 +37,7 @@ $('#downloadTemplate').click(function() {
 	else if(currentTempType==5){ // 5. 정기 과금 이용 약관
 		download(convertedString, 'payment_agreement_'+currentTempLang+'.html', "text/html");
 	}
-	else if(currentTempType==6){ // 6. 차단안내
+	else if(currentTempType==6){ // 6. 탈퇴안내
 		download(convertedString, 'removalNotification.'+currentTempLang+'.html', "text/html");
 	}
 	else if(currentTempType==7){ // 7. 이메일 인증
@@ -70,6 +70,8 @@ $('#downloadTemplate').click(function() {
 	else if(currentTempType==16){ // 16. 팀 - 팀 삭제 안내
 		download(convertedString, 'teamDeleted.'+currentTempLang+'.html', "text/html");
 	}
-	
+	else if(currentTempType==17){ // 17. 멤버 - 차단 안내
+		download(convertedString, 'teamDeleted.'+currentTempLang+'.html', "text/html");
+	}
 	
 });
