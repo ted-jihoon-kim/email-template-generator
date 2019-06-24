@@ -1139,7 +1139,7 @@
       "TC(zh-tw)": "你已經被 JANDI 的 {{teamname}}",
       "SC(zh-cn)": "你已经被 JANDI 的 {{teamname}}",
       "JA": "JANDIチーム{{teamname}}からブロックされました"
-    }
+    },
     {
       "KEY": "@email-blocked-from-team",
       "KO": "잔디 팀 {{teamname}}으로부터 차단되셨습니다. 자세한 차단 사유는 {{teamname}}팀 관리자에게 문의해주세요.",
