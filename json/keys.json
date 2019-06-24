@@ -1141,7 +1141,7 @@
       "JA": "JANDIチーム{{teamname}}からブロックされました"
     },
     {
-      "KEY": "@email-blocked-from-team",
+      "KEY": "@blocked-team-description",
       "KO": "잔디 팀 {{teamname}}으로부터 차단되셨습니다. 자세한 차단 사유는 {{teamname}}팀 관리자에게 문의해주세요.",
       "EN": "You have been blocked from JANDI Team {{teamname}}. For more information please contact Team Admin of {{teamname}}.",
       "TC(zh-tw)": "你已經被 JANDI 的 {{teamname}} 團隊關閉權限。想瞭解更多資訊，請聯繫 {{teamname}} 的團隊管理員。",

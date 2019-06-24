@@ -235,7 +235,7 @@ function replaceKeys(obj) {
     
     /* find keyname and replace with value on preview*/
     $('#previewTempate').contents().find( 'span:contains('+keynameR+')' ).replaceWith( "<span>"+valueR+"</span>" );
-    
+    console.log(keynameR, valueR);
     //$('#originalString').text().replace('<span>'+keyname+'</span>', "<span>"+value+"</span>");
     
     originText = $('#originalString').text();

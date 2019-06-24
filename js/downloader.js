@@ -71,7 +71,7 @@ $('#downloadTemplate').click(function() {
 		download(convertedString, 'teamDeleted.'+currentTempLang+'.html', "text/html");
 	}
 	else if(currentTempType==17){ // 17. 멤버 - 차단 안내
-		download(convertedString, 'teamDeleted.'+currentTempLang+'.html', "text/html");
+		download(convertedString, 'disabledMember.'+currentTempLang+'.html', "text/html");
 	}
 	
 });
